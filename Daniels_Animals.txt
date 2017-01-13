@@ -8,3 +8,8 @@ Sphinx
 
 Tiger_Nic
 Rat_Nic
+
+GrizzlyBear_Pat
+Moose_Pat
+Poutine_goose_Pat
+MapleLeaf_Beaver_Pat
