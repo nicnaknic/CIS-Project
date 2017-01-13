@@ -6,3 +6,5 @@ Cougar
 Panda
 Sphinx
 
+Tiger_Nic
+Rat_Nic
