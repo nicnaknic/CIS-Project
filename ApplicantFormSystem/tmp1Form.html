@@ -20,6 +20,13 @@
         h1{
             color: rgb(28, 158, 203);
         }
+        .input-group-btn select {
+	        border-color: #ccc;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
     </style>
 </head>
 <body>
@@ -93,16 +100,17 @@
             <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">Job Openings </a></li>
             <li><a href="#">Apply </a></li>
             <li><a href="#">Basic Application</a></li> <!--Link back to basicForm before production-->
-            <li><a href="#">Temporary Work </a></li>
+            <li><a href="#"><strong>Temporary Application</strong></a></li>
+            <li><a href="#">Upload &amp; Submit </a></li>
         </ol>
 
         <form>
-            <div class="row" style="margin-top: 70px;">
+            <div class="row" style="margin-top: 70px;"><!--TOP ROW ITEMS-->
                 <div class="col-sm-6"><!--Current employment/work type form group (Left side well)-->
                     <div class="well">
                         <div class="form-group">
                             <label for="empStat">What is your current employment status?</label>
-                            <input type="text" class="form-control" id="empStat" placeholder="Describe here" required>
+                            <input type="text" max="50" class="form-control" name="empStat" id="empStat" placeholder="Describe here" required>
                         </div>
                         <div class="form-group">
                             <label>What type of work are you mainly seeking? <small>Please choose the option that Best describes your situation:</small></label>
@@ -134,48 +142,48 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Accounting</label>
+                                        <label><input type="checkbox" name="accouting" id="accouting" value="">Accounting</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Administrative</label>
+                                        <label><input type="checkbox" name="administrative" id="administrative" value="">Administrative</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Book-keeping</label>
+                                        <label><input type="checkbox" name="book-keeping" id="book-keeping" value="">Book-keeping</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Customer Service</label>
+                                        <label><input type="checkbox" name="customer-service" id="customer-service" value="">Customer Service</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Data Entry</label>
+                                        <label><input type="checkbox" name="data-entry" id="data-entry" value="">Data Entry</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Legal Office</label>
+                                        <label><input type="checkbox" name="legal-office" id="legal-office" value="">Legal Office</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Managment</label>
+                                        <label><input type="checkbox" name="management" id="management" value="">Managment</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Medical Office</label>
+                                        <label><input type="checkbox" name="medical-office" id="medical-office" value="">Medical Office</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Payroll</label>
+                                        <label><input type="checkbox" name="payro/l" id="payroll" value="">Payroll</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Reception</label>
+                                        <label><input type="checkbox" name="reception" id="reception" value="">Reception</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">Sales &amp; Marketing</label>
+                                        <label><input type="checkbox" name="sales-marketing" id="sales-marketing" value="">Sales &amp; Marketing</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="input-group" style="padding: 0 100px 0 3px;">
                                             <span class="input-group-addon">
-                                                <input type="checkbox" aria-label="...">
+                                                <input type="checkbox" name="other-expertise-CB" aria-label="...">
                                             </span>
-                                                <input type="text"  placeholder="Other, Please specify" class="form-control" aria-label="...">
+                                                <input type="text"  name="other-expertise" placeholder="Other, Please specify" class="form-control" aria-label="...">
                                         </div>
                                     </div>
                                 </div>
@@ -184,13 +192,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row"><!--MIDDLE ROW1 ITEMS-->
                 <div class="col-sm-12">
-                    <div class="well">
+                    <div class="well" style="margin-bottom: 85px;">
                         <div class="row"><!--Top items for Proficiency panel -->
                             <div class="col-sm-6">
-                                <label>Please Indicate your proficiency with the following on a scale of 1 to 5,</br> 
-                                <small>Where 1 = basic, 3 = Intermediate and 5 = advanced</small></label>
+                                <h5><strong>Please indicate your Proficiency with the following on a scale of 1 to 5,</strong></br>
+                                Where 1 = basic, 3 = intermediate and 5 = advanced</h5>
                             </div>
                             <div class="col-sm-6">
                                 <div class="alert alert-info" role="alert">
@@ -198,10 +206,11 @@
                                 </div>
                             </div>
                         </div> 
+
                         <div class="form-group"><!--Contents for Proficiency panel-->
                             <div class="row">
                                 <div class="col-sm-3"><!--SOFTWARE-->
-                                    <h4><strong>Software</strong></h4>
+                                    <label>Software</label></br>
 
                                     <select class="custom-select" name="mAccess" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
@@ -306,9 +315,9 @@
                                 </div>
 
                                 <div class="col-sm-3"><!--ACCOUNTING-->
-                                    <h4><strong>Accounting</strong></h4>
+                                    <label>Accouting</label></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="a/p" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -318,7 +327,7 @@
                                     </select>
                                     <small>A/P</small></br>
                                    
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="a/r" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -328,7 +337,7 @@
                                     </select>
                                     <small>A/R &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="backup/recovery" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -338,7 +347,7 @@
                                     </select>
                                     <small>Backup/Recovery &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="collections" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -348,7 +357,7 @@
                                     </select>
                                     <small>Collections &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="deposites" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -358,7 +367,7 @@
                                     </select>
                                     <small>Deposites &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="fStatements" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -368,7 +377,7 @@
                                     </select>
                                     <small>Financial Statements &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="payroll" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -378,7 +387,7 @@
                                     </select>
                                     <small>Payroll &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="tReturns" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -388,7 +397,7 @@
                                     </select>
                                     <small>Tax Returns &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="tBalance" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -401,9 +410,9 @@
                                 </div>
 
                                 <div class="col-sm-3"><!--TYPING-->
-                                    <h4><strong>Typing</strong></h4>
+                                    <label>Typing</label></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="Correspondence" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -413,7 +422,7 @@
                                     </select>
                                     <small>Correspondence &nbsp;</small></br>
                                    
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="dEntry" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -423,7 +432,7 @@
                                     </select>
                                     <small>Data Entry &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="dictaphone" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -433,7 +442,7 @@
                                     </select>
                                     <small>Dictaphone &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="legal" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -443,7 +452,7 @@
                                     </select>
                                     <small>Legal &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="medical" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -453,7 +462,7 @@
                                     </select>
                                     <small>Medical &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="mTaking" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -463,7 +472,7 @@
                                     </select>
                                     <small>Minute Taking &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="tWPM" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -476,9 +485,9 @@
                                 </div>
 
                                 <div class="col-sm-3"><!--SWITCHBOARD-->
-                                    <h4><strong>SwitchBoard</strong></h4>
+                                    <label>SwitchBoard</label></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="m1-5" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -488,7 +497,7 @@
                                     </select>
                                     <small>Multiline with 1-5 lines &nbsp;</small></br>
                                    
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="m6-10" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -498,7 +507,7 @@
                                     </select>
                                     <small>Multiline with 6-10 lines &nbsp;</small></br>
 
-                                    <select class="custom-select" style="margin-top: 5px;">
+                                    <select class="custom-select" name="m10+" style="margin-top: 5px;">
                                         <option selected value="">&nbsp;n/a&nbsp;</option>
                                         <option value="1">&nbsp;1</option>
                                         <option value="2">&nbsp;2</option>
@@ -512,6 +521,50 @@
 
                             </div>
                         </div>
+
+                        <div class="form-group"><!--Other selection for Proficiency panel-->
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <select name="other1" id="other1" class="btn">
+                                                    <option selected value="">&nbsp;n/a&nbsp;</option>
+                                                    <option value="1">&nbsp;1</option>
+                                                    <option value="2">&nbsp;2</option>
+                                                    <option value="3">&nbsp;3</option>
+                                                    <option value="4">&nbsp;4</option>
+                                                    <option value="5">&nbsp;5</option>
+                                                </select>
+                                            </span>
+                                            <input type="text" name="other1Value" id="other1Value" class="form-control" placeholder="Other, Please specify">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <select name="other2" id="other2" class="btn">
+                                                    <option selected value="">&nbsp;n/a&nbsp;</option>
+                                                    <option value="1">&nbsp;1</option>
+                                                    <option value="2">&nbsp;2</option>
+                                                    <option value="3">&nbsp;3</option>
+                                                    <option value="4">&nbsp;4</option>
+                                                    <option value="5">&nbsp;5</option>
+                                                </select>
+                                            </span>
+                                            <input type="text" name="other2Value" id="other2Value" class="form-control" placeholder="Other, Please specify">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group pull-right" style="padding-right: 35px;">
+                                        <button type="submit" class="btn btn-primary" style="width: 90px;">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>

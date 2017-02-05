@@ -93,7 +93,9 @@
         <ol class="breadcrumb">
             <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">Job Openings </a></li>
             <li><a href="#">Apply </a></li>
-            <li><a href="#">Basic Application </a></li>
+            <li><a href="#"><strong>Basic Application</strong></a></li>
+            <li><a href="#"> Job Application </a></li>
+            <li><a href="#"> Upload &amp; Submit </a></li>
         </ol>
         <form>
             <div class="row" style="margin-top: 70px;">
@@ -127,19 +129,19 @@
                     <div class="well">
                         <div class="form-group">
                             <label for="fname">First Name:</label>
-                            <input type="text" class="form-control" id="fname" placeholder="First Name" required>
+                            <input type="text" class="form-control" name="fname" placeholder="First Name" required>
                         </div>
                         <div class="form-group">
                             <label for="lname">Last Name:</label>
-                            <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
+                            <input type="text" class="form-control" name="lname" placeholder="Last Name" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number:</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Ex: xxx-xxx-xxxx" required>
+                            <input type="text" class="form-control" name="phone" placeholder="Ex: xxx-xxx-xxxx" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="example@address.com" required>
+                            <input type="email" class="form-control" name="email" placeholder="example@address.com" required>
                         </div>
                     </div> <!--End Left col well-->
                 </div> <!--End Left Row-->
@@ -147,30 +149,30 @@
                     <div class="well">
                         <div class="form-group">
                             <label for="address">Street Address:</label>
-                            <input type="text" class="form-control" id="address" placeholder="Please enter your current primary address">
+                            <input type="text" class="form-control" name="address" placeholder="Please enter your current primary address">
                         </div>
                         <div class="form-group">
                             <label for="city">City:</label>
-                            <input type="text" class="form-control" id="city" placeholder="City">
+                            <input type="text" class="form-control" name="city" placeholder="City">
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="province">Province:</label>
-                                    <select class="form-control" id="province">
+                                    <select class="form-control" name="province">
                                         <option value="" selected disabled>Please Select</option>
-                                        <option>Alberta (AB)</option>
-                                        <option>British Columbia (BC)</option>
-                                        <option>Manitoba (MB)</option>
-                                        <option>Newfoundland and Labrador (NL)</option>
-                                        <option>Northwest Territories (NT)</option>
-                                        <option>Nova Scotia (NS)</option>
-                                        <option>Nunavut (NU)</option>
-                                        <option>Ontario (ON)</option>
-                                        <option>Prince Edward Island (PE)</option>
-                                        <option>Quebec (QC)</option>
-                                        <option>Saskatchewan (SK)</option>
-                                        <option>Yukon (YT)</option>
+                                        <option value="AB">Alberta (AB)</option>
+                                        <option value="BC">British Columbia (BC)</option>
+                                        <option value="MB">Manitoba (MB)</option>
+                                        <option value="NL">Newfoundland and Labrador (NL)</option>
+                                        <option value="NT">Northwest Territories (NT)</option>
+                                        <option value="NS">Nova Scotia (NS)</option>
+                                        <option value="NU">Nunavut (NU)</option>
+                                        <option value="ON">Ontario (ON)</option>
+                                        <option value="PE">Prince Edward Island (PE)</option>
+                                        <option value="QC">Quebec (QC)</option>
+                                        <option value="SK">Saskatchewan (SK)</option>
+                                        <option value="YT">Yukon (YT)</option>
                                     </select>
                                 </div>
                             </div>
@@ -178,7 +180,7 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="postal">Postal Code:</label>
-                                    <input type="text" class="form-control" id="postal" placeholder="Ex: xxx xxx" style="width: 120px;">    
+                                    <input type="text" class="form-control" name="postal" placeholder="Ex: xxx xxx" style="width: 120px;">    
                                 </div>   
                             </div>
                         </div> <!--End Inner Row-->
