@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apply For a Job</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sticky-footer.css" rel="stylesheet">
+    <link href="../css/jasny-bootstrap.min.css" rel="stylesheet" />
+    <style>/**Minor CSS changes that didnt need their own file**/       
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { /*Change the color of navbar items on hover*/
+            background-color: #EEEEEE;
+        }
+        li, select{
+            padding-top: 5px;
+        }
+        .form-container-padding{
+            padding-top: 30px;
+        }
+        h1{
+            color: rgb(28, 158, 203);
+        }
+    </style>
+</head>
+<body>
+    <!--=======================NAVBAR ELEMENTS DOWN BELOW, THIS IS THE DEFAULT NAV SYSTEM====================-->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand active" href="#">Okanagan Staffing &nbsp; / &nbsp;<small>Apply for a job</small></a>            
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://www.okanaganstaffing.com/">Home</a></li>
+                    <li><a href="http://www.okanaganstaffing.com/testing/">Testing</a></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Staffing Solutions<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/staffing-solutions/">Staffing Solutions</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/temporary-staffing/">Temporary Staffing</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/permanent-saffing/">Permanent Staffing</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/staffing-solutions/frequently-asked-questions/">Frequenty Asked Questions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Client Solutions<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/client-solutions/">Client Solutions</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/business-skill-evaluations/">Business Skill Evaluations</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/human-resources-consulting/">Human Resources Consulting</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/corporate-outplacement-services/">Corporate Outplacement Services</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/client-solutions/client-testimonials/">Client Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Job Seeker Services<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-seeker-services/">Job Seeker Services</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">job Openings</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/application-process/">Application Process</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/frequently-asked-questions/">Frequenty Asked Questions</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/applicants-success-stories/">Applicant Success Stories</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/job-seeker-services/resume-tips/">Resume Writing Tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/about-us/about-us/">About Us</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/about-us/community-events/">Community Events</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/about-us/kelowna/">About Kelowna</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://www.okanaganstaffing.com/contact/">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--=========================================END NAVBAR=============================================-->
+
+
+    <div class="container">
+        <form>
+            <div class="well" style="margin-top: 70px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>What is your current work status in Canada?</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <ul>
+                                <li>
+                                    <div class="radio">
+                                        Are you a Canadian Citizen?</br>
+                                        <label class="radio-inline"><input type="radio" name="opt1">Yes</label>
+                                        <label class="radio-inline"><input type="radio" name="opt1">No</label>
+                                    </div>
+                                    <div class="radio">
+                                        <br />If not, are you legally entitle to work in Canada?<br />
+                                        <label class="radio-inline"><input type="radio" name="opt2">Yes</label>
+                                        <label class="radio-inline"><input type="radio" name="opt2">No</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <ul>
+                                <li>
+                                    <div class="radio">
+                                        Do you have a criminal record for which you have not recieved a pardon?</br>
+                                        <label class="radio-inline"><input type="radio" name="opt3">Yes</label>
+                                        <label class="radio-inline"><input type="radio" name="opt3">No</label>
+                                    </div>
+                                    <div class="radio">
+                                        </br>Would you give Okanagan Staffing Services permission to conduct a Criminal Records Check, should it be requested by a client?</br>
+                                        <label class="radio-inline"><input type="radio" name="opt4">Yes</label>
+                                        <label class="radio-inline"><input type="radio" name="opt4">No</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--END COL-SM-6-->
+                </div><!--END ROW-->
+            </div><!--END OF WELL 1--> 
+        </form>
+    </div>
+
+
+
+    <!--========================= FOOTER SECTION =========================-->
+    <footer class="footer">
+        <div class="container" style="padding-top: 12px;">
+            <div class="row">
+                    <div class="col-sm-12">
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span><a class="foot-text" href="tel: 250-717-0506">&nbsp;250-717-0506</a>&nbsp;&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a class="foot-text" href="mailto: jobs@okanaganstaffing.com">&nbsp;jobs@okanaganstaffing.com</a>&nbsp;&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span><fade>&nbsp;1476 St. Paul Street&nbsp;&nbsp;&nbsp;</fade>
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span><fade>&nbsp;Kelowna, BC V1Y 2E6&nbsp;&nbsp;&nbsp;</fade>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span><a class="foot-text" href="https://www.linkedin.com/in/kevinrenwickatokanaganstaffing">&nbsp;LinkedIn</a>&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="foot-text">Copyright &copy; 2017 Okanagan staffing Services Inc. All rights reserved. Website Design by Nic Henseleit xD</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <!--======================= END FOOTER SECTION ========================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jasny-bootstrap.min.js"></script>
+</body>
+</html>
