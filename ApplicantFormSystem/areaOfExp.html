@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apply For a Job</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sticky-footer.css" rel="stylesheet">
+    <style>/**Minor CSS changes that didnt need their own file**/    
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { /*Change the color of navbar items on hover*/
+            background-color: #EEEEEE;
+        }
+        li, select{
+            padding-top: 5px;
+        }
+        .form-container-padding{
+            padding-top: 30px;
+        }
+        h1{
+            color: rgb(28, 158, 203);
+        }
+        .input-group-btn select {
+	        border-color: #ccc;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    </style>
+</head>
+<body>
+    <!--=======================NAVBAR ELEMENTS DOWN BELOW, THIS IS THE DEFAULT NAV SYSTEM====================-->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand active" href="#">Okanagan Staffing &nbsp; / &nbsp;<small>Apply for a job</small></a>            
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://www.okanaganstaffing.com/">Home</a></li>
+                    <li><a href="http://www.okanaganstaffing.com/testing/">Testing</a></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Staffing Solutions<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/staffing-solutions/">Staffing Solutions</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/temporary-staffing/">Temporary Staffing</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/permanent-saffing/">Permanent Staffing</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/staffing-solutions/frequently-asked-questions/">Frequenty Asked Questions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Client Solutions<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/client-solutions/">Client Solutions</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/business-skill-evaluations/">Business Skill Evaluations</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/human-resources-consulting/">Human Resources Consulting</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/client-solutions/corporate-outplacement-services/">Corporate Outplacement Services</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/client-solutions/client-testimonials/">Client Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Job Seeker Services<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-seeker-services/">Job Seeker Services</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">job Openings</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/application-process/">Application Process</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/staffing-solutions/frequently-asked-questions/">Frequenty Asked Questions</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/applicants-success-stories/">Applicant Success Stories</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/job-seeker-services/resume-tips/">Resume Writing Tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.okanaganstaffing.com/about-us/about-us/">About Us</a></li>
+                            <li><a href="http://www.okanaganstaffing.com/about-us/community-events/">Community Events</a></li>
+                            <li style="padding: 5px 0px 5px 0px;"><a href="http://www.okanaganstaffing.com/about-us/kelowna/">About Kelowna</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://www.okanaganstaffing.com/contact/">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--=========================================END NAVBAR=============================================-->
+
+    <div class="container"> <!--Main body contents, footer will be added in a container-fluid later on -->
+
+        <div class="page-header">
+                <h1>Job Applicant Form: &nbsp; <small>Temporary Application</small></h1>
+        </div>
+        <ol class="breadcrumb">
+            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">Job Openings </a></li>
+            <li><a href="#">Apply </a></li>
+            <li><a href="#">Basic Application</a></li> <!--Link back to basicForm before production-->
+            <li><a href="#"><strong>Temporary Application</strong></a></li>
+            <li><a href="#">Upload &amp; Submit </a></li>
+        </ol>
+
+        <form>
+            <div class="row" style="margin-top: 70px;"><!--TOP ROW ITEMS-->
+                <div class="col-sm-6"><!--Current employment/work type form group (Left side well)-->
+                    <div class="well">
+                        <div class="form-group">
+                            <label for="empStat">What is your current employment status?</label>
+                            <input type="text" max="50" class="form-control" name="empStat" id="empStat" placeholder="Describe here" required>
+                        </div>
+                        <div class="form-group">
+                            <label>What type of work are you mainly seeking? <small>Please choose the option that Best describes your situation:</small></label>
+                            <div class="radio">
+                                <label><input type="radio" name="opt1">Temporary work only</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="opt1">Temporary work prefered, but will take Permanent role if the right fit</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="opt1">Temporary or Permanent work, both are fine</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="opt1">Permanent work preferred, am only seeking temporary work while I seek a Permanent role</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="opt1">permanent work preferred, will only accept Temporary work if there is a possibility it could go Permanent</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="opt1">Permanent work only</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6"><!--Area of expertise form group (Right side well)-->
+                    <div class="well" style="padding-top: 63px; padding-bottom: 63px;">
+                        <label>What Are your areas of expertise? <large>Check all that apply:</large></label>
+                        <div class="form-group"> 
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="accouting" id="accouting" value="">Accounting</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="administrative" id="administrative" value="">Administrative</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="book-keeping" id="book-keeping" value="">Book-keeping</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="customer-service" id="customer-service" value="">Customer Service</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="data-entry" id="data-entry" value="">Data Entry</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="legal-office" id="legal-office" value="">Legal Office</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="management" id="management" value="">Managment</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="medical-office" id="medical-office" value="">Medical Office</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="payro/l" id="payroll" value="">Payroll</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="reception" id="reception" value="">Reception</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="sales-marketing" id="sales-marketing" value="">Sales &amp; Marketing</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="input-group" style="padding: 0 100px 0 3px;">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" name="other-expertise-CB" aria-label="...">
+                                            </span>
+                                                <input type="text"  name="other-expertise" placeholder="Other, Please specify" class="form-control" aria-label="...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row"><!--MIDDLE ROW1 ITEMS-->
+                <div class="col-sm-12">
+                    <div class="well" style="margin-bottom: 85px;">
+                        <div class="row"><!--Top items for Proficiency panel -->
+                            <div class="col-sm-6">
+                                <h5><strong>Please indicate your Proficiency with the following on a scale of 1 to 5,</strong></br>
+                                Where 1 = basic, 3 = intermediate and 5 = advanced</h5>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="alert alert-info" role="alert">
+                                    <strong>NOTE!</strong>&nbsp;<small>PLEASE DO NOT RATE ANYTHING THAT YOU ARE NOT EXPERIENCED IN/HAVE NEVER USED</small>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="form-group"><!--Contents for Proficiency panel-->
+                            <div class="row">
+                                <div class="col-sm-3"><!--SOFTWARE-->
+                                    <label>Software</label></br>
+
+                                    <select class="custom-select" name="mAccess" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Microsoft Access &nbsp;</small></br>
+                                   
+                                    <select class="custom-select" name="mExcel" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Microsoft Excel &nbsp;</small></br>
+
+                                    <select class="custom-select" name="mWord" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Microsoft Word &nbsp;</small></br> 
+
+                                    <select class="custom-select" name="mOutlook" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Microsoft Outlook &nbsp;</small></br>
+
+                                    <select class="custom-select" name="mPowerpoint" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Microsoft PowerPoint &nbsp;</small></br>
+
+                                     <select class="custom-select" name="mPublisher" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Microsoft Publisher &nbsp;</small></br>                                                                                                                                              
+
+                                    <select class="custom-select" name="qBooks" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>QuickBooks Pro &nbsp;</small></br>
+
+                                    <select class="custom-select" name="sAccounting" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Simply Accounting/Sage 50 &nbsp;</small></br>
+
+                                    <select class="custom-select" name="accpac" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>ACCPAC &nbsp;</small></br>
+
+                                    <select class="custom-select" name="sap" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>SAP &nbsp;</small></br>
+
+                                </div>
+
+                                <div class="col-sm-3"><!--ACCOUNTING-->
+                                    <label>Accouting</label></br>
+
+                                    <select class="custom-select" name="a/p" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>A/P</small></br>
+                                   
+                                    <select class="custom-select" name="a/r" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>A/R &nbsp;</small></br>
+
+                                    <select class="custom-select" name="backup/recovery" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Backup/Recovery &nbsp;</small></br>
+
+                                    <select class="custom-select" name="collections" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Collections &nbsp;</small></br>
+
+                                    <select class="custom-select" name="deposites" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Deposites &nbsp;</small></br>
+
+                                    <select class="custom-select" name="fStatements" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Financial Statements &nbsp;</small></br>
+
+                                    <select class="custom-select" name="payroll" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Payroll &nbsp;</small></br>
+
+                                    <select class="custom-select" name="tReturns" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Tax Returns &nbsp;</small></br>
+
+                                    <select class="custom-select" name="tBalance" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Trial Balance &nbsp;</small></br>                                                                                                                                                                                                                                                           
+
+                                </div>
+
+                                <div class="col-sm-3"><!--TYPING-->
+                                    <label>Typing</label></br>
+
+                                    <select class="custom-select" name="Correspondence" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Correspondence &nbsp;</small></br>
+                                   
+                                    <select class="custom-select" name="dEntry" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Data Entry &nbsp;</small></br>
+
+                                    <select class="custom-select" name="dictaphone" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Dictaphone &nbsp;</small></br>
+
+                                    <select class="custom-select" name="legal" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Legal &nbsp;</small></br>
+
+                                    <select class="custom-select" name="medical" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Medical &nbsp;</small></br>
+
+                                    <select class="custom-select" name="mTaking" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Minute Taking &nbsp;</small></br>
+
+                                    <select class="custom-select" name="tWPM" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Typing WPM &nbsp;</small></br>                                                                                                                                                                                                                      
+
+                                </div>
+
+                                <div class="col-sm-3"><!--SWITCHBOARD-->
+                                    <label>SwitchBoard</label></br>
+
+                                    <select class="custom-select" name="m1-5" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Multiline with 1-5 lines &nbsp;</small></br>
+                                   
+                                    <select class="custom-select" name="m6-10" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Multiline with 6-10 lines &nbsp;</small></br>
+
+                                    <select class="custom-select" name="m10+" style="margin-top: 5px;">
+                                        <option selected value="">&nbsp;n/a&nbsp;</option>
+                                        <option value="1">&nbsp;1</option>
+                                        <option value="2">&nbsp;2</option>
+                                        <option value="3">&nbsp;3</option>
+                                        <option value="4">&nbsp;4</option>
+                                        <option value="5">&nbsp;5</option>
+                                    </select>
+                                    <small>Multiline with 10+ lines &nbsp;</small></br>                                    
+
+                                </div>     
+
+                            </div>
+                        </div>
+
+                        <div class="form-group"><!--Other selection for Proficiency panel-->
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <select name="other1" id="other1" class="btn">
+                                                    <option selected value="">&nbsp;n/a&nbsp;</option>
+                                                    <option value="1">&nbsp;1</option>
+                                                    <option value="2">&nbsp;2</option>
+                                                    <option value="3">&nbsp;3</option>
+                                                    <option value="4">&nbsp;4</option>
+                                                    <option value="5">&nbsp;5</option>
+                                                </select>
+                                            </span>
+                                            <input type="text" name="other1Value" id="other1Value" class="form-control" placeholder="Other, Please specify">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <select name="other2" id="other2" class="btn">
+                                                    <option selected value="">&nbsp;n/a&nbsp;</option>
+                                                    <option value="1">&nbsp;1</option>
+                                                    <option value="2">&nbsp;2</option>
+                                                    <option value="3">&nbsp;3</option>
+                                                    <option value="4">&nbsp;4</option>
+                                                    <option value="5">&nbsp;5</option>
+                                                </select>
+                                            </span>
+                                            <input type="text" name="other2Value" id="other2Value" class="form-control" placeholder="Other, Please specify">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group pull-right" style="padding-right: 35px;">
+                                        <button type="submit" class="btn btn-primary" style="width: 90px;">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--========================= FOOTER SECTION =========================-->
+    <footer class="footer">
+        <div class="container" style="padding-top: 12px;">
+            <div class="row">
+                    <div class="col-sm-12">
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span><a class="foot-text" href="tel: 250-717-0506">&nbsp;250-717-0506</a>&nbsp;&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a class="foot-text" href="mailto: jobs@okanaganstaffing.com">&nbsp;jobs@okanaganstaffing.com</a>&nbsp;&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span><fade>&nbsp;1476 St. Paul Street&nbsp;&nbsp;&nbsp;</fade>
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span><fade>&nbsp;Kelowna, BC V1Y 2E6&nbsp;&nbsp;&nbsp;</fade>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span><a class="foot-text" href="https://www.linkedin.com/in/kevinrenwickatokanaganstaffing">&nbsp;LinkedIn</a>&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="foot-text">Copyright &copy; 2017 Okanagan staffing Services Inc. All rights reserved. Website Design by Nic Henseleit xD</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <!--======================= END FOOTER SECTION ========================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
