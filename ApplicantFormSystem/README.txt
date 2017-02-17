@@ -1,16 +1,25 @@
 
 Due to the recent news of another form being added (A temp form for trades/labor work) I have
-Decided to break the Temp form process up into 3 seperate Files. 
+Decided to break the Temp form process up into 4 seperate Files. 
 
-tmp1Form: Original temp applicant form, Includes fields for current employment, Type of work you are seeking, 
-Area of expertise and proficiency in the following fields.
 
-tmp2Form: WILL include the fields that are related specifically to trades/labor work as well as current employment 
-and type of work you are seeking fields. 
+eduEmpStat.html:
+Question related to Education and employment status
 
-tmp3Form: Final file for the Temp applicant system. Will include fields for "What is your work status", Current avaliability
-Cities you are willing to work in, references as well as Upload fields for Resume and Cover letter
+areaOfExp.html
+Questions related to skills for ALL OF accouting, labour, trades and hospitality
 
-Since there are now two different temp forms that we will have to account for, the system will go:
+avalLog.html
+Questions related to avaliability and Logistics
 
-basicForm -> tmp1Form (OR) tmp2Form -> tmp3Form -> (A page saying whether upload was successful or failed)
+submit.html
+Upload buttons for 3 different files, terms of agreement and submit button
+
+
+
+Unfortunately Maria has decided that to better streamline the Temp form process the questions should be asked on different pages
+to prevent the user from having to dig through one massive form sheet. Because of this, after hitting the "next" button on each
+inidvidual page, the data from the previous page will have to be stored in session variables which are processed from stand alone
+.php files (OR) you could have one "Proccess file" that checks which "next" button was clicked with an if(isset) statement then stores
+the data from within the if(isset) statement.
+
