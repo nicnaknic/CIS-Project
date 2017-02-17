@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,6 +7,7 @@
     <title>Apply For a Job</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/sticky-footer.css" rel="stylesheet">
+    <link href="../css/jasny-bootstrap.min.css" rel="stylesheet" />
     <style>/**Minor CSS changes that didnt need their own file**/       
         .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { /*Change the color of navbar items on hover*/
             background-color: #EEEEEE;
@@ -19,6 +20,12 @@
         }
         h1{
             color: rgb(28, 158, 203);
+        }
+        .no-link{
+            color: #337ab7;
+        }
+        .textarea-pad{
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -83,7 +90,116 @@
         </div>
     </nav>
     <!--=========================================END NAVBAR=============================================-->
-
+    <div class="container">
+        <div class="page-header">
+            <h1>Job Applicant Form: &nbsp; <small>Permanent Application</small></h1>
+        </div>
+        <ol class="breadcrumb">
+            <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">Job Openings </a></li>
+            <li><a href="#">Apply </a></li>
+            <li><a href="#">Basic Application</a></li> <!--Link back to basicForm before production-->
+            <li class="no-link"><strong>Permanent Application</strong></li>
+            <li class="no-link">Submission confirmation</li>
+        </ol>
+        <form>
+            <div class="well" style="margin-top: 70px;"><!--Perm Job applicant questions-->
+                <div class="row">
+                    <div class="col-sm-12">         
+                        <div class="form-group">
+                            <label>What are your main area's of expertise?</label>
+                            <textarea class="form-control" rows="4" name="permQ1" placeholder="Explain what you main areas of expertise are."></textarea>
+                        </div>
+                        <div class="form-group textarea-pad">
+                            <label>Why are you interested in this role?</label>
+                            <textarea class="form-control" rows="4" name="permQ2" placeholder="Explain why you are interested in this role."></textarea>
+                        </div>
+                        <div class="form-group textarea-pad">
+                            <label>Why do you think you are the perfect candidate?</label>
+                            <textarea class="form-control" rows="4" name="permQ3" placeholder="Explain why you believe you are the perfect candidate for this job opening."></textarea>
+                        </div>
+                        <div class="form-group textarea-pad">
+                            <label>Why did you leave your last job position? If you are still employed, why are you seeking new employment?</label>
+                            <textarea class="form-control" rows="4" name="permQ4" placeholder="Explain your current employment status."></textarea>
+                        </div>
+                        <div class="form-group textarea-pad">
+                            <label>What are you salary expectations for this job opening?</label>
+                            <textarea class="form-control" rows="4" name="permQ5" placeholder="Explain what your salary expectations are for this job."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="well" style="margin-bottom: 70px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Upload your Resume &amp; Cover Letter: &nbsp;<small>(.docx or pdf files only)</small></label><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--ROW FOR UPLOAD & SUBMISSION NOTICE-->
+                    <div class="col-sm-6">
+                        <!--UPLOAD COL FOR RESUME AND COVER LETTER-->
+                        <div class="form-group">
+                            <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top: 10px;">
+                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                <span class="fileinput-filename"></span>
+                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!--COL FOR SECOND UPLOAD BUTTON-->
+                        <div class="form-group">
+                            <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top: 10px;">
+                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                <span class="fileinput-filename"></span>
+                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="alert alert-info">
+                            <strong>IMPORTANT&nbsp;:</strong> PLEASE READ CAREFULLY<br />
+                            <ol>
+                                <li>
+                                    <p>
+                                        I declare that the information provided by myself on this application, as well as my resume, regarding my personal and prior
+                                        employment, academic history and skills is true and free of any false statements or exaggerations. I understand that any false
+                                        statements are grounds for dismissal and/or for removal from the OSS inc temp roster
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        I give permission for Okanagan staffing Services Inc. to verify my employment history by contacting the references I have provide.
+                                        I also agree to cooperate with other efforts to verify my credentials, such as by supplying copies of certificates/degrees, and by
+                                        undergoing skills testing to verify my skill level as indicated on this application.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        I understand that if offered temporary employment through Okanagan Staffing Services Inc., I will be working for and paid by
+                                        Okanagan Staffing Services Inc., and promise to comply with the company policies as stated in the
+                                        Temporary Employment & Non-Disclosure Agreement.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="administrative" id="administrative" value="" required><strong>By clicking submit I am agreeing to the Terms of Service as layed out by Okanagan Staffing Inc.</strong></label>
+                            </div>
+                            <div class="form-group pull-left" style="padding-right: 35px;">
+                                <button type="submit" class="btn btn-primary" style="width: 100%; padding-left: 10px; padding-right: 10px;">Submit Application</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
 
@@ -108,5 +224,6 @@
     <!--======================= END FOOTER SECTION ========================-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jasny-bootstrap.min.js"></script><!--JS for UPLOAD/File input type-->
 </body>
 </html>
