@@ -27,7 +27,6 @@ IMPORTANT: DONT REMOVE
     <title>Apply For a Job</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../css/sticky-footer.css" rel="stylesheet" />
-    <link href="../css/jasny-bootstrap.min.css" rel="stylesheet" />
     <style>/**Minor CSS changes that didnt need their own file**/       
         .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { /*Change the color of navbar items on hover*/
             background-color: #EEEEEE;
@@ -43,6 +42,9 @@ IMPORTANT: DONT REMOVE
         }
         .input-sm{ /**CHANGE THE FONT-WEIGHT FOR reference inputs*/
             font-weight: 100;
+        }
+        .no-link{
+            color: #337ab7;
         }
     </style>
 </head>
@@ -110,67 +112,20 @@ IMPORTANT: DONT REMOVE
     
     <div class="container">
         <div class="page-header">
-                <h1>Job Applicant Form: &nbsp; <small>Upload &amp; Submit</small></h1>
+                <h1>Job Applicant Form: &nbsp; <small>Avaliability &amp; Logistics</small></h1>
         </div>
         <ol class="breadcrumb">
             <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">Job Openings </a></li>
             <li><a href="#">Apply </a></li>
             <li><a href="#">Basic Application</a></li> <!--Link back to basicForm before production-->
-            <li><a href="#">Temporary Application</a></li>
-            <li><a href="#"><strong>Upload &amp; Submit</strong></a></li>
+            <li><a href="#">Education &amp; Employment</a></li>
+            <li><a href="#">Area Of Expertise</a></li>
+            <li class="no-link"><strong>Avaliability &amp; Logistics</strong></li>
+            <li class="no-link">Upload &amp; Submit</li>
         </ol>
         <form>
-            <div class="well" style="margin-top: 70px;">   
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>What is your current work status in Canada?</label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <ul>
-                                <li>
-                                    <div class="radio">
-                                        Are you a Canadian Citizen?</br>
-                                        <label class="radio-inline"><input type="radio" name="opt1">Yes</label>
-                                        <label class="radio-inline"><input type="radio" name="opt1">No</label>
-                                    </div>
-                                    <div class="radio">
-                                        <br/>If not, are you legally entitle to work in Canada?<br/>
-                                        <label class="radio-inline"><input type="radio" name="opt2">Yes</label>
-                                        <label class="radio-inline"><input type="radio" name="opt2">No</label>
-                                    </div>                                            
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <ul>
-                                <li>
-                                    <div class="radio">
-                                        Do you have a criminal record for which you have not recieved a pardon?</br>
-                                        <label class="radio-inline"><input type="radio" name="opt3">Yes</label>
-                                        <label class="radio-inline"><input type="radio" name="opt3">No</label>
-                                    </div>
-                                    <div class="radio">
-                                        </br>Would you give Okanagan Staffing Services permission to conduct a Criminal Records Check, should it be requested by a client?</br>
-                                        <label class="radio-inline"><input type="radio" name="opt4">Yes</label>
-                                        <label class="radio-inline"><input type="radio" name="opt4">No</label>
-                                    </div>                                            
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!--END COL-SM-6-->                       
-                </div><!--END ROW-->
-            </div><!--END OF WELL 1--> 
-
-            <div class="well">
+          
+            <div class="well" style="margin-top: 70px;">
                 <div class="form-group">
                     <label>What is your current avaliability?</label>
 
@@ -181,16 +136,44 @@ IMPORTANT: DONT REMOVE
                         <label class="radio-inline"><input type="radio" name="opt4">Full Time</label>
                      </div> 
 
-                    <label><br/>Which days are you avaliable to work?</label><br/>
-                    <div class="checkbox" style="margin-left: 10px;">
-                        <label class="checkbox-inline" style="padding-right: 2em;"><input type="checkbox" name="mon">Monday</label>
-                        <label class="checkbox-inline" style="padding-right: 2em;"><input type="checkbox" name="tues">Tuesday</label>
-                        <label class="checkbox-inline" style="padding-right: 2em;"><input type="checkbox" name="wed">Wednesday</label>
-                        <label class="checkbox-inline" style="padding-right: 2em;"><input type="checkbox" name="thur">Thursday</label>
-                        <label class="checkbox-inline" style="padding-right: 2em;"><input type="checkbox" name="fri">Friday</label>
-                        <label class="checkbox-inline" style="padding-right: 2em;"><input type="checkbox" name="sat">Saturday</label>
-                        <label class="checkbox-inline" style="padding-right: 2em;"><input type="checkbox" name="sun">Sunday</label>
-                    </div>
+                    <label style="margin-bottom: 20px;"><br/>If your avaliability is more complex, please enter what hours you are avaliable below:</label><br/>
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th><small></small></th>
+                                <th><small>Monday</small></th>
+                                <th><small>Tuesday</small></th>
+                                <th><small>Wednesday</small></th>
+                                <th><small>Thursday</small></th>
+                                <th><small>Friday</small></th>
+                                <th><small>Saturday</small></th>
+                                <th><small>Sunday</small></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><small>Start</small></th>
+                                <th><input type="text" name="monStart" class="form-control input-sm" placeholder="Ex: 9am"/></th>
+                                <th><input type="text" name="tuesStart" class="form-control input-sm"/></th>
+                                <th><input type="email" name="wedStart" class="form-control input-sm"/></th>
+                                <th><input type="text" name="thursStart" class="form-control input-sm"/></th>
+                                <th><input type="text" name="friStart" class="form-control input-sm" /></th>
+                                <th><input type="text" name="satStart" class="form-control input-sm" /></th>
+                                <th><input type="text" name="sunStart" class="form-control input-sm" /></th>
+                            </tr>
+                            <tr>
+                                <th scope="row"><small>Finish</small></th>
+                                <th><input type="text" name="monStart" class="form-control input-sm" placeholder="Ex: 5pm"/></th>
+                                <th><input type="text" name="tuesStart" class="form-control input-sm" /></th>
+                                <th><input type="email" name="wedStart" class="form-control input-sm" /></th>
+                                <th><input type="text" name="thursStart" class="form-control input-sm" /></th>
+                                <th><input type="text" name="friStart" class="form-control input-sm" /></th>
+                                <th><input type="text" name="satStart" class="form-control input-sm" /></th>
+                                <th><input type="text" name="sunStart" class="form-control input-sm" /></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                     <div class="row">
                         <div class="col-sm-6">
                             <label><br/>How much notice do you require to be avaliable for job placements?</label>
@@ -209,7 +192,7 @@ IMPORTANT: DONT REMOVE
                         </div>
                     </div>
                 </div><!--END FORM GROUP-->
-            </div><!--END OF WELL 2--> 
+            </div><!--END OF WELL 1--> 
             <div class="well">
                 <div class="row">
                     <div class="col-sm-12">
@@ -309,125 +292,29 @@ IMPORTANT: DONT REMOVE
                         </div>   
                     </div><!--END OF COL-SM-6 (COL2)-->
                 </div><!--END OF WELL 3 ROW3-->       
-            </div><!--END OF WELL 3-->
-            <div class="well">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label>If references are not included within your resume, please provide three employment references:<br/></label>
-                        </div>
-                    </div>
-                </div><!--END OF WELL 4 ROW1-->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <table class="table table-bordered table-sm" >
-                            <thead>
-                                <tr>
-                                    <th><small>#</small></th>
-                                    <th><small>Supervisor name &amp; Title</small></th>
-                                    <th><small>Company Name</small></th>
-                                    <th><small>Email Address:</small></th>
-                                    <th><small>Phone Number:</small></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><small>1</small></th>
-                                    <th><input type="text" name="superName1" class="form-control input-sm" placeholder="Ex: John Doe manager"/></th>
-                                    <th><input type="text" name="compName1" class="form-control input-sm" placeholder="Ex: Okanagan Staffing"/></th>
-                                    <th><input type="email" name="emailAdd1" class="form-control input-sm" placeholder="example@address.com" /></th>
-                                    <th><input type="text" name="phoneNum1" class="form-control input-sm" placeholder="Ex: xxx-xxx-xxxx"/></th>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><small>2</small></th>
-                                    <th><input type="text" name="superName2" class="form-control input-sm" /></th>
-                                    <th><input type="text" name="compName2" class="form-control input-sm" /></th>
-                                    <th><input type="email" name="emailAdd2" class="form-control input-sm" /></th>
-                                    <th><input type="text" name="phoneNum2" class="form-control input-sm" /></th>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><small>3</small></th>
-                                    <th><input type="text" name="superName3" class="form-control input-sm" /></th>
-                                    <th><input type="text" name="compName3" class="form-control input-sm" /></th>
-                                    <th><input type="email" name="emailAdd3" class="form-control input-sm" /></th>
-                                    <th><input type="text" name="phoneNum3" class="form-control input-sm" /></th>
-                                </tr>
-                            </tbody>
-                        </table>   
- 
-                    </div><!--END OF WELL 4 COL-SM-4 (COL4)-->
-                </div>
-            </div><!--END OF WELL 4-->
+            </div><!--END OF WELL 2-->
             <div class="well" style="margin-bottom: 70px;">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-3">
                         <div class="form-group">
-                            <label>Upload your Resume &amp; Cover Letter: &nbsp;<small>(.docx or pdf files only)</small></label><br />
+                            <label for="minWage">What is the minimum hourly rate you are seeking?</label>
+                            <input type="text" class="form-control" name="minWage" placeholder="Ex: $30/h">
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <!--ROW FOR UPLOAD & SUBMISSION NOTICE-->
-                    <div class="col-sm-6">
-                        <!--UPLOAD COL FOR RESUME AND COVER LETTER-->
-                        <div class="form-group">
-                            <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top: 10px;">
-                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                                <span class="fileinput-filename"></span>
-                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <!--COL FOR SECOND UPLOAD BUTTON-->
-                        <div class="form-group">
-                            <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top: 10px;">
-                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                                <span class="fileinput-filename"></span>
-                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-7" style="padding-top: 5px;">
                         <div class="alert alert-info">
-                            <strong>IMPORTANT&nbsp;:</strong> PLEASE READ CAREFULLY<br />
-                            <ol>
-                                <li>
-                                    <p>
-                                        I declare that the information provided by myself on this application, as well as my resume, regarding my personal and prior
-                                        employment, academic history and skills is true and free of any false statements or exaggerations. I understand that any false
-                                        statements are grounds for dismissal and/or for removal from the OSS inc temp roster
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        I give permission for Okanagan staffing Services Inc. to verify my employment history by contacting the references I have provide.
-                                        I also agree to cooperate with other efforts to verify my credentials, such as by supplying copies of certificates/degrees, and by
-                                        undergoing skills testing to verify my skill level as indicated on this application.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        I understand that if offered temporary employment through Okanagan Staffing Services Inc., I will be working for and paid by
-                                        Okanagan Staffing Services Inc., and promise to comply with the company policies as stated in the
-                                        Temporary Employment & Non-Disclosure Agreement.
-                                    </p>
-                                </li>
-                            </ol>
+                            <strong>NOTE!</strong>&nbsp;<small>Please note that temp roles vary widely in pay and are different for each role.
+                            We do not guarantee a specific wage; this is for our information purposes only.</small>
                         </div>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label><input type="checkbox" name="administrative" id="administrative" value=""><strong>By clicking submit I am agreeing to the Terms of Service as layed out by Okanagan Staffing Inc.</strong></label>
-                            </div>
-                            <div class="form-group pull-left" style="padding-right: 35px;">
-                                <button type="submit" class="btn btn-primary" style="width: 100%; padding-left: 10px; padding-right: 10px;">Submit Application</button>
-                            </div>
+                    </div>
+                    <div class="col-sm-2" style="margin-top: 30px;">
+                        <div class="form-group pull-right" style="padding-top: 10px;">
+                            <button type="submit" class="btn btn-primary" style="width: 90px;">Next</button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!--END OF WELL 3-->
+            
         </form>
     </div>
 
@@ -451,20 +338,5 @@ IMPORTANT: DONT REMOVE
     <!--======================= END FOOTER SECTION ========================-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jasny-bootstrap.min.js"></script><!--JS for UPLOAD/File input type-->
 </body>
 </html>
-
-
-<!--
-    IMPORTANT: PLEASE READ CAREFULLY
-    1) I declare that the information provided by myself on this application, as well as my resume, regarding my personal and prior 
-       employment, academic history and skills is true and free of any false statements or exaggerations. I understand that any false
-       statements are grounds for dismissal and/or for removal from the OSS inc temp roster.
-    2) I give permission for Okanagan staffing Services Inc. to verify my employment history by contacting the references I have provide.
-       I also agree to cooperate with other efforst to verify my credentials, such as by supplying copies of certificates/degrees, and by
-       undergoing skills testing to verify my skill level as indicated on this application.
-    3) I understand that if offered temporary employment through Okanagan Staffing Services Inc., I will be working for and paid by 
-       Okanagan Staffing Services Inc., and promise to comply with the company policies as stated in the 
-       Temporary Employment & Non-Disclosure Agreement. 
--->
