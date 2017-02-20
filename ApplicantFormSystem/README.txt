@@ -13,7 +13,7 @@ avalLog.html
 Questions related to avaliability and Logistics
 
 submit.html
-Upload buttons for 3 different files, terms of agreement and submit button
+Alternative Reference information, Upload buttons for 3 different files, terms of agreement and submit button
 
 
 
