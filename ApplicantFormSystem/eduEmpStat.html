@@ -27,6 +27,9 @@
         textarea{
             resize: vertical;
         }
+        texthold{
+            padding-right: 50px;
+        }
     </style>
 </head>
 <body>
@@ -106,7 +109,80 @@
             <li>Upload &amp; Submit</li>
         </ol>
         <form>
-            <div class="well" style="margin-top: 70px;">
+            <div class="row" style="margin-top: 70px;">
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="well">
+                            <label>Are you currently a student?</label>
+                            <div class="radio">
+                                <label class="radio-inline"><input type="radio" name="isStudent" value="yes" required>Yes</label>
+                                <label class="radio-inline"><input type="radio" name="isStudent" value="no">No</label>
+                                <br /><br />If so, what are you studying and where? What is your career goal?<br />
+                                <textarea class="form-control" rows="3" name="isStudentQuestion" placeholder="Leave blank if you are not a student"></textarea>
+                            </div>
+                            <br /><label>What languages are you proficient in?</label>
+                            <textarea style="margin-bottom: 4px;" class="form-control" rows="3" name="isStudentQuestion" placeholder="Briefly describe your language capabilities"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="well">
+                            <label>What is your highest level of education you have completed? <small>Check all that apply:</small></label>
+                            <div class="row" style="padding-left: 12px;">
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="highschool" value="High School Diploma">High School Diploma</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="associate" value="Associate Degree">Associate Degree</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="bachelor" value="Bachelors Degree">Bachelor's Degree</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="masters" value="Masters Degree">Master's Degree</label>
+                                    </div>
+                                </div><!--END OF INNER COL-SM-6 (RIGHT SIDE)-->
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="doctoral" value="Doctoral Degree">Doctoral Degree (PHD)</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="technical" value="Technical Training">Technical Training</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="certificate" value="Certificate">Certificate</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="diploma" value="Diploma">Diploma</label>
+                                    </div>
+                                </div><!--END OF INNER COL-SM-6 (LEFT SIDE)-->
+                            </div><!--END OF INNER ROW-->
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" name="apprenticeship" value="Apprenticeship">
+                                    &nbsp;Apprenticeship
+                                </span>
+                                <input type="text" class="form-control" aria-label="..." name="tradeType" placeholder="Which trade & level completed?">
+                            </div><br />
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" name="journeyman" value="Journeyman">
+                                    &nbsp;Journeyman&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span>
+                                <input type="text" class="form-control" aria-label="..." name="tradeType2" placeholder="Which trade?">
+                            </div><br />
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" name="other" value="Other">
+                                    &nbsp;Other&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span>
+                                <input type="text" class="form-control" aria-label="..." name="eduOther" placeholder="Other: Please specify">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--END OUTER ROW: CONTAINS 2 TOP WELLS-->
+            <div class="well">
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6">
@@ -143,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-            </div><!--END OF WELL 1-->
+            </div><!--END OF WELL 2-->
             <div class="well">
                 <div class="row">
                     <div class="col-sm-12">
@@ -174,9 +250,16 @@
                                 </li>
                                 <li>
                                     <div class="radio">
-                                        Do you have a criminal record for which you have not recieved a pardon?</br>
-                                        <label class="radio-inline"><input type="radio" name="status3" value="yes" required>Yes</label>
-                                        <label class="radio-inline"><input type="radio" name="status3" value="no">No</label>
+                                        Have you ever been bonded?<br />
+                                        <label class="radio-inline"><input type="radio" name="status5" value="yes" required>Yes</label>
+                                        <label class="radio-inline"><input type="radio" name="status5" value="no">No</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio">
+                                        Are you eligible for bonding?<br />
+                                        <label class="radio-inline"><input type="radio" name="status6" value="yes" required>Yes</label>
+                                        <label class="radio-inline"><input type="radio" name="status6" value="no">No</label>
                                     </div>
                                 </li>
                             </ul>
@@ -187,48 +270,35 @@
                             <ul>
                                 <li>
                                     <div class="radio">
+                                        Do you have a criminal record for which you have not recieved a pardon?</br>
+                                        <label class="radio-inline"><input type="radio" name="status3" value="yes" required>Yes</label>
+                                        <label class="radio-inline"><input type="radio" name="status3" value="no">No</label>
+                                        <br/><br/>If yes, please provide a brief description of your record<br/>
+                                        <textarea class="form-control" rows="2" name="status3TB" placeholder="Leave blank if inapplicable"></textarea>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="radio">
                                         Would you give Okanagan Staffing Services permission to conduct a Criminal Records Check, should it be requested by a client?</br>
                                         <label class="radio-inline"><input type="radio" name="status4" value="yes" required>Yes</label>
                                         <label class="radio-inline"><input type="radio" name="status4" value="no">No</label>
+                                        <br /><br />If no, please provide a brief explanation of why<br />
+                                        <textarea class="form-control" rows="2" name="status4TB" placeholder="Leave blank if inapplicable"></textarea>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="radio">
-                                        Have you ever been bonded?<br/>
-                                        <label class="radio-inline"><input type="radio" name="status5" value="yes" required>Yes</label>
-                                        <label class="radio-inline"><input type="radio" name="status5" value="no">No</label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="radio">
-                                        Are you eligible for bonding?<br/>
-                                        <label class="radio-inline"><input type="radio" name="status6" value="yes" required>Yes</label>
-                                        <label class="radio-inline"><input type="radio" name="status6" value="no">No</label>
-                                    </div>
-                                </li>
+                                </li> 
                             </ul>
                         </div>
                     </div><!--END COL-SM-6-->
                 </div><!--END ROW-->
-            </div><!--END OF WELL 2--> 
-            <div class="well">
-                <div class="row">
-                    <div class="form-group">
-                        <div class="col-sm-6">
-                            <label>Are you currently a student?</label>
-                            <div class="radio">
-                                <label class="radio-inline"><input type="radio" name="isStudent" value="yes" required>Yes</label>
-                                <label class="radio-inline"><input type="radio" name="isStudent" value="no">No</label>
-                            </div>
-                            <label>If so, what are you studying and where? What is your career goal?</label>
-                            <textarea class="form-control" rows="4" name="isStudentQuestion" placeholder="Leave blank if you are not a student"></textarea>
-                        </div>
-                        <div class="col-sm-6">
-
-                        </div>
+            </div><!--END OF WELL 3-->  
+            <div class="row" style="padding-bottom: 70px;">
+                <div class="col-sm-12">
+                    <div class="form-group pull-right" style="padding-top: 10px;">
+                        <button type="submit" class="btn btn-primary" style="width: 90px;">Next</button>
                     </div>
-                </div><!--END OF LOWER ROW IN WELL 3-->
-            </div><!--END OF WELL 3-->
+                </div>
+            </div>      
         </form>
     </div>
 
