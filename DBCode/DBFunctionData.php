@@ -26,15 +26,15 @@ $tablePersonal = "create table personal(
 	email varchar(50),
 	PCMethod varchar(10),
 	workType varchar(4),
-	employmentStatus varchar(25),
+	employmentStatus varchar(50),
 	dateForm varchar(10),
-	findOKStaff varchar(25));";
+	findOKStaff varchar(50));";
 $tablePermanentData = "create table permanentData(
 	applicantID int,
-	mainExpertise varchar(50),
-	roleInterest varchar(50),
-	perfectCandidate varchar(50),
-	employmentStatus varchar(50),
+	mainExpertise varchar(100),
+	roleInterest varchar(100),
+	perfectCandidate varchar(100),
+	employmentStatus varchar(100),
 	salaryExpect varchar(50),
 	mainTransport varchar(10),
 	filePath varchar(50));";
@@ -43,9 +43,9 @@ $tableCitizenOther = "create table citizenOther(
 	citizen varchar(3),
 	legalWork varchar(3),
 	crimeRecord varchar(3),
-	yesWhat varchar(50),
+	yesWhat varchar(100),
 	permission varchar(3),
-	noWhy varchar(50),
+	noWhy varchar(100),
 	pastBonding varchar(3),
 	eligibleBonding varchar(3),
 	certificates varchar(50),
@@ -54,7 +54,7 @@ $tableCitizenOther = "create table citizenOther(
 	driveClass int,
 	airBrake varchar(3),
 	mainTransport varchar(10),
-	notice varchar(25),
+	notice varchar(50),
 	hourlyRate varchar(10),
 	filePath varchar(50))";
 $tableEducation = "create table education(
@@ -108,7 +108,7 @@ $tableExpertise = "create table expertise(
 	transport varchar(3),
 	trades varchar(3),
 	warehouse varchar(3),
-	other varchar(25));";
+	other varchar(50));";
 $tableSkillPrograms = "create table skillPrograms(
 	applicantID int,
 	accounting varchar(25),
@@ -191,28 +191,28 @@ $tableAvailability = "create table availability(
 	fullTimes varchar(3),
 	evenings varchar(3),
 	weekends varchar(3),
-	monday varchar(25),
-	tuesday varchar(25),
-	wednesday varchar(25),
-	thursday varchar(25),
-	friday varchar(25),
-	saturday varchar(25),
-	sunday varchar(25));";	
+	monday varchar(50),
+	tuesday varchar(50),
+	wednesday varchar(50),
+	thursday varchar(50),
+	friday varchar(50),
+	saturday varchar(50),
+	sunday varchar(50));";	
 $tableApplicantReferences = "create table applicantReferences(
 	applicantID int,
-	supervisorName1 varchar(25),
-	superTitle1 varchar(25),
-	companyName1 varchar(25),
+	supervisorName1 varchar(50),
+	superTitle1 varchar(50),
+	companyName1 varchar(50),
 	referenceEmail1 varchar(50),
 	referencePhone1 varchar(15),
-	supervisorName2 varchar(25),
-	superTitle2 varchar(25),
-	companyName2 varchar(25),
+	supervisorName2 varchar(50),
+	superTitle2 varchar(50),
+	companyName2 varchar(50),
 	referenceEmail2 varchar(50),
 	referencePhone2 varchar(15),
-	supervisorName3 varchar(25),
-	superTitle3 varchar(25),
-	companyName3 varchar(25),
+	supervisorName3 varchar(50),
+	superTitle3 varchar(50),
+	companyName3 varchar(50),
 	referenceEmail3 varchar(50),
 	referencePhone3 varchar(15));";
 	
