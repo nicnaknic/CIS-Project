@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -20,12 +20,11 @@
         h1{
             color: rgb(28, 158, 203);
         }
-        .input-group-btn select {
-	        border-color: #ccc;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-top: 7px;
-            padding-bottom: 7px;
+        .no-link{
+            color: #337ab7;
+        }
+        textarea{
+            resize: none;
         }
     </style>
 </head>
@@ -94,480 +93,357 @@
     <div class="container"> <!--Main body contents, footer will be added in a container-fluid later on -->
 
         <div class="page-header">
-                <h1>Job Applicant Form: &nbsp; <small>Temporary Application</small></h1>
+                <h1>Job Applicant Form: &nbsp; <small>Areas Of Expertise</small></h1>
         </div>
-        <ol class="breadcrumb">
+        <ol class="breadcrumb no-link">
             <li><a href="http://www.okanaganstaffing.com/job-seeker-services/job-openings/">Job Openings </a></li>
-            <li><a href="#">Apply </a></li>
-            <li><a href="#">Basic Application</a></li> <!--Link back to basicForm before production-->
-            <li><a href="#"><strong>Temporary Application</strong></a></li>
-            <li><a href="#">Upload &amp; Submit </a></li>
+            <li>Apply</li>
+            <li>Basic Application</li> <!--Link back to basicForm before production-->
+            <li>Education &amp; Employment</li>
+            <li><strong>Areas Of Expertise</strong></li>
+            <li>Avaliability &amp; Logistics</li>
+            <li>Upload &amp; Submit</li>
         </ol>
 
         <form>
-            <div class="row" style="margin-top: 70px;"><!--TOP ROW ITEMS-->
-                <div class="col-sm-6"><!--Current employment/work type form group (Left side well)-->
-                    <div class="well">
-                        <div class="form-group">
-                            <label for="empStat">What is your current employment status?</label>
-                            <input type="text" max="50" class="form-control" name="empStat" id="empStat" placeholder="Describe here" required>
+            <div class="well" style="margin-top: 70px;">
+                <label>What are your areas of expertise? Check all that apply:</label>
+                <div class="form-group" style="padding-left: 12px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="accountingFinance" value="Accounting/Finance">Accounting/Finance</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="adminSupport" value="Administrative Support">Administrative Support</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="bookkeeping" value="Bookkeeping">Bookkeeping</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="businessOperations" value="Business Operations">Business Operations</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="construction" value="Construction">Construction</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="customerService" value="Customer Service">Customer Service</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="dataEntry" value="Data Entry">Data Entry</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="engineering" value="Engineering">Engineering</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="equiptmentOperators" value="Equiptment Operators">Equiptment Operators</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="foodService" value="Food Service">Food Service</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="generalLabour" value="General Labour">General Labour</label>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>What type of work are you mainly seeking? <small>Please choose the option that Best describes your situation:</small></label>
-                            <div class="radio">
-                                <label><input type="radio" name="opt1">Temporary work only</label>
+                        <div class="col-sm-4">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="healthSafety" value="Health and Safety">Health &amp; Safety</label>
                             </div>
-                            <div class="radio">
-                                <label><input type="radio" name="opt1">Temporary work prefered, but will take Permanent role if the right fit</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="healthcare" value="Healthcare">Healthcare</label>
                             </div>
-                            <div class="radio">
-                                <label><input type="radio" name="opt1">Temporary or Permanent work, both are fine</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="hospitality" value="Hospitality/Tourism">Hospitality/Tourism</label>
                             </div>
-                            <div class="radio">
-                                <label><input type="radio" name="opt1">Permanent work preferred, am only seeking temporary work while I seek a Permanent role</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="humanResources" value="Human Resources/Training">Human Resources/Training</label>
                             </div>
-                            <div class="radio">
-                                <label><input type="radio" name="opt1">permanent work preferred, will only accept Temporary work if there is a possibility it could go Permanent</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="infoTechnologies" value="Information Technologies">Information Technologies</label>
                             </div>
-                            <div class="radio">
-                                <label><input type="radio" name="opt1">Permanent work only</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="landscaping" value="Landscaping/Agriculture">Landscaping/Agriculture</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="legalAssistant" value="Legal Assistant/Paralegal">Legal Assistant/Paralegal</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="manufacturing" value="Manufacturing/Heavy Industry/Production Line">Manufacturing/Heavy Industry/Production Line</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="marketing" value="Marketing/Advertising">Marketing/Advertising</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="management" value="Management">Management</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="medical" value="Medical/Dental Office Administration">Medical/Dental Office Administration</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="oildGasRigging" value="Oil & Gas Rigging">Oil &amp; Gas Rigging</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="payrol" value="Payrol/Benefits Administration">Payrol/Benefits Administration</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="projectManagement" value="Project Management">Project Management</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="reception" value="Reception">Reception</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="retail" value="Retail">Retail</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="sales" value="Sales">Sales</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="technicalTransport" value="Technical Transport/Logistics">Technical Transport/Logistics</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="trades" value="Trades">Trades</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="warehouse" value="Warehouse">Warehouse</label>
+                            </div>
+                        </div>
+                    </div><!--END OF ROW-->
+                </div>
+            </div><!--END OF WELL 1 (Area's Of Expertise)-->
+            <div class="well">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-4"><label>Please list which software programs you are experienced and proficient in</label></div>
+                        <div class="col-sm-8">
+                            <div class="alert alert-info" role="alert"><strong>NOTE!&nbsp;&nbsp;</strong>If you are not proficient in any of these areas,  or you are applying 
+                            for a LABOUR/TRADES/HOSPITALITY job, please skip this section</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <br />Accounting<br />
+                            <input type="text" max="100" class="form-control" name="accountingSoftware" placeholder="Ex: Quickbooks, GnuCash">
+                            <br />Banking<br />
+                            <input type="text" max="100" class="form-control" name="bankingSoftware">
+                            <br />Customer Relationship Management<br />
+                            <input type="text" max="100" class="form-control" name="customerRelationshipSoftware">
+                            <br />Database Management<br />
+                            <input type="text" max="100" class="form-control" name="databaseSoftware">
+                            <br />Word Processing<br />
+                            <input type="text" max="100" class="form-control" name="wordprocessingSoftware">
+                        </div>
+                        <div class="col-sm-4">
+                            <br />Design and Drafting<br />
+                            <input type="text" max="100" class="form-control" name="designSoftware">
+                            <br />Healthcare<br />
+                            <input type="text" max="100" class="form-control" name="healthcareSoftware">
+                            <br />Spreadsheets<br />
+                            <input type="text" max="100" class="form-control" name="spreadsheetsSoftware">
+                            <br />Payroll<br />
+                            <input type="text" max="100" class="form-control" name="payrollSoftware">
+                            <br />Other Software<br />
+                            <input type="text" max="100" class="form-control" name="otherSoftware">
+                        </div>
+                        <div class="col-sm-4">
+                            <br />Presentations<br />
+                            <input type="text" max="100" class="form-control" name="presentationsSoftware">
+                            <br />Project Management<br />
+                            <input type="text" max="100" class="form-control" name="projectSoftware">
+                            <br />Publishing<br />
+                            <input type="text" max="100" class="form-control" name="publishingSoftware">
+                            <br />Transcription<br />
+                            <input type="text" max="100" class="form-control" name="customerRelationshipSoftware">
+                        </div>
+                    </div>
+                </div><!--END WELL 2 FORM GROUP 1-->
+                <label><br />Please check off which of the following ACCOUNTING skills/functions you are experienced and proficient in:</label>
+                <div class="form-group" style="margin-left: 12px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="accountsPayable" value="Accounts Payable">Accounts Payable</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="accountsRecievable" value="Accounts Recievable">Accounts Recievable</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="backups" value="Backups/Recovery">Backups/Recovery</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="bankReconciliations" value="Bank Reconciliations">Bank Reconciliations</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="collections" value="Collections">Collections</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="deposites" value="Deposites">Deposites</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="financialStatements" value="Financial Statements">Financial Statements</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="fullCycle" value="Full Cycle Accounting">Full Cycle Accounting</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="generalJournal" value="General Journal">General Journal</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="incomeTaxBusiness" value="Income Tax Returns - Business">Income Tax Returns - Business</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="incomeTaxPersonal" value="Income Tax Returns - Personal">Income Tax Returns - Personal</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="multipleEntities" value="Multiple Entities">Multiple Entities</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="payroll" value="Payroll/Benefits">Payroll/Benefits</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="trialBalances" value="Trial Balances">Trial Balances</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="yearEnd" value="Year End Financials">Year End Financials</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="input-group" style="margin-left: -12px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" name="otherCityCB1" aria-label="...">
+                                </span>
+                                <input type="text" name="otherCityTxt1" placeholder="Other, Please specify" class="form-control" aria-label="...">
+                            </div>
+                        </div>
+                        <div class="col-sm-8"></div>
+                    </div>
+                </div><!--END WELL 2 FORM GROUP2-->
+            </div><!--END OF WELL 2 (Software programs)-->
+            <div class="well">
+                <div class="row">
+                    <div class="col-sm-4"><label>Please check off which LABOUR/TRADE/HOSPITALITY skills/functions you are experienced and proficient in.</label></div>
+                    <div class="col-sm-8">
+                        <div class="alert alert-info" role="alert">
+                            <strong>NOTE!&nbsp;&nbsp;</strong>If you are not proficient in any of these areas, or you are applying
+                            for an ADMINISTRATIVE/ACCOUNTING job, please skip this section.
+                        </div>
+                    </div>
+                </div><!--END OF WELL 3 UPPER ROW-->
+                <div class="form-group" style="margin-left: 12px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label style="margin-bottom: -2px; margin-left: -12px;">Hospitality:</label>
+                            <div class="checkbox" style="margin-top: 3px;">
+                                <label><input type="checkbox" name="catering" value="Catering">Catering</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="bartending" value="Bartending">Bartending</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="host" value="Host">Host</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="waitress" value="Waitress">Waitress</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="cook" value="Cook/Chef">Cook/Chef</label>
+                            </div>
+                            <label style="margin-bottom: -2px; margin-left: -12px;">Mechanical Assembly:</label>
+                            <div class="checkbox" style="margin-top: 3px;">
+                                <label><input type="checkbox" name="discDrive" value="Disc Drive">Disc Drive</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="machineParts" value="Machine Parts">Machine Parts</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label style="margin-bottom: -2px; margin-left: -12px;">Manufacturing:</label>
+                            <div class="checkbox" style="margin-top: 3px;">
+                                <label><input type="checkbox" name="assembly" value="Assembly">Assembly</label>
+                            </div>
+                            <div class="checkbox" ">
+                                <label><input type="checkbox" name="construction" value="Construction">Construction</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="line" value="Line">Line</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="piecework" value="Piecework">Piecework</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="printing" value="Printing">Printing</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="shipping" value="Shipping/Receiving">Shipping/Receiving</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="warehouse" value="Warehouse">Warehouse</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label style="margin-bottom: -2px; margin-left: -12px;">Electronic Assembly:</label>
+                            <div class="checkbox" style="margin-top: 3px;">
+                                <label><input type="checkbox" name="kitting" value="Kitting">Kitting</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="pcBoards" value="PC Boards">PC Boards</label>
+                            </div>
+                            <label style="margin-bottom: -2px; margin-left: -12px;">Testing/Inspection/Quality Control:</label>
+                            <div class="checkbox" style="margin-top: 3px;">
+                                <label><input type="checkbox" name="automated" value="Automated">Automated</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="manual" value="Manual">Manual</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="final" value="Final">Final</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6"><!--Area of expertise form group (Right side well)-->
-                    <div class="well" style="padding-top: 63px; padding-bottom: 63px;">
-                        <label>What Are your areas of expertise? <large>Check all that apply:</large></label>
-                        <div class="form-group"> 
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="accouting" id="accouting" value="">Accounting</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="administrative" id="administrative" value="">Administrative</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="book-keeping" id="book-keeping" value="">Book-keeping</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="customer-service" id="customer-service" value="">Customer Service</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="data-entry" id="data-entry" value="">Data Entry</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="legal-office" id="legal-office" value="">Legal Office</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="management" id="management" value="">Managment</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="medical-office" id="medical-office" value="">Medical Office</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="payro/l" id="payroll" value="">Payroll</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="reception" id="reception" value="">Reception</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="sales-marketing" id="sales-marketing" value="">Sales &amp; Marketing</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="input-group" style="padding: 0 100px 0 3px;">
-                                            <span class="input-group-addon">
-                                                <input type="checkbox" name="other-expertise-CB" aria-label="...">
-                                            </span>
-                                                <input type="text"  name="other-expertise" placeholder="Other, Please specify" class="form-control" aria-label="...">
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Please list all the current certificates/tickets that you have completed:</label>
+                            <textarea style="margin-bottom: 4px;" class="form-control" rows="1" name="certsTickets" placeholder="Ex: Fork-Lift, WHMIS, Serving it Right, etc"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <div class="radio">
+                                Do you have a driver's licence?</br>
+                                <label class="radio-inline"><input type="radio" name="licence" value="yes">Yes</label>
+                                <label class="radio-inline"><input type="radio" name="licence" value="no">No</label>
+                                <br /><br />If yes, what class? Air brake endorsement?<br />
+                                <textarea class="form-control" rows="2" name="status3TB" placeholder="Leave blank if inapplicable"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="radio">
+                                Are you capable of lifting over 50lbs?</br>
+                                <label class="radio-inline"><input type="radio" name="lift50" value="yes">Yes</label>
+                                <label class="radio-inline"><input type="radio" name="lift50" value="no">No</label>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row"><!--MIDDLE ROW1 ITEMS-->
+            </div><!--END OF WELL 3-->
+            <div class="row" style="padding-bottom: 70px;">
                 <div class="col-sm-12">
-                    <div class="well" style="margin-bottom: 85px;">
-                        <div class="row"><!--Top items for Proficiency panel -->
-                            <div class="col-sm-6">
-                                <h5><strong>Please indicate your Proficiency with the following on a scale of 1 to 5,</strong></br>
-                                Where 1 = basic, 3 = intermediate and 5 = advanced</h5>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="alert alert-info" role="alert">
-                                    <strong>NOTE!</strong>&nbsp;<small>PLEASE DO NOT RATE ANYTHING THAT YOU ARE NOT EXPERIENCED IN/HAVE NEVER USED</small>
-                                </div>
-                            </div>
-                        </div> 
-
-                        <div class="form-group"><!--Contents for Proficiency panel-->
-                            <div class="row">
-                                <div class="col-sm-3"><!--SOFTWARE-->
-                                    <label>Software</label></br>
-
-                                    <select class="custom-select" name="mAccess" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Microsoft Access &nbsp;</small></br>
-                                   
-                                    <select class="custom-select" name="mExcel" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Microsoft Excel &nbsp;</small></br>
-
-                                    <select class="custom-select" name="mWord" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Microsoft Word &nbsp;</small></br> 
-
-                                    <select class="custom-select" name="mOutlook" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Microsoft Outlook &nbsp;</small></br>
-
-                                    <select class="custom-select" name="mPowerpoint" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Microsoft PowerPoint &nbsp;</small></br>
-
-                                     <select class="custom-select" name="mPublisher" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Microsoft Publisher &nbsp;</small></br>                                                                                                                                              
-
-                                    <select class="custom-select" name="qBooks" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>QuickBooks Pro &nbsp;</small></br>
-
-                                    <select class="custom-select" name="sAccounting" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Simply Accounting/Sage 50 &nbsp;</small></br>
-
-                                    <select class="custom-select" name="accpac" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>ACCPAC &nbsp;</small></br>
-
-                                    <select class="custom-select" name="sap" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>SAP &nbsp;</small></br>
-
-                                </div>
-
-                                <div class="col-sm-3"><!--ACCOUNTING-->
-                                    <label>Accouting</label></br>
-
-                                    <select class="custom-select" name="a/p" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>A/P</small></br>
-                                   
-                                    <select class="custom-select" name="a/r" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>A/R &nbsp;</small></br>
-
-                                    <select class="custom-select" name="backup/recovery" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Backup/Recovery &nbsp;</small></br>
-
-                                    <select class="custom-select" name="collections" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Collections &nbsp;</small></br>
-
-                                    <select class="custom-select" name="deposites" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Deposites &nbsp;</small></br>
-
-                                    <select class="custom-select" name="fStatements" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Financial Statements &nbsp;</small></br>
-
-                                    <select class="custom-select" name="payroll" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Payroll &nbsp;</small></br>
-
-                                    <select class="custom-select" name="tReturns" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Tax Returns &nbsp;</small></br>
-
-                                    <select class="custom-select" name="tBalance" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Trial Balance &nbsp;</small></br>                                                                                                                                                                                                                                                           
-
-                                </div>
-
-                                <div class="col-sm-3"><!--TYPING-->
-                                    <label>Typing</label></br>
-
-                                    <select class="custom-select" name="Correspondence" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Correspondence &nbsp;</small></br>
-                                   
-                                    <select class="custom-select" name="dEntry" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Data Entry &nbsp;</small></br>
-
-                                    <select class="custom-select" name="dictaphone" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Dictaphone &nbsp;</small></br>
-
-                                    <select class="custom-select" name="legal" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Legal &nbsp;</small></br>
-
-                                    <select class="custom-select" name="medical" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Medical &nbsp;</small></br>
-
-                                    <select class="custom-select" name="mTaking" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Minute Taking &nbsp;</small></br>
-
-                                    <select class="custom-select" name="tWPM" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Typing WPM &nbsp;</small></br>                                                                                                                                                                                                                      
-
-                                </div>
-
-                                <div class="col-sm-3"><!--SWITCHBOARD-->
-                                    <label>SwitchBoard</label></br>
-
-                                    <select class="custom-select" name="m1-5" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Multiline with 1-5 lines &nbsp;</small></br>
-                                   
-                                    <select class="custom-select" name="m6-10" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Multiline with 6-10 lines &nbsp;</small></br>
-
-                                    <select class="custom-select" name="m10+" style="margin-top: 5px;">
-                                        <option selected value="">&nbsp;n/a&nbsp;</option>
-                                        <option value="1">&nbsp;1</option>
-                                        <option value="2">&nbsp;2</option>
-                                        <option value="3">&nbsp;3</option>
-                                        <option value="4">&nbsp;4</option>
-                                        <option value="5">&nbsp;5</option>
-                                    </select>
-                                    <small>Multiline with 10+ lines &nbsp;</small></br>                                    
-
-                                </div>     
-
-                            </div>
-                        </div>
-
-                        <div class="form-group"><!--Other selection for Proficiency panel-->
-                            <div class="row">
-                                <div class="col-sm-5">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <select name="other1" id="other1" class="btn">
-                                                    <option selected value="">&nbsp;n/a&nbsp;</option>
-                                                    <option value="1">&nbsp;1</option>
-                                                    <option value="2">&nbsp;2</option>
-                                                    <option value="3">&nbsp;3</option>
-                                                    <option value="4">&nbsp;4</option>
-                                                    <option value="5">&nbsp;5</option>
-                                                </select>
-                                            </span>
-                                            <input type="text" name="other1Value" id="other1Value" class="form-control" placeholder="Other, Please specify">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <select name="other2" id="other2" class="btn">
-                                                    <option selected value="">&nbsp;n/a&nbsp;</option>
-                                                    <option value="1">&nbsp;1</option>
-                                                    <option value="2">&nbsp;2</option>
-                                                    <option value="3">&nbsp;3</option>
-                                                    <option value="4">&nbsp;4</option>
-                                                    <option value="5">&nbsp;5</option>
-                                                </select>
-                                            </span>
-                                            <input type="text" name="other2Value" id="other2Value" class="form-control" placeholder="Other, Please specify">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group pull-right" style="padding-right: 35px;">
-                                        <button type="submit" class="btn btn-primary" style="width: 90px;">Next</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
+                    <div class="form-group pull-right" style="padding-top: 10px;">
+                        <button type="submit" class="btn btn-primary" style="width: 90px;">Next</button>
                     </div>
                 </div>
-            </div>
+            </div><!--"next" button; last for element-->
         </form>
     </div>
 
