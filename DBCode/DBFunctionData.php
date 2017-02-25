@@ -26,7 +26,7 @@ $tablePersonal = "create table personal(
 	email varchar(50),
 	PCMethod varchar(10),
 	workType varchar(4),
-	employmentStatus varchar(50),
+	employerStatus varchar(50),
 	dateForm varchar(10),
 	findOKStaff varchar(50));";
 $tablePermanentData = "create table permanentData(
@@ -34,7 +34,6 @@ $tablePermanentData = "create table permanentData(
 	mainExpertise varchar(100),
 	roleInterest varchar(100),
 	perfectCandidate varchar(100),
-	employmentStatus varchar(100),
 	salaryExpect varchar(50),
 	mainTransport varchar(10),
 	filePath varchar(50));";
@@ -78,7 +77,7 @@ $tableEducation = "create table education(
 	languageSpeak varchar(50));";
 $tableExpertise = "create table expertise(
 	applicantID int,
-	accounting varchar(3),
+	accountingEX varchar(3),
 	administrative varchar(3),
 	bookKeeping varchar(3),
 	business varchar(3),
@@ -101,14 +100,14 @@ $tableExpertise = "create table expertise(
 	management varchar(3),
 	medical varchar(3),
 	oilGas varchar(3),
-	payroll varchar(3),
+	payrollEX varchar(3),
 	projectM varchar(3),
 	reception varchar(3),
 	sales varchar(3),
 	transport varchar(3),
 	trades varchar(3),
 	warehouse varchar(3),
-	other varchar(50));";
+	otherExpert varchar(50));";
 $tableSkillPrograms = "create table skillPrograms(
 	applicantID int,
 	accounting varchar(25),
@@ -124,7 +123,7 @@ $tableSkillPrograms = "create table skillPrograms(
 	publish varchar(25),
 	transript varchar(25),
 	wordProcess varchar(25),
-	other varchar(25));";
+	otherSkillP varchar(25));";
 $tableMoneySkills = "create table moneySkills(
 	applicantID int,
 	payable varchar(3),
@@ -142,7 +141,7 @@ $tableMoneySkills = "create table moneySkills(
 	payrollBenefits varchar(3),
 	trialBalances varchar(3),
 	yearEndFin varchar(3),
-	other varchar(3));";
+	otherMoneySkill varchar(3));";
 $tableOtherSkills = "create table otherSkills(
 	applicantID int,
 	MAssembly varchar(25),
@@ -220,26 +219,26 @@ $tableApplicantReferences = "create table applicantReferences(
 $staffInsertion = "insert into staff(firstName, lastName, passwords, username) values (";
 $jobsInsertion = "insert into jobs(applicantID, jobNum, jobName, jobDate, jobType) values (";
 $personalInsertion = "insert into personal(applicationID, applicantID, firstName, lastName, addressNum,
-	street, city, province, postal, homePhone, cellPhone, email, PCMethod, workType, employmentStatus, 
+	street, city, province, postal, homePhone, cellPhone, email, PCMethod, workType, employerStatus, 
 	dateForm, findOKStaff) values (";
 $permanentDataInsertion = "insert into permanentData(applicantID, mainExpertise, roleInterest, perfectCandidate, 
-	employmentStatus, salaryExpect, mainTransport, filePath) values (";
+	salaryExpect, mainTransport, filePath) values (";
 $citizenOtherInsertion = "insert into citizenOther(applicantID, citizen, legalWork, crimeRecord, yesWhat, permission, 
 	noWhy, pastBonding, eligibleBonding, certificates, lifting, driverLicense, driveClass, airBrake, mainTransport, 
 	notice, hourlyRate, filePath) values (";
 $educationInsertion = "insert into education(applicantID, highSchool, associateDegree, bachelorDegree, masterDegree, 
 	doctorDegree, technical, certificate, diploma, AShipTrade, AShipLevel, JManTrade, noEducation, student, studyData, 
 	languageRead, languageWrite, languageSpeak) values (";
-$expertiseInsertion = "insert into expertise(applicantID, accounting, administrative, bookKeeping, business, construction, 
+$expertiseInsertion = "insert into expertise(applicantID, accountingEX, administrative, bookKeeping, business, construction, 
 	customerService, dataEntry, engineering, equipment, foodService, generalLabour, healthSafety, healthCare, hospitality, 
 	humanResources, infoTechnology, landscaping, legalAssistant, manufacture, marketing, management, medical, oilGas, 
-	payroll, projectM, reception, sales, transport, trades, warehouse, other) values (";
+	payrollEX, projectM, reception, sales, transport, trades, warehouse, otherExpert) values (";
 $skillProgramsInsertion = "insert into skillPrograms(applicantID, accounting, banking, CRManagement, DBManagement, 
 	designDraft, healthCare, spreadsheets, payroll, presentations, PManagment, publish, transript, wordProcess, 
-	other) values (";
+	otherSkillP) values (";
 $moneySkillsInsertion = "insert into moneySkills(applicantID, payable, receivable, backups, bankR, collections, deposits, 
 	financial, fullCycleAcc, journal, taxBusiness, taxPersonal, entities, payrollBenefits, trialBalances, yearEndFin, 
-	other) values (";
+	otherMoneySkill) values (";
 $otherSkillsInsertion = "insert into otherSkills(applicantID, MAssembly, MConstruction, MLine, MPieceWork, MPrinting, 
 	MShipping, MWarehouse, EAKitting, EAPCBoards, TIQCAutomated, TIQCManual, TIQCFinal, MADiscDrive, MAMachineParts, 
 	HCatering, HBartending, HHost, HWaitstaff, HCookChef) values (";
@@ -255,10 +254,10 @@ $applicantReferencesInsertion = "insert into applicantReferences(applicantID, su
 // Table Selection Data
 $StaffSelection ="select s.firstName, s.lastName, s.passwords, s.username 
 	from staff s;";
-$OnlyPermSelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, p.addressNum, 
+$PermanentSelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, p.addressNum, 
 	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, p.workType, 
 	p.employerStatus, p.dateForm, p.findOKStaff,
-	pd.mainExpertise, pd.roleInterest, pd.perfectCandidate, pd.employmentStatus, pd.salaryExpect, 
+	pd.mainExpertise, pd.roleInterest, pd.perfectCandidate, pd.salaryExpect, 
 	pd.mainTransport, pd.filePath,
 	j.jobNum, j.jobName, j.jobDate, j.jobType
 	from personal p, permanentData pd, jobs j
@@ -266,7 +265,7 @@ $OnlyPermSelection = "select distinct p.applicationID, p.applicantID, p.firstNam
 	and p.applicantID = j.applicantID
 	and p.workType = 'OP';";
 
-$NotOnlyPermSelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, p.addressNum, 
+$TemporySelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, p.addressNum, 
 	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, p.workType, 
 	p.employerStatus, p.dateForm, p.findOKStaff,
 	j.jobNum, j.jobName, j.jobDate, j.jobType,
@@ -276,21 +275,21 @@ $NotOnlyPermSelection = "select distinct p.applicationID, p.applicantID, p.first
 	ed.highSchool, ed.associateDegree, ed.bachelorDegree, ed.masterDegree, ed.doctorDegree, ed.technical, 
 	ed.certificate, ed.diploma, ed.AShipTrade, ed.AShipLevel, ed.JManTrade, ed.noEducation, ed.student, ed.studyData, 
 	ed.languageRead, ed.languageWrite, ed.languageSpeak,
-	ex.accounting, ex.administrative, ex.bookKeeping, ex.business, ex.construction, ex.customerService, ex.dataEntry, 
+	ex.accountingEX, ex.administrative, ex.bookKeeping, ex.business, ex.construction, ex.customerService, ex.dataEntry, 
 	ex.engineering, ex.equipment, ex.foodService, ex.generalLabour, ex.healthSafety, ex.healthCare, ex.hospitality, 
 	ex.humanResources, ex.infoTechnology, ex.landscaping, ex.legalAssistant, ex.manufacture, ex.marketing, 
-	ex.management, ex.medical, ex.oilGas, ex.payroll, ex.projectM, ex.reception, ex.sales, ex.transport, ex.trades, 
-	ex.warehouse, ex.other,
+	ex.management, ex.medical, ex.oilGas, ex.payrollEX, ex.projectM, ex.reception, ex.sales, ex.transport, ex.trades, 
+	ex.warehouse, ex.otherExpert,
 	sp.accounting, sp.banking, sp.CRManagement, sp.DBManagement, sp.designDraft, sp.healthCare, sp.spreadsheets, 
-	sp.payroll, sp.presentations, sp.PManagment, sp.publish, sp.transript, sp.wordProcess, sp.other
+	sp.payroll, sp.presentations, sp.PManagment, sp.publish, sp.transript, sp.wordProcess, sp.otherSkillP,
 	ms.payable, ms.receivable, ms.backups, ms.bankR, ms.collections, ms.deposits, ms.financial, ms.fullCycleAcc, 
 	ms.journal, ms.taxBusiness, ms.taxPersonal, ms.entities, ms.payrollBenefits, ms.trialBalances, 
-	ms.yearEndFin, ms.other
+	ms.yearEndFin, ms.otherMoneySkill,
 	os.MAssembly, os.MConstruction, os.MLine, os.MPieceWork, os.MPrinting, os.MShipping, os.MWarehouse, os.EAKitting, 
 	os.EAPCBoards, os.TIQCAutomated, os.TIQCManual, os.TIQCFinal, os.MADiscDrive, os.MAMachineParts, os.HCatering, 
 	os.HBartending, os.HHost, os.HWaitstaff, os.HCookChef,
 	c.armstrong, c.enderby, c.kamloops, c.kelowna, c.lakeCountry, c.OKFalls, c.oliver, c.osoyoos, c.oyama, c.peachland,
-	c.penticton, c.salmonArm, c.sicamous, c.summerland, c.vernon, c.westKelowna, c.winfield, c.otherCities,
+	c.penticton, c.salmonArm, c.sicamous, c.summerland, c.vernon, c.westKelowna, c.winfield, c.otherCity,
 	a.dayTimes, a.partTimes, a.fullTimes, a.evenings, a.weekends, a.monday, a.tuesday, a.wednesday, a.thursday,
 	a.friday, a.saturday, a.sunday, 
 	ar.supervisorName1, ar.superTitle1, ar.companyName1, ar.referenceEmail1, ar.referencePhone1, 
@@ -309,5 +308,4 @@ $NotOnlyPermSelection = "select distinct p.applicationID, p.applicantID, p.first
 	and p.applicantID = a.applicantID
 	and p.applicantID = ar.applicantID
 	and p.workType <> 'OP';";
-	
 ?>
