@@ -1,4 +1,38 @@
 <?php
+//Insertion Array Variables
+$staff = array_fill_keys(array('firstName', 'lastName', 'userName', 'password'), '');
+$jobs = array('apptID'=>0, 'job#'=>0, 'name'=>'', 'date'=>'', 'type'=>'');
+$personal = array('appnID'=>0, 'apptID'=>0, 'firstName'=>'', 'lastName'=>'', 'address#'=>0, 'street'=>'', 'city'=>'', 
+'province'=>'', 'postal'=>'', 'homePhone'=>'', 'cellPhone'=>'', 'email'=>'', 'PCMethod'=>'', 'workType'=>'', 
+'employerStatus'=>'', 'dateForm'=>'', 'findOKStaff'=>'');
+$permanent = array('apptID'=>0, 'mainExpertise'=>'', 'roleInterest'=>'', 'perfectCandidate'=>'', 
+'salaryExpect'=>'', 'mainTransport'=>'', 'filePath'=>'');
+$citizenO = array('apptID'=>0, 'citizen'=>'', 'legalWork'=>'', 'crimeRecord'=>'', 'yesWhat'=>'', 'permission'=>'', 'noWhy'=>'', 
+'pastBonding'=>'', 'eligibleBonding'=>'', 'certificates'=>'', 'lifting'=>'', 'driverLicense'=>'', 'driveClass'=>'', 'airBrake'=>'', 
+'mainTransport'=>'', 'notice'=>'', 'hourlyRate'=>'', 'filePath'=>'');
+$education = array('apptID'=>0, 'highSchool'=>'', 'associateDegree'=>'', 'bachelorDegree'=>'', 'masterDegree'=>'', 'doctorDegree'=>'', 
+'technical'=>'', 'certificate'=>'', 'diploma'=>'', 'AShipTrade'=>'', 'AShipLevel'=>'', 'JManTrade'=>'', 'noEducation'=>'', 'student'=>'', 
+'studyData'=>'', 'languageRead'=>'', 'languageWrite'=>'', 'languageSpeak'=>'');
+$expertise = array('apptID'=>0, 'accountingEX'=>'', 'administrative'=>'', 'bookKeeping'=>'', 'business'=>'', 'construction'=>'', 
+'customerService'=>'', 'dataEntry'=>'', 'engineering'=>'', 'equipment'=>'', 'foodService'=>'', 'generalLabour'=>'', 'healthSafety'=>'', 
+'healthCare'=>'', 'hospitality'=>'', 'humanResources'=>'', 'infoTechnology'=>'', 'landscaping'=>'', 'legalAssistant'=>'', 'manufacture'=>'', 
+'marketing'=>'', 'management'=>'', 'medical'=>'', 'oilGas'=>'', 'payrollEX'=>'', 'projectM'=>'', 'reception'=>'', 'sales'=>'', 'transport'=>'', 
+'trades'=>'', 'warehouse'=>'', 'otherExpert'=>'');
+$skillPrograms = array('apptID'=>0, 'accounting'=>'', 'banking'=>'', 'CRManagement'=>'', 'DBManagement'=>'', 'designDraft'=>'', 
+'healthCare'=>'', 'spreadsheets'=>'', 'payroll'=>'', 'presentations'=>'', 'PManagment'=>'', 'publish'=>'', 'transript'=>'', 
+'wordProcess'=>'', 'otherSkillP'=>'');
+$moneySkills = array('apptID'=>0, 'payable'=>'', 'receivable'=>'', 'backups'=>'', 'bankR'=>'', 'collections'=>'', 'deposits'=>'', 
+'financial'=>'', 'fullCycleAcc'=>'', 'journal'=>'', 'taxBusiness'=>'', 'taxPersonal'=>'', 'entities'=>'', 'payrollBenefits'=>'', 
+'trialBalances'=>'', 'yearEndFin'=>'', 'otherMoneySkill'=>'');
+$skills = array('apptID'=>0, 'MAssembly'=>'', 'MConstruction'=>'', 'MLine'=>'', 'MPieceWork'=>'', 'MPrinting'=>'', 'MShipping'=>'', 'MWarehouse'=>'', 
+'EAKitting'=>'', 'EAPCBoards'=>'', 'TIQCAutomated'=>'', 'TIQCManual'=>'', 'TIQCFinal'=>'', 'MADiscDrive'=>'', 'MAMachineParts'=>'', 'HCatering'=>'', 
+'HBartending'=>'', 'HHost'=>'', 'HWaitstaff'=>'', 'HCookChef'=>'');
+$cities = array('apptID'=>0, 'armstrong'=>'', 'enderby'=>'', 'kamloops'=>'', 'kelowna'=>'', 'lakeCountry'=>'', 'OKFalls'=>'', 'oliver'=>'', 'osoyoos'=>'', 
+'oyama'=>'', 'peachland'=>'', 'penticton'=>'', 'salmonArm'=>'', 'sicamous'=>'', 'summerland'=>'', 'vernon'=>'', 'westKelowna'=>'', 'winfield'=>'', 'otherCity'=>'');
+$available = array('apptID'=>0, 'dayTimes'=>'', 'partTimes'=>'', 'fullTimes'=>'', 'evenings'=>'', 'weekends'=>'', 'monday'=>'', 'tuesday'=>'', 'wednesday'=>'', 
+'thursday'=>'', 'friday'=>'', 'saturday'=>'', 'sunday'=>'');
+$references = array('apptID'=>0, 'supervisorName1'=>'', 'superTitle1'=>'', 'companyName1'=>'', 'referenceEmail1'=>'', 'referencePhone1'=>'', 'supervisorName2'=>'', 'superTitle2'=>'', 
+'companyName2'=>'', 'referenceEmail2'=>'', 'referencePhone2'=>'', 'supervisorName3'=>'', 'superTitle3'=>'', 'companyName3'=>'', 'referenceEmail3'=>'', 'referencePhone3'=>'');
 //Table Creation Data
 $tableStaff = "create table staff(
 	firstName varchar(25),

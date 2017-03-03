@@ -41,7 +41,7 @@ function PermanentSelectTest($temp, $query){
 			" Address: ".$row["addressNum"]." ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
 			$row["postal"]."<br>Home: ".$row["homePhone"]." Cell: ".$row["cellPhone"]." Email: ".
 			$row["email"]." Preffered: ".$row["PCMethod"]."<br>Work Type: ".$row["workType"].
-			" Work Status: ".$row["employerStatus"]." Date: ".$row["dateForm"].", ".$row["findOKStaffing"]."<br>".
+			" Work Status: ".$row["employerStatus"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
 			$row["mainExpertise"].", ".$row["roleInterest"].", ".$row["perfectCandidate"].", ".$row["salaryExpect"].", ".
 			$row["mainTransport"].", File Path: ".$row["filePath"].
 			"<br>Job# ".$row["jobNum"]." Job: ".$row["jobName"]." Date: ".$row["jobDate"]." Type: ".$row["jobType"]."<br>";
@@ -120,59 +120,281 @@ tableTest($mysqli, $tableOtherSkills, __LINE__); //20 Columns
 tableTest($mysqli, $tableCities, __LINE__); //19 Columns
 tableTest($mysqli, $tableAvailability, __LINE__); //13 Columns
 tableTest($mysqli, $tableApplicantReferences, __LINE__); //16 Columns
-
 //Data Insertion Functions
 $end = ");";
-//Staff Table
-$staffData = $staffInsertion . "'Peter', 'Rogers', 'DodoBird', 'Mammoth'" . $end;
-tableInsert($mysqli, $staffData, __LINE__);
-//Jobs Table
-$jobsData = $jobsInsertion . "21, 2121, 'SQL & PHP Code', '2017/01/21', 'Programmer'" . $end;
-tableInsert($mysqli, $jobsData, __LINE__);
-//Personal Table
-$personalData = $personalInsertion . " 41, 21,'Daniel','Rozek',679,'Pimlico Rd.', 'Kelowna', 'BC', 'V1W2Z6', '778-477-4721', 
-	'250-870-0919', 'drobpc@gmail.com', 'cellphone', 'OT', 'Student', '2017/02/10', 'Online'" . $end;
+//Staff Insert Table
+$staff['firstName'] = 'Peter';
+$staff['lastName'] = 'Rogers';
+$staff['userName'] = 'DodoBird';
+$staff['password'] = 'Mammoth';
+$staffData = $staffInsertion.$staff['firstName'].','.$staff['lastName'].','.$staff['userName'].','.$staff['password'].$end; 
+tableInsert($mysqli, $staffData, __LINE__); 
+//Jobs Insert Table
+$jobs['apptID'] = 21;
+$jobs['job#'] = 2121;
+$jobs['name'] = 'SQL & PHP Code';
+$jobs['date'] = '2017/01/21';
+$jobs['type'] = 'Programmer';
+$jobsData = $jobsInsertion.$jobs['apptID'].','.$jobs['job#'].','.$jobs['name'].','$jobs['date'].','.$jobs['type'].$end;
+tableInsert($mysqli, $jobsData, __LINE__); 
+//Personal Insert Table
+$personal['appnID'] = 41;
+$personal['apptID'] = 21;
+$personal['firstName'] = 'Daniel';
+$personal['lastName'] = 'Rozek';
+$personal['address#'] = 679; 
+$personal['street'] = 'Pimlico Rd.';
+$personal['city'] = 'Kelowna';
+$personal['province'] = 'BC';
+$personal['postal'] = 'V1W2Z6';
+$personal['homePhone'] = '778-477-4721';
+$personal['cellPhone'] = '250-870-0919';
+$personal['email'] = 'drobpc@gmail.com';
+$personal['PCMethod'] = 'cellphone';
+$personal['workType'] = 'OT';
+$personal['employerStatus'] = 'Student';
+$personal['dateForm'] = '2017/02/10';
+$personal['findOKStaff'] = 'Online';
+$personalData = $personalInsertion.','.$personal['appnID'].','.$personal['apptID'].','.$personal['firstName'].','.
+$personal['lastName'].','.$personal['address#'].','.$personal['street'].','.$personal['city'].','.$personal['province'].','.
+$personal['postal'].','.$personal['homePhone'].','.$personal['cellPhone'].','.$personal['email'].','.$personal['PCMethod'].','.
+$personal['workType'].','.$personal['employerStatus'].','.$personal['dateForm'].','.$personal['findOKStaff'].$end;
 tableInsert($mysqli, $personalData, __LINE__);
 //Permanent Table
-$permanentData = $permanentDataInsertion . "21,'Programming, Organizing, Sorting, TKD', 'Programming', 
-	'Computer Science Diploma',  '13$/hour', 'bike/bus', 'dsad/sdsa/sdsd.ccc'" . $end;
+$permanent['apptID'] = 21;
+$permanent['mainExpertise'] = 'Programming, Organizing, Sorting, TKD';
+$permanent['roleInterest'] = 'Programming';
+$permanent['perfectCandidate'] = 'Computer Science Diploma';
+$permanent['salaryExpect'] = '13$/hour';
+$permanent['mainTransport'] = 'bike/bus';
+$permanent['filePath'] = 'dsad/sdsa/sdsd.ccc';
+$permanentData = $permanentDataInsertion.$permanent['apptID'].','.$permanent['mainExpertise'].','.$permanent['roleInterest'].','.
+$permanent['perfectCandidate'].','.$permanent['salaryExpect'].','.$permanent['mainTransport'].','.$permanent['filePath'].$end;
 tableInsert($mysqli, $permanentData, __LINE__);
 //CitizenOther Table
-$citizenOtherData = $citizenOtherInsertion. "21,'YES','YES','NO','NO','YES','YES','NO','YES','Food Safe Level 1','YES',
-	'NO','NO','NO','Bike/Bus','Email','$13/hour','adsf/sdf/dsafsd.dfd'" . $end;
+$citizenO['apptID'] = 21;
+$citizenO['citizen'] = 'YES';
+$citizenO['legalWork'] = 'YES';
+$citizenO['crimeRecord'] = 'NO';
+$citizenO['yesWhat'] = 'NO';
+$citizenO['permission'] = 'YES';
+$citizenO['noWhy'] = 'YES';
+$citizenO['pastBonding'] = 'NO';
+$citizenO['eligibleBonding'] = 'YES';
+$citizenO['certificates'] = 'Food Safe Level 1';
+$citizenO['lifting'] = 'YES';
+$citizenO['driverLicense'] = 'NO';
+$citizenO['driveClass'] = 'NO';
+$citizenO['airBrake'] = 'NO';
+$citizenO['mainTransport'] = 'Bike/Bus';
+$citizenO['notice'] = 'Email';
+$citizenO['hourlyRate'] = '$13/hour';
+$citizenO['filePath'] = 'adsf/sdf/dsafsd.dfd';
+$citizenOtherData = $citizenOtherInsertion.$citizenO['apptID'].','.$citizenO['citizen'].','.$citizenO['legalWork'].','.
+$citizenO['crimeRecord'].','.$citizenO['yesWhat'].','.$citizenO['permission'].','.$citizenO['noWhy'].','.$citizenO['pastBonding'].','.
+$citizenO['eligibleBonding'].','.$citizenO['certificates'].','.$citizenO['lifting'].','.$citizenO['driverLicense'].','.
+$citizenO['driveClass'].','.$citizenO['airBrake'].','.$citizenO['mainTransport'].','.$citizenO['notice'].','.
+$citizenO['hourlyRate'].','.$citizenO['filePath'].$end;
 tableInsert($mysqli, $citizenOtherData, __LINE__);
 //Education Table
-$educationData = $educationInsertion . "21,'YES','NO','NO','NO','NO','YES','YES','YES','NO',0,'NO','NO','YES',
-	'Computer Science', 'English', 'English', 'English, Czech'" . $end;
+$education['apptID'] = 21;
+$education['highSchool'] = 'YES';
+$education['associateDegree'] = 'NO';
+$education['bachelorDegree'] = 'NO';
+$education['masterDegree'] = 'NO';
+$education['doctorDegree'] = 'NO';
+$education['technical'] = 'YES';
+$education['certificate'] = 'YES';
+$education['diploma'] = 'YES';
+$education['AShipTrade'] = 'NO';
+$education['AShipLevel'] = 0;
+$education['JManTrade'] = 'NO';
+$education['noEducation'] = 'NO';
+$education['student'] = 'YES';
+$education['studyData'] = 'Computer Science';
+$education['languageRead'] = 'English';
+$education['languageWrite'] = 'English';
+$education['languageSpeak'] = 'English, Czech';
+$educationData = $educationInsertion.$education['apptID'].','.$education['highSchool'].','.$education['associateDegree'].','.
+$education['bachelorDegree'].','.$education['masterDegree'].','.$education['doctorDegree'].','.$education['technical'].','.
+$education['certificate'].','.$education['diploma'].','.$education['AShipTrade'].','.$education['AShipLevel'].','.$education['JManTrade'].','.
+$education['noEducation'].','.$education['student'].','.$education['studyData'].','.$education['languageRead'].','.
+$education['languageWrite'].','.$education['languageSpeak'].$end;
 tableInsert($mysqli, $educationData, __LINE__);
 //Expertise Table
-$expertiseData = $expertiseInsertion . "21,'NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO',
-	'NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO'" . $end;
+$expertise['apptID'] = 21;
+$expertise['accountingEX'] = 'NO';
+$expertise['administrative'] = 'NO';
+$expertise['bookKeeping'] = 'NO';
+$expertise['business'] = 'NO';
+$expertise['construction'] = 'NO';
+$expertise['customerService'] = 'NO';
+$expertise['dataEntry'] = 'NO';
+$expertise['engineering'] = 'NO';
+$expertise['equipment'] = 'NO';
+$expertise['foodService'] = 'NO';
+$expertise['generalLabour'] = 'NO';
+$expertise['healthSafety'] = 'NO';
+$expertise['healthCare'] = 'NO';
+$expertise['hospitality'] = 'NO';
+$expertise['humanResources'] = 'NO';
+$expertise['infoTechnology'] = 'NO';
+$expertise['landscaping'] = 'NO';
+$expertise['legalAssistant'] = 'NO';
+$expertise['manufacture'] = 'NO';
+$expertise['marketing'] = 'NO';
+$expertise['management'] = 'NO';
+$expertise['medical'] = 'NO';
+$expertise['oilGas'] = 'NO';
+$expertise['payrollEX'] = 'NO';
+$expertise['projectM'] = 'NO';
+$expertise['reception'] = 'NO';
+$expertise['sales'] = 'NO';
+$expertise['transport'] = 'NO';
+$expertise['trades'] = 'NO';
+$expertise['warehouse'] = 'NO';
+$expertise['otherExpert'] = 'NO';
+$expertiseData = $expertiseInsertion.$expertise['apptID'].','.$expertise['accountingEX'].','.$expertise['administrative'].','.
+$expertise['bookKeeping'].','.$expertise['business'].','.$expertise['construction'].','.$expertise['customerService'].','.
+$expertise['dataEntry'].','.$expertise['engineering'].','.$expertise['equipment'].','.$expertise['foodService'].','.
+$expertise['generalLabour'].','.$expertise['healthSafety'].','.$expertise['healthCare'].','.$expertise['hospitality'].','.
+$expertise['humanResources'].','.$expertise['infoTechnology'].','.$expertise['landscaping'].','.$expertise['legalAssistant'].','.
+$expertise['manufacture'].','.$expertise['marketing'].','.$expertise['management'].','.$expertise['medical'].','.$expertise['oilGas'].','.
+$expertise['payrollEX'].','.$expertise['projectM'].','.$expertise['reception'].','.$expertise['sales'].','.$expertise['transport'].','.
+$expertise['trades'].','.$expertise['warehouse'].','.$expertise['otherExpert'].$end;
 tableInsert($mysqli, $expertiseData, __LINE__);
 //SkillPrograms Table 
-$skillProgramsData = $skillProgramsInsertion . "21,'NO','NO','NO','Heidi SQL', 'SketchUp','NO','Libre Office','NO',
-	'Libre Office','NO','NO','NO','NO','Notepad++'" . $end;
+$skillPrograms['apptID'] = 21';
+$skillPrograms['accounting'] = 'NO';
+$skillPrograms['banking'] = 'NO';
+$skillPrograms['CRManagement'] = 'NO';
+$skillPrograms['DBManagement'] = 'Heidi SQL';
+$skillPrograms['designDraft'] = 'SketchUp';
+$skillPrograms['healthCare'] = 'NO';
+$skillPrograms['spreadsheets'] = 'Libre Office';
+$skillPrograms['payroll'] = 'NO';
+$skillPrograms['presentations'] = 'Libre Office';
+$skillPrograms['PManagment'] = 'NO';
+$skillPrograms['publish'] = 'NO';
+$skillPrograms['transript'] = 'NO';
+$skillPrograms['wordProcess'] = 'NO';
+$skillPrograms['otherSkillP'] = 'Notepad++';
+$skillProgramsData = $skillProgramsInsertion.$skillPrograms['apptID'].','.$skillPrograms['accounting'].','.$skillPrograms['banking'].','.
+$skillPrograms['CRManagement'].','.$skillPrograms['DBManagement'].','.$skillPrograms['designDraft'].','.$skillPrograms['healthCare'].','.
+$skillPrograms['spreadsheets'].','.$skillPrograms['payroll'].','.$skillPrograms['presentations'].','.$skillPrograms['PManagment'].','.
+$skillPrograms['publish'].','.$skillPrograms['transript'].','.$skillPrograms['wordProcess'].','.$skillPrograms['otherSkillP'].$end;
 tableInsert($mysqli, $skillProgramsData, __LINE__);
 //MoneySkills Table
-$moneySkillsData = $moneySkillsInsertion . "21,'NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO','NO',
-	'NO','NO'" . $end;
+$moneySkills['apptID'] = 21;
+$moneySkills['payable'] = 'NO';
+$moneySkills['receivable'] = 'NO';
+$moneySkills['backups'] = 'NO';
+$moneySkills['bankR'] = 'NO';
+$moneySkills['collections'] = 'NO';
+$moneySkills['deposits'] = 'NO';
+$moneySkills['financial'] = 'NO';
+$moneySkills['fullCycleAcc'] = 'NO';
+$moneySkills['journal'] = 'NO';
+$moneySkills['taxBusiness'] = 'NO';
+$moneySkills['taxPersonal'] = 'NO';
+$moneySkills['entities'] = 'NO';
+$moneySkills['payrollBenefits'] = 'NO';
+$moneySkills['trialBalances'] = 'NO';
+$moneySkills['yearEndFin'] = 'NO';
+$moneySkills['otherMoneySkill'] = 'NO';
+$moneySkillsData = $moneySkillsInsertion.$moneySkills['apptID'].','.$moneySkills['payable'].','.$moneySkills['receivable'].','.$moneySkills['backups'].','.
+$moneySkills['bankR'].','.$moneySkills['collections'].','.$moneySkills['deposits'].','.$moneySkills['financial'].','.$moneySkills['fullCycleAcc'].','.
+$moneySkills['journal'].','.$moneySkills['taxBusiness'].','.$moneySkills['taxPersonal'].','.$moneySkills['entities'].','.$moneySkills['payrollBenefits'].','.
+$moneySkills['trialBalances'].','.$moneySkills['yearEndFin'].','.$moneySkills['otherMoneySkill'].$end;
 tableInsert($mysqli, $moneySkillsData, __LINE__);
 //Other Skills Table
-$otherSkillsData = $otherSkillsInsertion . "21, 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 
-	'NO', 'NO', 'NO', 'NO', 'NO', 'NO'" . $end;
+$skills['apptID'] = 21;
+$skills['MAssembly'] = 'NO';
+$skills['MConstruction'] = 'NO';
+$skills['MLine'] = 'NO';
+$skills['MPieceWork'] = 'NO';
+$skills['MPrinting'] = 'NO';
+$skills['MShipping'] = 'NO';
+$skills['MWarehouse'] = 'NO';
+$skills['EAKitting'] = 'NO';
+$skills['EAPCBoards'] = 'NO';
+$skills['TIQCAutomated'] = 'NO';
+$skills['TIQCManual'] = 'NO';
+$skills['TIQCFinal'] = 'NO';
+$skills['MADiscDrive'] = 'NO';
+$skills['MAMachineParts'] = 'NO';
+$skills['HCatering'] = 'NO';
+$skills['HBartending'] = 'NO';
+$skills['HHost'] = 'NO';
+$skills['HWaitstaff'] = 'NO';
+$skills['HCookChef'] = 'NO';
+$otherSkillsData = $otherSkillsInsertion.$skills['apptID'].','.$skills['MAssembly'].','.$skills['MConstruction'].','.$skills['MLine'].','.
+$skills['MPieceWork'].','.$skills['MPrinting'].','.$skills['MShipping'].','.$skills['MWarehouse'].','.$skills['EAKitting'].','.$skills['EAPCBoards'].','.
+$skills['TIQCAutomated'].','.$skills['TIQCManual'].','.$skills['TIQCFinal'].','.$skills['MADiscDrive'].','.$skills['MAMachineParts'].','.
+$skills['HCatering'].','.$skills['HBartending'].','.$skills['HBartending'].','.$skills['HHost'].','.$skills['HWaitstaff'].','.$skills['HCookChef'].$end;
 tableInsert($mysqli, $otherSkillsData, __LINE__);
 //Cities
-$citiesData = $citiesInsertion . "21, 'NO', 'NO', 'NO', 'YES', 'YES', 'YES', 'NO', 'NO', 'NO', 'NO', 'YES', 'NO', 'NO',
-	'NO', 'YES', 'YES', 'NO', 'NO'" . $end;
+$cities['apptID'] = 0;
+$cities['armstrong'] = 'NO';
+$Cities['enderby'] = 'NO';
+$Cities['kamloops'] = 'NO';
+$Cities['kelowna'] = 'YES';
+$Cities['lakeCountry'] = 'YES';
+$Cities['OKFalls'] = 'NO';
+$Cities['oliver'] = 'NO';
+$Cities['osoyoos'] = 'NO';
+$Cities['oyama'] = 'NO';
+$Cities['peachland'] = 'NO';
+$Cities['penticton'] = 'NO';
+$Cities['salmonArm'] = 'NO';
+$Cities['sicamous'] = 'NO';
+$Cities['summerland'] = 'NO';
+$Cities['vernon'] = 'NO';
+$Cities['westKelowna'] = 'YES';
+$Cities['winfield'] = 'NO';
+$Cities['otherCity'] = 'NO';
+$citiesData = $citiesInsertion.$skills['apptID'].','.$skills['armstrong'].','.$skills['enderby'].','.$skills['kamloops'].','.$skills['kelowna'].','.
+$skills['lakeCountry'].','.$skills['OKFalls'].','.$skills['oliver'].','.$skills['osoyoos'].','.$skills['oyama'].','.$skills['peachland'].','.$skills['penticton'].','.
+$skills['salmonArm'].','.$skills['sicamous'].','.$skills['summerland'].','.$skills['vernon'].','.$skills['westKelowna'].','.$skills['winfield'].','.$skills['otherCity'].$end;
 tableInsert($mysqli, $citiesData, __LINE__);
 //Availability Table
-$availablilityData = $availabilityInsertion . "21, 'NO', 'YES', 'YES', 'NO', 'NO', 'YES', 'YES', 'YES', 'YES', 'YES',
-	'NO', 'NO'" . $end;
+$available['apptID'] = 21;
+$available['dayTimes'] = 'NO';
+$available['partTimes'] = 'YES';
+$available['fullTimes'] = 'YES';
+$available['evenings'] = 'NO';
+$available['weekends'] = 'NO';
+$available['monday'] = 'YES';
+$available['tuesday'] = 'YES';
+$available['wednesday'] = 'YES';
+$available['thursday'] = 'YES';
+$available['friday'] = 'YES';
+$available['saturday'] = 'NO';
+$available['sunday'] = 'NO';
+$availablilityData = $availabilityInsertion.$available['apptID'].','.$available['dayTimes'].','.$available['partTimes'].','.$available['fullTimes'].','.$available['evenings'].','.
+$available['weekends'].','.$available['monday'].','.$available['tuesday'].','.$available['wednesday'].','.$available['thursday'].','.$available['friday'].','.
+$available['saturday'].','.$available['sunday'].$end;
 tableInsert($mysqli, $availablilityData, __LINE__);
 //ApplicantReferences
-$applicantReferencesData = $applicantReferencesInsertion . "21, 'Ken Chidlow', 'Java Teacher', 'OK College', 'ken@oc.com',
-	'255-255-2552', 'Alan Kennedy', 'SQL Teacher', 'OK College', 'alan@oc.com',	'250-250-2550', 'Michael Saad', 
-	'English Teacher', 'OK College', 'msaad@oc.com', '252-252-2222'" . $end;
+$references['apptID'] = 21;
+$references['supervisorName1'] = 'Ken Chidlow';
+$references['superTitle1'] = 'Java Teacher';
+$references['companyName1'] = 'OK College';
+$references['referenceEmail1'] = 'ken@oc.com';
+$references['referencePhone1'] = '255-255-2552';
+$references['supervisorName2'] = 'Alan Kennedy';
+$references['superTitle2'] = 'SQL Teacher';
+$references['companyName2'] = 'OK College';
+$references['referenceEmail2'] = 'alan@oc.com';
+$references['referencePhone2'] = '250-250-2550';
+$references['supervisorName3'] = 'Michael Saad';
+$references['superTitle3'] = 'English Teacher';
+$references['companyName3'] = 'OK College';
+$references['referenceEmail3'] = 'msaad@oc.com';
+$references['referencePhone3'] = '252-252-2222';
+$applicantReferencesData = $applicantReferencesInsertion.$references['apptID'].$references['supervisorName1'].$references['superTitle1'].$references['companyName1'].$references['referenceEmail1'].
+$references['referencePhone1'].$references['supervisorName2'].$references['superTitle2'].$references['companyName2'].$references['referenceEmail2'].$references['referencePhone2'].
+$references['supervisorName3'].$references['superTitle3'].$references['companyName3'].$references['referenceEmail3'].$references['referencePhone3'].$end;
 tableInsert($mysqli, $applicantReferencesData, __LINE__);
 //Staff Selection
 StaffSelectTest($mysqli, $StaffSelection);
