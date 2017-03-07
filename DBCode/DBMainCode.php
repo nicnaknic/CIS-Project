@@ -127,7 +127,7 @@ $staff['firstName'] = 'Peter';
 $staff['lastName'] = 'Rogers';
 $staff['userName'] = 'DodoBird';
 $staff['password'] = 'Mammoth';
-$staffData = $staffInsertion.$staff['firstName'].','.$staff['lastName'].','.$staff['userName'].','.$staff['password'].$end; 
+$staffData = $staffInsertion.$staff['firstName'].",".$staff['lastName'].",".$staff['userName'].",".$staff['password'].$end; 
 tableInsert($mysqli, $staffData, __LINE__); 
 //Jobs Insert Table
 $jobs['apptID'] = 21;
@@ -135,7 +135,7 @@ $jobs['job#'] = 2121;
 $jobs['name'] = 'SQL & PHP Code';
 $jobs['date'] = '2017/01/21';
 $jobs['type'] = 'Programmer';
-$jobsData = $jobsInsertion.$jobs['apptID'].','.$jobs['job#'].','.$jobs['name'].','$jobs['date'].','.$jobs['type'].$end;
+$jobsData = $jobsInsertion.$jobs['apptID'].','.$jobs['job#'].','.$jobs['name'].','.$jobs['date'].','.$jobs['type'].$end;
 tableInsert($mysqli, $jobsData, __LINE__); 
 //Personal Insert Table
 $personal['appnID'] = 41;
@@ -264,7 +264,7 @@ $expertise['payrollEX'].','.$expertise['projectM'].','.$expertise['reception'].'
 $expertise['trades'].','.$expertise['warehouse'].','.$expertise['otherExpert'].$end;
 tableInsert($mysqli, $expertiseData, __LINE__);
 //SkillPrograms Table 
-$skillPrograms['apptID'] = 21';
+$skillPrograms['apptID'] = 21;
 $skillPrograms['accounting'] = 'NO';
 $skillPrograms['banking'] = 'NO';
 $skillPrograms['CRManagement'] = 'NO';
@@ -353,9 +353,9 @@ $Cities['vernon'] = 'NO';
 $Cities['westKelowna'] = 'YES';
 $Cities['winfield'] = 'NO';
 $Cities['otherCity'] = 'NO';
-$citiesData = $citiesInsertion.$skills['apptID'].','.$skills['armstrong'].','.$skills['enderby'].','.$skills['kamloops'].','.$skills['kelowna'].','.
-$skills['lakeCountry'].','.$skills['OKFalls'].','.$skills['oliver'].','.$skills['osoyoos'].','.$skills['oyama'].','.$skills['peachland'].','.$skills['penticton'].','.
-$skills['salmonArm'].','.$skills['sicamous'].','.$skills['summerland'].','.$skills['vernon'].','.$skills['westKelowna'].','.$skills['winfield'].','.$skills['otherCity'].$end;
+$citiesData = $citiesInsertion.$cities['apptID'].','.$cities['armstrong'].','.$cities['enderby'].','.$cities['kamloops'].','.$cities['kelowna'].','.
+$cities['lakeCountry'].','.$cities['OKFalls'].','.$cities['oliver'].','.$cities['osoyoos'].','.$cities['oyama'].','.$cities['peachland'].','.$cities['penticton'].','.
+$cities['salmonArm'].','.$cities['sicamous'].','.$cities['summerland'].','.$cities['vernon'].','.$cities['westKelowna'].','.$cities['winfield'].','.$cities['otherCity'].$end;
 tableInsert($mysqli, $citiesData, __LINE__);
 //Availability Table
 $available['apptID'] = 21;
