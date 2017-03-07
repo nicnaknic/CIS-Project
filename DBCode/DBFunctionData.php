@@ -92,7 +92,7 @@ $tableCitizenOther = "create table citizenOther(
 	filePath varchar(50))";
 $tableEducation = "create table education(
 	applicantID int, 
-	highSchool varchar(3),
+	highSchool varchar(3), //from here to
 	associateDegree varchar(3),
 	bachelorDegree varchar(3),
 	masterDegree varchar(3),
@@ -103,7 +103,7 @@ $tableEducation = "create table education(
 	AShipTrade varchar(25),
 	AShipLevel int,
 	JManTrade varchar(25),
-	noEducation varchar(3),
+	noEducation varchar(3), // here shrink to one column 50 varchar
 	student varchar(3),
 	studyData varchar(250),
 	language varchar(250));";
@@ -142,20 +142,20 @@ $tableExpertise = "create table expertise(
 	otherExpert varchar(50));";
 $tableSkillPrograms = "create table skillPrograms(
 	applicantID int,
-	accounting varchar(25),
-	banking varchar(25),
-	CRManagement varchar(25),
-	DBManagement varchar(25),
-	designDraft varchar(25),
-	healthCare varchar(25),
-	spreadsheets varchar(25),
-	payroll varchar(25),
-	presentations varchar(25),
-	PManagment varchar(25),
-	publish varchar(25),
-	transript varchar(25),
-	wordProcess varchar(25),
-	otherSkillP varchar(25));";
+	accounting varchar(50),
+	banking varchar(50),
+	CRManagement varchar(50),
+	DBManagement varchar(50),
+	designDraft varchar(50),
+	healthCare varchar(50),
+	spreadsheets varchar(50),
+	payroll varchar(50),
+	presentations varchar(50),
+	PManagment varchar(50),
+	publish varchar(50),
+	transript varchar(50),
+	wordProcess varchar(50),
+	otherSkillP varchar(50));";
 $tableMoneySkills = "create table moneySkills(
 	applicantID int,
 	payable varchar(3),
