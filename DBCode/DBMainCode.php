@@ -121,13 +121,13 @@ tableTest($mysqli, $tableCities, __LINE__); //19 Columns
 tableTest($mysqli, $tableAvailability, __LINE__); //13 Columns
 tableTest($mysqli, $tableApplicantReferences, __LINE__); //16 Columns
 //Data Insertion Functions
-$end = ");";
+$end = "');";
 //Staff Insert Table
 $staff['firstName'] = 'Peter';
 $staff['lastName'] = 'Rogers';
 $staff['userName'] = 'DodoBird';
 $staff['password'] = 'Mammoth';
-$staffData = $staffInsertion.$staff['firstName'].",".$staff['lastName'].",".$staff['userName'].",".$staff['password'].$end; 
+$staffData = $staffInsertion."'".$staff['firstName']."','".$staff['lastName']."','".$staff['userName']."','".$staff['password'].$end; 
 tableInsert($mysqli, $staffData, __LINE__); 
 //Jobs Insert Table
 $jobs['apptID'] = 21;
@@ -135,7 +135,7 @@ $jobs['job#'] = 2121;
 $jobs['name'] = 'SQL & PHP Code';
 $jobs['date'] = '2017/01/21';
 $jobs['type'] = 'Programmer';
-$jobsData = $jobsInsertion.$jobs['apptID'].','.$jobs['job#'].','.$jobs['name'].','.$jobs['date'].','.$jobs['type'].$end;
+$jobsData = $jobsInsertion.$jobs['apptID'].', '.$jobs['job#'].",'".$jobs['name']."','".$jobs['date']."','".$jobs['type'].$end;
 tableInsert($mysqli, $jobsData, __LINE__); 
 //Personal Insert Table
 $personal['appnID'] = 41;
@@ -155,10 +155,10 @@ $personal['workType'] = 'OT';
 $personal['employerStatus'] = 'Student';
 $personal['dateForm'] = '2017/02/10';
 $personal['findOKStaff'] = 'Online';
-$personalData = $personalInsertion.','.$personal['appnID'].','.$personal['apptID'].','.$personal['firstName'].','.
-$personal['lastName'].','.$personal['address#'].','.$personal['street'].','.$personal['city'].','.$personal['province'].','.
-$personal['postal'].','.$personal['homePhone'].','.$personal['cellPhone'].','.$personal['email'].','.$personal['PCMethod'].','.
-$personal['workType'].','.$personal['employerStatus'].','.$personal['dateForm'].','.$personal['findOKStaff'].$end;
+$personalData = $personalInsertion.$personal['appnID'].','.$personal['apptID'].",'".$personal['firstName']."','".
+$personal['lastName']."',".$personal['address#'].",'".$personal['street']."','".$personal['city']."','".$personal['province']."','".
+$personal['postal']."','".$personal['homePhone']."','".$personal['cellPhone']."','".$personal['email']."','".$personal['PCMethod']."','".
+$personal['workType']."','".$personal['employerStatus']."','".$personal['dateForm']."','".$personal['findOKStaff'].$end;
 tableInsert($mysqli, $personalData, __LINE__);
 //Permanent Table
 $permanent['apptID'] = 21;
