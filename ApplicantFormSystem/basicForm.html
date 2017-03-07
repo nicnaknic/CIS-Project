@@ -143,6 +143,10 @@
                             <input type="text" class="form-control" name="phone" placeholder="Ex: xxx-xxx-xxxx" required>
                         </div>
                         <div class="form-group">
+                            <label for="phone">Cell Phone Number:</label>
+                            <input type="text" class="form-control" name="cellphone" placeholder="Ex: xxx-xxx-xxxx">
+                        </div>
+                        <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" name="email" placeholder="example@address.com" required>
                         </div>
@@ -186,14 +190,16 @@
                                     <input type="text" class="form-control" name="postal" placeholder="Ex: xxx xxx" style="width: 120px;">    
                                 </div>   
                             </div>
-                        </div> <!--End Inner Row-->
-                        
+                        </div> <!--End Inner Row-->                    
                         <div class="row">
                             <div class="col-sm-9">
                                 <div class="form-group">
                                     <label for="contMethod">Prefered Contact Method:</label></br>
                                     <label class="radio-inline">
                                         <input type="radio" name="optradio" id="contMethod">Phone
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio">Cell Phone
                                     </label>
                                     <label class="radio-inline">
                                         <input type="radio" name="optradio">Email
@@ -203,6 +209,26 @@
                             <div class="col-sm-3">
                             </div>
                         </div><!--End second Inner Row-->
+                        <div class="row"  style="margin-bottom: 13px;">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="howHear">How did you hear about Okanagan Staffing Services?:</label>
+                                    <select class="form-control" name="howHear" required>
+                                        <option value="" selected disabled>Please Select</option>
+                                        <option value="OKS Website">Okanagan Staffing Services website</option>
+                                        <option value="Search Engine">Search Engine</option>
+                                        <option value="Advertisement Online">Advertisement Online</option>
+                                        <option value="Advertisement Print">Advertisement Print/option>
+                                        <option value="Job Board">Job Board</option>
+                                        <option value="Refered by WorkBC">Refered by: WorkBC</option>
+                                        <option value="Refered by friend">Refered by: Friend</option>
+                                        <option value="Refered by CoWorker">Refered by: Coworker</option>
+                                        <option value="Social Media">Social Media</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div> <!--End right col well-->
                 </div> <!--End Right Row-->
             </div> <!--End Outer Row-->
