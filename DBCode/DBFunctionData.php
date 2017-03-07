@@ -12,7 +12,7 @@ $citizenO = array('apptID'=>0, 'citizen'=>'', 'legalWork'=>'', 'crimeRecord'=>''
 'mainTransport'=>'', 'notice'=>'', 'hourlyRate'=>'', 'filePath'=>'');
 $education = array('apptID'=>0, 'highSchool'=>'', 'associateDegree'=>'', 'bachelorDegree'=>'', 'masterDegree'=>'', 'doctorDegree'=>'', 
 'technical'=>'', 'certificate'=>'', 'diploma'=>'', 'AShipTrade'=>'', 'AShipLevel'=>'', 'JManTrade'=>'', 'noEducation'=>'', 'student'=>'', 
-'studyData'=>'', 'languageRead'=>'', 'languageWrite'=>'', 'languageSpeak'=>'');
+'studyData'=>'', 'language'=>'');
 $expertise = array('apptID'=>0, 'accountingEX'=>'', 'administrative'=>'', 'bookKeeping'=>'', 'business'=>'', 'construction'=>'', 
 'customerService'=>'', 'dataEntry'=>'', 'engineering'=>'', 'equipment'=>'', 'foodService'=>'', 'generalLabour'=>'', 'healthSafety'=>'', 
 'healthCare'=>'', 'hospitality'=>'', 'humanResources'=>'', 'infoTechnology'=>'', 'landscaping'=>'', 'legalAssistant'=>'', 'manufacture'=>'', 
@@ -99,16 +99,14 @@ $tableEducation = "create table education(
 	doctorDegree varchar(3),
 	technical varchar(3),
 	certificate varchar(3),
-	diploma varchar(3),
+	diploma varchar(3), 
 	AShipTrade varchar(25),
 	AShipLevel int,
 	JManTrade varchar(25),
 	noEducation varchar(3),
 	student varchar(3),
-	studyData varchar(50),
-	languageRead varchar(50),
-	languageWrite varchar(50),
-	languageSpeak varchar(50));";
+	studyData varchar(250),
+	language varchar(250));";
 $tableExpertise = "create table expertise(
 	applicantID int,
 	accountingEX varchar(3),
@@ -262,7 +260,7 @@ $citizenOtherInsertion = "insert into citizenOther(applicantID, citizen, legalWo
 	notice, hourlyRate, filePath) values (";
 $educationInsertion = "insert into education(applicantID, highSchool, associateDegree, bachelorDegree, masterDegree, 
 	doctorDegree, technical, certificate, diploma, AShipTrade, AShipLevel, JManTrade, noEducation, student, studyData, 
-	languageRead, languageWrite, languageSpeak) values (";
+	language) values (";
 $expertiseInsertion = "insert into expertise(applicantID, accountingEX, administrative, bookKeeping, business, construction, 
 	customerService, dataEntry, engineering, equipment, foodService, generalLabour, healthSafety, healthCare, hospitality, 
 	humanResources, infoTechnology, landscaping, legalAssistant, manufacture, marketing, management, medical, oilGas, 
@@ -307,8 +305,7 @@ $TemporySelection = "select distinct p.applicationID, p.applicantID, p.firstName
 	co.certificates, co.lifting, co.driverLicense, co.driveClass, co.airBrake, co.mainTransport, co.notice, 
 	co.hourlyRate, co.filePath,
 	ed.highSchool, ed.associateDegree, ed.bachelorDegree, ed.masterDegree, ed.doctorDegree, ed.technical, 
-	ed.certificate, ed.diploma, ed.AShipTrade, ed.AShipLevel, ed.JManTrade, ed.noEducation, ed.student, ed.studyData, 
-	ed.languageRead, ed.languageWrite, ed.languageSpeak,
+	ed.certificate, ed.diploma, ed.AShipTrade, ed.AShipLevel, ed.JManTrade, ed.noEducation, ed.student, ed.studyData, ed.language,
 	ex.accountingEX, ex.administrative, ex.bookKeeping, ex.business, ex.construction, ex.customerService, ex.dataEntry, 
 	ex.engineering, ex.equipment, ex.foodService, ex.generalLabour, ex.healthSafety, ex.healthCare, ex.hospitality, 
 	ex.humanResources, ex.infoTechnology, ex.landscaping, ex.legalAssistant, ex.manufacture, ex.marketing, 

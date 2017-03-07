@@ -68,8 +68,7 @@ function TemporySelectTest($temp, $query){
 			$row["notice"].", ".$row["hourlyRate"].", File Path: ".$row["filePath"].
 			"<br>Education: ".$row["highSchool"].", ".$row["associateDegree"].", ".$row["bachelorDegree"].", ".$row["masterDegree"].", ".
 			$row["doctorDegree"].", ".$row["technical"].", ".$row["certificate"].", ".$row["diploma"].", ".$row["AShipTrade"].", ".
-			$row["AShipLevel"].", ".$row["JManTrade"].", ".$row["noEducation"].", ".$row["student"].", ".$row["studyData"].", ".
-			$row["languageRead"].", ".$row["languageWrite"].", ".$row["languageSpeak"].
+			$row["AShipLevel"].", ".$row["JManTrade"].", ".$row["noEducation"].", ".$row["student"].", ".$row["studyData"].", ".$row["language"].
 			"<br>Expertise: ".$row["accountingEX"].", ".$row["administrative"].", ".$row["bookKeeping"].", ".$row["business"].", ".
 			$row["construction"].", ".$row["customerService"].", ".$row["dataEntry"].", ".$row["engineering"].", ".$row["equipment"].", ".
 			$row["foodService"].", ".$row["generalLabour"].", ".$row["healthSafety"].", ".$row["healthCare"].", ".$row["hospitality"].", ".
@@ -112,7 +111,7 @@ tableTest($mysqli, $tableJobs, __LINE__); //5 Columns
 tableTest($mysqli, $tablePersonal, __LINE__); //17 Columns
 tableTest($mysqli, $tablePermanentData, __LINE__); //8 Columns
 tableTest($mysqli, $tableCitizenOther, __LINE__); //18 Columns
-tableTest($mysqli, $tableEducation, __LINE__); //18 Columns
+tableTest($mysqli, $tableEducation, __LINE__); //16 Columns
 tableTest($mysqli, $tableExpertise, __LINE__); //32 Columns
 tableTest($mysqli, $tableSkillPrograms, __LINE__); //15 Columns
 tableTest($mysqli, $tableMoneySkills, __LINE__); //17 Columns
@@ -212,14 +211,11 @@ $education['JManTrade'] = 'NO';
 $education['noEducation'] = 'NO';
 $education['student'] = 'YES';
 $education['studyData'] = 'Computer Science';
-$education['languageRead'] = 'English';
-$education['languageWrite'] = 'English';
-$education['languageSpeak'] = 'English, Czech';
+$education['language'] = 'English';
 $educationData = $educationInsertion.$education['apptID'].",'".$education['highSchool']."','".$education['associateDegree']."','".
 $education['bachelorDegree']."','".$education['masterDegree']."','".$education['doctorDegree']."','".$education['technical']."','".
 $education['certificate']."','".$education['diploma']."','".$education['AShipTrade']."',".$education['AShipLevel'].",'".$education['JManTrade']."','".
-$education['noEducation']."','".$education['student']."','".$education['studyData']."','".$education['languageRead']."','".
-$education['languageWrite']."','".$education['languageSpeak'].$end;
+$education['noEducation']."','".$education['student']."','".$education['studyData']."','".$education['language'].$end;
 tableInsert($mysqli, $educationData, __LINE__);
 //Expertise Table
 $expertise['apptID'] = 21;
