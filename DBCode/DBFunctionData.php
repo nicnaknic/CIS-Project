@@ -92,18 +92,7 @@ $tableCitizenOther = "create table citizenOther(
 	filePath varchar(50))";
 $tableEducation = "create table education(
 	applicantID int, 
-	highSchool varchar(3), //from here to
-	associateDegree varchar(3),
-	bachelorDegree varchar(3),
-	masterDegree varchar(3),
-	doctorDegree varchar(3),
-	technical varchar(3),
-	certificate varchar(3),
-	diploma varchar(3), 
-	AShipTrade varchar(25),
-	AShipLevel int,
-	JManTrade varchar(25),
-	noEducation varchar(3), // here shrink to one column 50 varchar
+	educationLevel varchar(50),
 	student varchar(3),
 	studyData varchar(250),
 	language varchar(250));";
@@ -258,9 +247,7 @@ $permanentDataInsertion = "insert into permanentData(applicantID, mainExpertise,
 $citizenOtherInsertion = "insert into citizenOther(applicantID, citizen, legalWork, crimeRecord, yesWhat, permission, 
 	noWhy, pastBonding, eligibleBonding, certificates, lifting, driverLicense, driveClass, airBrake, mainTransport, 
 	notice, hourlyRate, filePath) values (";
-$educationInsertion = "insert into education(applicantID, highSchool, associateDegree, bachelorDegree, masterDegree, 
-	doctorDegree, technical, certificate, diploma, AShipTrade, AShipLevel, JManTrade, noEducation, student, studyData, 
-	language) values (";
+$educationInsertion = "insert into education(applicantID, educationLevel, student, studyData, language) values (";
 $expertiseInsertion = "insert into expertise(applicantID, accountingEX, administrative, bookKeeping, business, construction, 
 	customerService, dataEntry, engineering, equipment, foodService, generalLabour, healthSafety, healthCare, hospitality, 
 	humanResources, infoTechnology, landscaping, legalAssistant, manufacture, marketing, management, medical, oilGas, 
@@ -304,8 +291,7 @@ $TemporySelection = "select distinct p.applicationID, p.applicantID, p.firstName
 	co.citizen, co.legalWork, co.crimeRecord, co.yesWhat, co.permission, co.noWhy, co.pastBonding, co.eligibleBonding, 
 	co.certificates, co.lifting, co.driverLicense, co.driveClass, co.airBrake, co.mainTransport, co.notice, 
 	co.hourlyRate, co.filePath,
-	ed.highSchool, ed.associateDegree, ed.bachelorDegree, ed.masterDegree, ed.doctorDegree, ed.technical, 
-	ed.certificate, ed.diploma, ed.AShipTrade, ed.AShipLevel, ed.JManTrade, ed.noEducation, ed.student, ed.studyData, ed.language,
+	ed.educationLevel, ed.student, ed.studyData, ed.language,
 	ex.accountingEX, ex.administrative, ex.bookKeeping, ex.business, ex.construction, ex.customerService, ex.dataEntry, 
 	ex.engineering, ex.equipment, ex.foodService, ex.generalLabour, ex.healthSafety, ex.healthCare, ex.hospitality, 
 	ex.humanResources, ex.infoTechnology, ex.landscaping, ex.legalAssistant, ex.manufacture, ex.marketing, 

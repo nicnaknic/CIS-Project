@@ -66,9 +66,7 @@ function TemporySelectTest($temp, $query){
 			", ".$row["noWhy"].", ".$row["pastBonding"].", ".$row["eligibleBonding"].", ".$row["certificates"].", ".
 			$row["lifting"].", ".$row["driverLicense"].", ".$row["driveClass"].", ".$row["airBrake"].", ".$row["mainTransport"].", ".
 			$row["notice"].", ".$row["hourlyRate"].", File Path: ".$row["filePath"].
-			"<br>Education: ".$row["highSchool"].", ".$row["associateDegree"].", ".$row["bachelorDegree"].", ".$row["masterDegree"].", ".
-			$row["doctorDegree"].", ".$row["technical"].", ".$row["certificate"].", ".$row["diploma"].", ".$row["AShipTrade"].", ".
-			$row["AShipLevel"].", ".$row["JManTrade"].", ".$row["noEducation"].", ".$row["student"].", ".$row["studyData"].", ".$row["language"].
+			"<br>Education: ".$row["educationLevel"].", ".$row["student"].", ".$row["studyData"].", ".$row["language"].
 			"<br>Expertise: ".$row["accountingEX"].", ".$row["administrative"].", ".$row["bookKeeping"].", ".$row["business"].", ".
 			$row["construction"].", ".$row["customerService"].", ".$row["dataEntry"].", ".$row["engineering"].", ".$row["equipment"].", ".
 			$row["foodService"].", ".$row["generalLabour"].", ".$row["healthSafety"].", ".$row["healthCare"].", ".$row["hospitality"].", ".
@@ -197,25 +195,12 @@ $citizenO['hourlyRate']."','".$citizenO['filePath'].$end;
 tableInsert($mysqli, $citizenOtherData, __LINE__);
 //Education Table
 $education['apptID'] = 21;
-$education['highSchool'] = 'YES';
-$education['associateDegree'] = 'NO';
-$education['bachelorDegree'] = 'NO';
-$education['masterDegree'] = 'NO';
-$education['doctorDegree'] = 'NO';
-$education['technical'] = 'YES';
-$education['certificate'] = 'YES';
-$education['diploma'] = 'YES';
-$education['AShipTrade'] = 'NO';
-$education['AShipLevel'] = 0;
-$education['JManTrade'] = 'NO';
-$education['noEducation'] = 'NO';
+$education['educationLevel'] = 'Computer Science Diploma';
 $education['student'] = 'YES';
 $education['studyData'] = 'Computer Science';
 $education['language'] = 'English';
-$educationData = $educationInsertion.$education['apptID'].",'".$education['highSchool']."','".$education['associateDegree']."','".
-$education['bachelorDegree']."','".$education['masterDegree']."','".$education['doctorDegree']."','".$education['technical']."','".
-$education['certificate']."','".$education['diploma']."','".$education['AShipTrade']."',".$education['AShipLevel'].",'".$education['JManTrade']."','".
-$education['noEducation']."','".$education['student']."','".$education['studyData']."','".$education['language'].$end;
+$educationData = $educationInsertion.$education['apptID'].",'".$education['educationLevel']."','".$education['student']."','".
+$education['studyData']."','".$education['language'].$end;
 tableInsert($mysqli, $educationData, __LINE__);
 //Expertise Table
 $expertise['apptID'] = 21;
