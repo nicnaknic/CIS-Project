@@ -37,11 +37,10 @@ function PermanentSelectTest($temp, $query){
 	$tempResult = $temp->query($query);
 	if($tempResult->num_rows > 0) {
 		while($row = $tempResult->fetch_assoc()){
-			echo "<br>IDapp: ".$row["applicationID"]."ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"]."<br>".
-			" Address: ".$row["addressNum"]." ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
+			echo "<br>IDapp: ".$row["applicationID"]."ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"].
+			"<br>Address: ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
 			$row["postal"]."<br>Home: ".$row["homePhone"]." Cell: ".$row["cellPhone"]." Email: ".
-			$row["email"]." Preffered: ".$row["PCMethod"]."<br>Work Type: ".$row["workType"].
-			" Work Status: ".$row["employerStatus"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
+			$row["email"]." Preffered: ".$row["PCMethod"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
 			$row["mainExpertise"].", ".$row["roleInterest"].", ".$row["perfectCandidate"].", ".$row["salaryExpect"].", ".
 			$row["mainTransport"].", File Path: ".$row["filePath"].
 			"<br>Job# ".$row["jobNum"]." Job: ".$row["jobName"]." Date: ".$row["jobDate"]." Type: ".$row["jobType"]."<br>";
@@ -57,23 +56,20 @@ function TemporySelectTest($temp, $query){
 	if($tempResult->num_rows > 0) {
 		while($row = $tempResult->fetch_assoc()){
 			echo "<br>IDapp: ".$row["applicationID"]."ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"]."<br>".
-			" Address: ".$row["addressNum"]." ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
+			" Address: ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
 			$row["postal"]."<br>Home: ".$row["homePhone"]." Cell: ".$row["cellPhone"]." Email: ".
-			$row["email"]." Preffered: ".$row["PCMethod"]."<br>Work Type: ".$row["workType"].
-			" Work Status: ".$row["employerStatus"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
+			$row["email"]." Preffered: ".$row["PCMethod"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
 			"<br>Job# ".$row["jobNum"]." Job: ".$row["jobName"]." Date: ".$row["jobDate"]." Type: ".$row["jobType"].
 			"<br>Citizen: ".$row["citizen"].", ".$row["legalWork"].", ".$row["crimeRecord"].", ".$row["yesWhat"].", ".$row["permission"].
 			", ".$row["noWhy"].", ".$row["pastBonding"].", ".$row["eligibleBonding"].", ".$row["certificates"].", ".
-			$row["lifting"].", ".$row["driverLicense"].", ".$row["driveClass"].", ".$row["airBrake"].", ".$row["mainTransport"].", ".
-			$row["notice"].", ".$row["hourlyRate"].", File Path: ".$row["filePath"].
+			$row["lifting"].", ".$row["driverLicense"].", ".$row["driveClass"]."<br>Work Type: ".$row["workType"]." Work Status: ".$row["employerStatus"].
 			"<br>Education: ".$row["educationLevel"].", ".$row["student"].", ".$row["studyData"].", ".$row["language"].
 			"<br>Expertise: ".$row["accountingEX"].", ".$row["administrative"].", ".$row["bookKeeping"].", ".$row["business"].", ".
 			$row["construction"].", ".$row["customerService"].", ".$row["dataEntry"].", ".$row["engineering"].", ".$row["equipment"].", ".
 			$row["foodService"].", ".$row["generalLabour"].", ".$row["healthSafety"].", ".$row["healthCare"].", ".$row["hospitality"].", ".
-			$row["humanResources"].", ".$row["infoTechnology"].", ".$row["landscaping"].", ".$row["legalAssistant"].", ".
-			$row["manufacture"].", ".$row["marketing"].", ".$row["management"].", ".$row["medical"].", ".$row["oilGas"].", ".
-			$row["payrollEX"].", ".$row["projectM"].", ".$row["reception"].", ".$row["sales"].", ".$row["transport"].", ".$row["trades"].", ".
-			$row["warehouse"].", ".$row["otherExpert"].
+			$row["humanResources"].", ".$row["infoTechnology"].", ".$row["landscaping"].", ".$row["legalAssistant"].", ".$row["manufacture"].", ".
+			$row["marketing"].", ".$row["management"].", ".$row["medical"].", ".$row["oilGas"].", ".$row["payrollEX"].", ".$row["projectM"].", ".
+			$row["reception"].", ".$row["sales"].", ".$row["transport"].", ".$row["trades"].", ".$row["warehouse"].
 			"<br>Skill Programs: ".$row["accounting"].", ".$row["banking"].", ".$row["CRManagement"].", ".
 			$row["DBManagement"].", ".$row["designDraft"].", ".$row["healthCare"].", ".$row["spreadsheets"].", ".$row["payroll"].", ".
 			$row["presentations"].", ".$row["PManagment"].", ".$row["publish"].", ".$row["transript"].", ".
@@ -91,13 +87,12 @@ function TemporySelectTest($temp, $query){
 			$row["OKFalls"].", ".$row["oliver"].", ".$row["osoyoos"].", ".$row["oyama"].", ".$row["peachland"].", ".$row["penticton"].", ".
 			$row["salmonArm"].", ".$row["sicamous"].", ".$row["summerland"].", ".$row["vernon"].", ".$row["westKelowna"].", ".
 			$row["winfield"].", ".$row["otherCity"].
-			"<br>Availability: ".$row["dayTimes"].", ".$row["partTimes"].", ".$row["fullTimes"].", ".$row["evenings"].", ".
-			$row["weekends"].", ".$row["monday"].", ".$row["tuesday"].", ".$row["wednesday"].", ".$row["thursday"].", ".$row["friday"].", ".
-			$row["saturday"].", ".$row["sunday"].
-			"<br>References: ".$row["supervisorName1"].", ".$row["superTitle1"].", ".$row["companyName1"].", ".$row["referenceEmail1"].", ".
-			$row["referencePhone1"].", ".$row["supervisorName2"].", ".$row["superTitle2"].", ".$row["companyName2"].", ".
-			$row["referenceEmail2"].", ".$row["referencePhone2"].", ".$row["supervisorName3"].", ".$row["superTitle3"].", ".
-			$row["companyName3"].", ".$row["referenceEmail3"].", ".$row["referencePhone3"];
+			"<br>Availability: ".$row["dayTimes"].", ".$row["partTimes"].", ".$row["fullTimes"].", ".$row["eveNweekends"].", ".	$row["monday"].", ".
+			$row["tuesday"].", ".$row["wednesday"].", ".$row["thursday"].", ".$row["friday"].", ".$row["saturday"].", ".$row["sunday"].", ".
+			$row["mainTransport"].", ".$row["notice"].", ".$row["hourlyRate"].
+			"<br>References: ".$row["nameTitle1"].", ".$row["companyName1"].", ".$row["referenceEmail1"].", ".
+			$row["referencePhone1"].", ".$row["nameTitle2"].", ".$row["companyName2"].", ".$row["referenceEmail2"].", ".$row["referencePhone2"].", ".
+			$row["nameTitle3"].", ".$row["companyName3"].", ".$row["referenceEmail3"].", ".$row["referencePhone3"].", File Path: ".$row["filePath"];
 		}
 	} else {
     echo "0 results";
@@ -131,7 +126,7 @@ $jobs['apptID'] = 21;
 $jobs['job#'] = 2121;
 $jobs['name'] = 'SQL & PHP Code';
 $jobs['date'] = '2017/01/21';
-$jobs['type'] = 'Programmer';
+$jobs['type'] = 'Tempory';
 $jobsData = $jobsInsertion.$jobs['apptID'].', '.$jobs['job#'].",'".$jobs['name']."','".$jobs['date']."','".$jobs['type'].$end;
 tableInsert($mysqli, $jobsData, __LINE__); 
 //Personal Insert Table
@@ -139,8 +134,7 @@ $personal['appnID'] = 41;
 $personal['apptID'] = 21;
 $personal['firstName'] = 'Daniel';
 $personal['lastName'] = 'Rozek';
-$personal['address#'] = 679; 
-$personal['street'] = 'Pimlico Rd.';
+$personal['street'] = '679 Pimlico Rd.';
 $personal['city'] = 'Kelowna';
 $personal['province'] = 'BC';
 $personal['postal'] = 'V1W2Z6';
@@ -148,14 +142,11 @@ $personal['homePhone'] = '778-477-4721';
 $personal['cellPhone'] = '250-870-0919';
 $personal['email'] = 'drobpc@gmail.com';
 $personal['PCMethod'] = 'cellphone';
-$personal['workType'] = 'OT';
-$personal['employerStatus'] = 'Student';
 $personal['dateForm'] = '2017/02/10';
 $personal['findOKStaff'] = 'Online';
-$personalData = $personalInsertion.$personal['appnID'].','.$personal['apptID'].",'".$personal['firstName']."','".
-$personal['lastName']."',".$personal['address#'].",'".$personal['street']."','".$personal['city']."','".$personal['province']."','".
-$personal['postal']."','".$personal['homePhone']."','".$personal['cellPhone']."','".$personal['email']."','".$personal['PCMethod']."','".
-$personal['workType']."','".$personal['employerStatus']."','".$personal['dateForm']."','".$personal['findOKStaff'].$end;
+$personalData = $personalInsertion.$personal['appnID'].','.$personal['apptID'].",'".$personal['firstName']."','".$personal['lastName']."','".
+$personal['street']."','".$personal['city']."','".$personal['province']."','".$personal['postal']."','".$personal['homePhone']."','".
+$personal['cellPhone']."','".$personal['email']."','".$personal['PCMethod']."','".$personal['dateForm']."','".$personal['findOKStaff'].$end;
 tableInsert($mysqli, $personalData, __LINE__);
 //Permanent Table
 $permanent['apptID'] = 21;
@@ -181,17 +172,13 @@ $citizenO['eligibleBonding'] = 'YES';
 $citizenO['certificates'] = 'Food Safe Level 1';
 $citizenO['lifting'] = 'YES';
 $citizenO['driverLicense'] = 'NO';
-$citizenO['driveClass'] = 'NO';
-$citizenO['airBrake'] = 'NO';
-$citizenO['mainTransport'] = 'Bike/Bus';
-$citizenO['notice'] = 'Email';
-$citizenO['hourlyRate'] = '$13/hour';
-$citizenO['filePath'] = 'adsf/sdf/dsafsd.dfd';
-$citizenOtherData = $citizenOtherInsertion.$citizenO['apptID'].",'".$citizenO['citizen']."','".$citizenO['legalWork']."','".
-$citizenO['crimeRecord']."','".$citizenO['yesWhat']."','".$citizenO['permission']."','".$citizenO['noWhy']."','".$citizenO['pastBonding']."','".
-$citizenO['eligibleBonding']."','".$citizenO['certificates']."','".$citizenO['lifting']."','".$citizenO['driverLicense']."','".
-$citizenO['driveClass']."','".$citizenO['airBrake']."','".$citizenO['mainTransport']."','".$citizenO['notice']."','".
-$citizenO['hourlyRate']."','".$citizenO['filePath'].$end;
+$citizenO['driveClass'] = 'None';
+$citizenO['workType'] = 'OT';
+$citizenO['employerStatus'] = 'Student';
+$citizenOtherData = $citizenOtherInsertion.$citizenO['apptID'].",'".$citizenO['citizen']."','".$citizenO['legalWork']."','".$citizenO['crimeRecord']."','".
+$citizenO['yesWhat']."','".$citizenO['permission']."','".$citizenO['noWhy']."','".$citizenO['pastBonding']."','".$citizenO['eligibleBonding']."','".
+$citizenO['certificates']."','".$citizenO['lifting']."','".$citizenO['driverLicense']."','".$citizenO['driveClass']."','".
+$citizenO['workType']."','".$citizenO['employerStatus'].$end;
 tableInsert($mysqli, $citizenOtherData, __LINE__);
 //Education Table
 $education['apptID'] = 21;
@@ -234,7 +221,6 @@ $expertise['sales'] = 'NO';
 $expertise['transport'] = 'NO';
 $expertise['trades'] = 'NO';
 $expertise['warehouse'] = 'NO';
-$expertise['otherExpert'] = 'NO';
 $expertiseData = $expertiseInsertion.$expertise['apptID'].",'".$expertise['accountingEX']."','".$expertise['administrative']."','".
 $expertise['bookKeeping']."','".$expertise['business']."','".$expertise['construction']."','".$expertise['customerService']."','".
 $expertise['dataEntry']."','".$expertise['engineering']."','".$expertise['equipment']."','".$expertise['foodService']."','".
@@ -242,7 +228,7 @@ $expertise['generalLabour']."','".$expertise['healthSafety']."','".$expertise['h
 $expertise['humanResources']."','".$expertise['infoTechnology']."','".$expertise['landscaping']."','".$expertise['legalAssistant']."','".
 $expertise['manufacture']."','".$expertise['marketing']."','".$expertise['management']."','".$expertise['medical']."','".$expertise['oilGas']."','".
 $expertise['payrollEX']."','".$expertise['projectM']."','".$expertise['reception']."','".$expertise['sales']."','".$expertise['transport']."','".
-$expertise['trades']."','".$expertise['warehouse']."','".$expertise['otherExpert'].$end;
+$expertise['trades']."','".$expertise['warehouse'].$end;
 tableInsert($mysqli, $expertiseData, __LINE__);
 //SkillPrograms Table 
 $skillPrograms['apptID'] = 21;
@@ -343,8 +329,7 @@ $available['apptID'] = 21;
 $available['dayTimes'] = 'NO';
 $available['partTimes'] = 'YES';
 $available['fullTimes'] = 'YES';
-$available['evenings'] = 'NO';
-$available['weekends'] = 'NO';
+$available['eveNweekends'] = 'NO';
 $available['monday'] = 'YES';
 $available['tuesday'] = 'YES';
 $available['wednesday'] = 'YES';
@@ -352,30 +337,31 @@ $available['thursday'] = 'YES';
 $available['friday'] = 'YES';
 $available['saturday'] = 'NO';
 $available['sunday'] = 'NO';
-$availablilityData = $availabilityInsertion.$available['apptID'].",'".$available['dayTimes']."','".$available['partTimes']."','".$available['fullTimes']."','".$available['evenings']."','".
-$available['weekends']."','".$available['monday']."','".$available['tuesday']."','".$available['wednesday']."','".$available['thursday']."','".$available['friday']."','".
-$available['saturday']."','".$available['sunday'].$end;
+$available['mainTransport'] = 'Bike/Bus';
+$available['notice'] = 'Email';
+$available['hourlyRate'] = '$13/hour';
+$availablilityData = $availabilityInsertion.$available['apptID'].",'".$available['dayTimes']."','".$available['partTimes']."','".$available['fullTimes']."','".$available['eveNweekends']."','".
+$available['monday']."','".$available['tuesday']."','".$available['wednesday']."','".$available['thursday']."','".$available['friday']."','".$available['saturday']."','".$available['sunday']."','".
+$available['mainTransport']."','".$available['notice']."','".$available['hourlyRate'].$end;
 tableInsert($mysqli, $availablilityData, __LINE__);
 //ApplicantReferences
 $references['apptID'] = 21;
-$references['supervisorName1'] = 'Ken Chidlow';
-$references['superTitle1'] = 'Java Teacher';
+$references['nameTitle1'] = 'Ken Chidlow';
 $references['companyName1'] = 'OK College';
 $references['referenceEmail1'] = 'ken@oc.com';
 $references['referencePhone1'] = '255-255-2552';
-$references['supervisorName2'] = 'Alan Kennedy';
-$references['superTitle2'] = 'SQL Teacher';
+$references['nameTitle2'] = 'Alan Kennedy';
 $references['companyName2'] = 'OK College';
 $references['referenceEmail2'] = 'alan@oc.com';
 $references['referencePhone2'] = '250-250-2550';
-$references['supervisorName3'] = 'Michael Saad';
-$references['superTitle3'] = 'English Teacher';
+$references['nameTitle3'] = 'Michael Saad';
 $references['companyName3'] = 'OK College';
 $references['referenceEmail3'] = 'msaad@oc.com';
 $references['referencePhone3'] = '252-252-2222';
-$applicantReferencesData = $applicantReferencesInsertion.$references['apptID'].",'".$references['supervisorName1']."','".$references['superTitle1']."','".$references['companyName1']."','".$references['referenceEmail1']."','".
-$references['referencePhone1']."','".$references['supervisorName2']."','".$references['superTitle2']."','".$references['companyName2']."','".$references['referenceEmail2']."','".$references['referencePhone2']."','".
-$references['supervisorName3']."','".$references['superTitle3']."','".$references['companyName3']."','".$references['referenceEmail3']."','".$references['referencePhone3'].$end;
+$references['filePath'] = 'adsf/sdf/dsafsd.dfd';
+$applicantReferencesData = $applicantReferencesInsertion.$references['apptID'].",'".$references['nameTitle1']."','".$references['companyName1']."','".$references['referenceEmail1']."','".
+$references['referencePhone1']."','".$references['nameTitle2']."','".$references['companyName2']."','".$references['referenceEmail2']."','".$references['referencePhone2']."','".
+$references['nameTitle3']."','".$references['companyName3']."','".$references['referenceEmail3']."','".$references['referencePhone3']."','".$references['filePath'].$end;
 tableInsert($mysqli, $applicantReferencesData, __LINE__);
 //Staff Selection
 StaffSelectTest($mysqli, $StaffSelection);
