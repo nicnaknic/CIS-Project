@@ -35,7 +35,7 @@ function StaffSelectTest($temp, $query){
 //Function Permanent Selection
 function PermanentSelectTest($temp, $query){
 	$tempResult = $temp->query($query);
-	if($tempResult->num_rows > 0) {
+	if( (isset($tempResult->num_rows)) &&($tempResult->num_rows > 0)) {
 		while($row = $tempResult->fetch_assoc()){
 			echo "<br>IDapp: ".$row["applicationID"]."ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"].
 			"<br>Address: ".$row["street"].", ".$row["city"]." ".$row["province"].", ".

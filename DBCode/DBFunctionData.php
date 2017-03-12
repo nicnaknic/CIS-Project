@@ -269,7 +269,7 @@ $PermanentSelection = "select distinct p.applicationID, p.applicantID, p.firstNa
 	from personal p, permanentData pd, jobs j
 	where p.applicantID = pd.applicantID
 	and p.applicantID = j.applicantID
-	and j.jobType = 'Permanent';";
+	and j.jobType = 'OP';";
 
 $TemporySelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, 
 	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, p.dateForm, p.findOKStaff,
@@ -308,5 +308,5 @@ $TemporySelection = "select distinct p.applicationID, p.applicantID, p.firstName
 	and p.applicantID = c.applicantID
 	and p.applicantID = a.applicantID
 	and p.applicantID = ar.applicantID
-	and j.jobType <> 'Temporary';";
+	and j.jobType <> 'OP';";
 ?>
