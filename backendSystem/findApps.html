@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Applicant Tracking</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"> <!--Included CSS Files-->
+    <link href="../css/sticky-footer.css" rel="stylesheet">
+    <style>/**Minor CSS changes that didnt need their own file**/       
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { /*Change the color of navbar items on hover*/
+            background-color: #EEEEEE;
+        }
+        li, select{
+            padding-top: 5px;
+        }
+        .form-container-padding{
+            padding-top: 30px;
+        }
+        h1{
+            color: rgb(28, 158, 203);
+        }
+        .no-link{
+            color: #337ab7;
+        }
+    </style>
+</head>
+<body>
+    <!--=======================NAVBAR ELEMENTS DOWN BELOW, THIS IS THE DEFAULT NAV SYSTEM====================-->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a style="margin-right: 10px;" class="navbar-brand active" href="#">Welcome back _________ !</a> <!--In the space after "back" and before the "!" add the name of who is signed in -->
+            </div>
+			<div class="navbar-left"><!--This button brings up the search functionality in a bootstrap modal object. I have decided to do it this way to allow for the staff to make a search easily from the top navbar -->
+				<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Search Applicant Forms</button>
+			</div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://www.okanaganstaffing.com/">Manage Staff Accounts</a></li>
+                    <li><a href="http://www.okanaganstaffing.com/testing/">Manage Old Applications&nbsp;</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<!--=========================================END NAVBAR SECTION===========================================-->
+
+	<div class="container">
+		<div class="page-header">
+                <h1>Latest Applicant submission results</h1>
+        </div>
+		<div class="row">
+			<div class="col-sm-6"></div>
+			<div class="col-sm-6"></div>
+		</div>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--Required script references-->
+    <script src="../js/bootstrap.min.js"></script>
+</body> 
