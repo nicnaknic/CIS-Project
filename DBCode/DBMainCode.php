@@ -35,7 +35,7 @@ function StaffSelectTest($temp, $query){
 //Function Permanent Selection
 function PermanentSelectTest($temp, $query){
 	$tempResult = $temp->query($query);
-	if( (isset($tempResult->num_rows)) &&($tempResult->num_rows > 0)) {
+	if((isset($tempResult->num_rows)) &&($tempResult->num_rows > 0)) {
 		while($row = $tempResult->fetch_assoc()){
 			echo "<br>IDapp: ".$row["applicationID"]."ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"].
 			"<br>Address: ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
@@ -101,17 +101,17 @@ function TemporySelectTest($temp, $query){
 //Table Creation Tests
 tableTest($mysqli, $tableStaff, __LINE__); //4 Columns
 tableTest($mysqli, $tableJobs, __LINE__); //5 Columns
-tableTest($mysqli, $tablePersonal, __LINE__); //17 Columns
-tableTest($mysqli, $tablePermanentData, __LINE__); //8 Columns
-tableTest($mysqli, $tableCitizenOther, __LINE__); //18 Columns
-tableTest($mysqli, $tableEducation, __LINE__); //16 Columns
-tableTest($mysqli, $tableExpertise, __LINE__); //32 Columns
+tableTest($mysqli, $tablePersonal, __LINE__); //14 Columns
+tableTest($mysqli, $tablePermanentData, __LINE__); //7 Columns
+tableTest($mysqli, $tableCitizenOther, __LINE__); //15 Columns
+tableTest($mysqli, $tableEducation, __LINE__); //5 Columns
+tableTest($mysqli, $tableExpertise, __LINE__); //31 Columns
 tableTest($mysqli, $tableSkillPrograms, __LINE__); //15 Columns
 tableTest($mysqli, $tableMoneySkills, __LINE__); //17 Columns
 tableTest($mysqli, $tableOtherSkills, __LINE__); //20 Columns
 tableTest($mysqli, $tableCities, __LINE__); //19 Columns
-tableTest($mysqli, $tableAvailability, __LINE__); //13 Columns
-tableTest($mysqli, $tableApplicantReferences, __LINE__); //16 Columns
+tableTest($mysqli, $tableAvailability, __LINE__); //15 Columns
+tableTest($mysqli, $tableApplicantReferences, __LINE__); //14 Columns
 //Data Insertion Functions
 $end = "');";
 //Staff Insert Table

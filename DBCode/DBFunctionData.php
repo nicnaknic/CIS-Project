@@ -261,8 +261,8 @@ $applicantReferencesInsertion = "insert into applicantReferences(applicantID, na
 $StaffSelection ="select s.firstName, s.lastName, s.passwords, s.username 
 	from staff s;";
 $PermanentSelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, 
-	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, p.workType, 
-	p.employerStatus, p.dateForm, p.findOKStaff,
+	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, 
+	p.dateForm, p.findOKStaff,
 	pd.mainExpertise, pd.roleInterest, pd.perfectCandidate, pd.salaryExpect, 
 	pd.mainTransport, pd.filePath,
 	j.jobNum, j.jobName, j.jobDate, j.jobType
