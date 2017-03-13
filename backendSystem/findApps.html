@@ -35,7 +35,7 @@
                     <a style="margin-right: 10px;" class="navbar-brand active" href="#">Welcome back _________ !</a> <!--In the space after "back" and before the "!" add the name of who is signed in -->
             </div>
 			<div class="navbar-left"><!--This button brings up the search functionality in a bootstrap modal object. I have decided to do it this way to allow for the staff to make a search easily from the top navbar -->
-				<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">
+				<button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#myModal">
 					<span class="glyphicon glyphicon-search"></span>&nbsp;Search Applicants
 				</button>
 			</div>
@@ -83,10 +83,19 @@
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-sm-6">
-						<p><strong>Address &amp; Postal:</strong> 4802 Canyon Ridge Crescent, Kelowna BC &nbsp;(V1W 4A1)</p>
+						<p><strong>Home Phone Number:</strong> 250-826-0960</p>
+						<p><strong>Cell Phone Number:</strong> 250-826-0960</p>
+						<p><strong>Email Address:</strong> nicholashens@gmail.com</p>
+						<p><strong>Prefered Contact Method:</strong> Cell Phone</p>	
 					</div>
 					<div class="col-sm-6">
-					
+						<p><strong>Home Address:</strong> 4802 Canyon Ridge Crescent, Kelowna BC</p>
+						<p><strong>Postal Code:</strong> V1W 4A1</p>
+						<p><strong>How did you hear about Okanagan Staffing:</strong> Job Board</p>
+						<form>
+							<input type="hidden" name="AppID"><!--Store the current AppID in a hidden input field-->
+							<div class="pull-right"><input type="submit" class="btn btn-default" value="Show All"></div>
+						</form>
 					</div>
 				</div>
 			</div>
