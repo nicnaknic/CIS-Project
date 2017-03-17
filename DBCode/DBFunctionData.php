@@ -5,9 +5,9 @@ $jobs = array('apptID'=>0, 'job#'=>0, 'name'=>'', 'date'=>'', 'type'=>'');
 $personal = array('appnID'=>0, 'apptID'=>0, 'firstName'=>'', 'lastName'=>'', 'address#'=>0, 'street'=>'', 'city'=>'', 
 'province'=>'', 'postal'=>'', 'homePhone'=>'', 'cellPhone'=>'', 'email'=>'', 'PCMethod'=>'', 'dateForm'=>'', 'findOKStaff'=>'');
 $permanent = array('apptID'=>0, 'mainExpertise'=>'', 'roleInterest'=>'', 'perfectCandidate'=>'', 
-'salaryExpect'=>'', 'mainTransport'=>'', 'filePath'=>'');
+'salaryExpect'=>'', 'employment'=>'', 'filePath'=>'');
 $citizenO = array('apptID'=>0, 'citizen'=>'', 'legalWork'=>'', 'crimeRecord'=>'', 'yesWhat'=>'', 'permission'=>'', 'noWhy'=>'', 'pastBonding'=>'', 
-'eligibleBonding'=>'', 'certificates'=>'', 'lifting'=>'', 'driverLicense'=>'', 'driveClass'=>'','employerStatus'=>'', 'workType'=>'');
+'eligibleBonding'=>'','employerStatus'=>'', 'workType'=>'');
 $education = array('apptID'=>0, 'educationLevel'=>'', 'student'=>'', 'studyData'=>'', 'language'=>'');
 $expertise = array('apptID'=>0, 'accountingEX'=>'', 'administrative'=>'', 'bookKeeping'=>'', 'business'=>'', 'construction'=>'', 
 'customerService'=>'', 'dataEntry'=>'', 'engineering'=>'', 'equipment'=>'', 'foodService'=>'', 'generalLabour'=>'', 'healthSafety'=>'', 
@@ -22,7 +22,7 @@ $moneySkills = array('apptID'=>0, 'payable'=>'', 'receivable'=>'', 'backups'=>''
 'trialBalances'=>'', 'yearEndFin'=>'', 'otherMoneySkill'=>'');
 $skills = array('apptID'=>0, 'MAssembly'=>'', 'MConstruction'=>'', 'MLine'=>'', 'MPieceWork'=>'', 'MPrinting'=>'', 'MShipping'=>'', 'MWarehouse'=>'', 
 'EAKitting'=>'', 'EAPCBoards'=>'', 'TIQCAutomated'=>'', 'TIQCManual'=>'', 'TIQCFinal'=>'', 'MADiscDrive'=>'', 'MAMachineParts'=>'', 'HCatering'=>'', 
-'HBartending'=>'', 'HHost'=>'', 'HWaitstaff'=>'', 'HCookChef'=>'');
+'HBartending'=>'', 'HHost'=>'', 'HWaitstaff'=>'', 'HCookChef'=>'', 'certificates'=>'', 'lifting'=>'', 'driverLicense'=>'', 'driveClass'=>'');
 $cities = array('apptID'=>0, 'armstrong'=>'', 'enderby'=>'', 'kamloops'=>'', 'kelowna'=>'', 'lakeCountry'=>'', 'OKFalls'=>'', 'oliver'=>'', 'osoyoos'=>'', 
 'oyama'=>'', 'peachland'=>'', 'penticton'=>'', 'salmonArm'=>'', 'sicamous'=>'', 'summerland'=>'', 'vernon'=>'', 'westKelowna'=>'', 'winfield'=>'', 'otherCity'=>'');
 $available = array('apptID'=>0, 'dayTimes'=>'', 'partTimes'=>'', 'fullTimes'=>'', 'eveNweekends'=>'', 'monday'=>'', 'tuesday'=>'', 'wednesday'=>'', 
@@ -58,12 +58,12 @@ $tablePersonal = "create table personal(
 	findOKStaff varchar(50));";
 $tablePermanentData = "create table permanentData(
 	applicantID int,
-	mainExpertise varchar(100),
-	roleInterest varchar(100),
-	perfectCandidate varchar(100),
-	salaryExpect varchar(50),
-	mainTransport varchar(10),
-	filePath varchar(50));";
+	mainExpertise varchar(250),
+	roleInterest varchar(250),
+	perfectCandidate varchar(250),
+	salaryExpect varchar(250),
+	employment varchar(250),
+	filePath varchar(100));";
 $tableCitizenOther = "create table citizenOther(
 	applicantID int,
 	citizen varchar(3),
@@ -74,84 +74,80 @@ $tableCitizenOther = "create table citizenOther(
 	noWhy varchar(100),
 	pastBonding varchar(3),
 	eligibleBonding varchar(3),
-	certificates varchar(75),
-	lifting varchar(3),
-	driverLicense varchar(3),
-	driveClass varchar(50),
 	workType varchar(4),
 	employerStatus varchar(50))";
 $tableEducation = "create table education(
 	applicantID int, 
-	educationLevel varchar(50),
+	educationLevel varchar(250),
 	student varchar(3),
 	studyData varchar(250),
 	language varchar(250));";
 $tableExpertise = "create table expertise(
 	applicantID int,
-	accountingEX varchar(3),
-	administrative varchar(3),
-	bookKeeping varchar(3),
-	business varchar(3),
-	construction varchar(3),
-	customerService varchar(3),
-	dataEntry varchar(3),
-	engineering varchar(3),
-	equipment varchar(3),
-	foodService varchar(3),
-	generalLabour varchar(3),
-	healthSafety varchar(3),
-	healthCare varchar(3),
-	hospitality varchar(3),
-	humanResources varchar(3),
-	infoTechnology varchar(3),
-	landscaping varchar(3),
-	legalAssistant varchar(3),
-	manufacture varchar(3),
-	marketing varchar(3),
-	management varchar(3),
-	medical varchar(3),
-	oilGas varchar(3),
-	payrollEX varchar(3),
-	projectM varchar(3),
-	reception varchar(3),
-	sales varchar(3),
-	transport varchar(3),
-	trades varchar(3),
-	warehouse varchar(3));";
+	accountingEX varchar(50),
+	administrative varchar(50),
+	bookKeeping varchar(50),
+	business varchar(50),
+	construction varchar(50),
+	customerService varchar(50),
+	dataEntry varchar(50),
+	engineering varchar(50),
+	equipment varchar(50),
+	foodService varchar(50),
+	generalLabour varchar(50),
+	healthSafety varchar(50),
+	healthCare varchar(50),
+	hospitality varchar(50),
+	humanResources varchar(50),
+	infoTechnology varchar(50),
+	landscaping varchar(50),
+	legalAssistant varchar(50),
+	manufacture varchar(50),
+	marketing varchar(50),
+	management varchar(50),
+	medical varchar(50),
+	oilGas varchar(50),
+	payrollEX varchar(50),
+	projectM varchar(50),
+	reception varchar(50),
+	sales varchar(50),
+	transport varchar(50),
+	trades varchar(50),
+	warehouse varchar(50));";
 $tableSkillPrograms = "create table skillPrograms(
 	applicantID int,
-	accounting varchar(50),
-	banking varchar(50),
-	CRManagement varchar(50),
-	DBManagement varchar(50),
-	designDraft varchar(50),
-	healthCare varchar(50),
-	spreadsheets varchar(50),
-	payroll varchar(50),
-	presentations varchar(50),
-	PManagment varchar(50),
-	publish varchar(50),
-	transript varchar(50),
-	wordProcess varchar(50),
-	otherSkillP varchar(50));";
+	accounting varchar(100),
+	banking varchar(100),
+	CRManagement varchar(100),
+	DBManagement varchar(100),
+	designDraft varchar(100),
+	healthCare varchar(100),
+	spreadsheets varchar(100),
+	payroll varchar(100),
+	presentations varchar(100),
+	PManagment varchar(100),
+	publish varchar(100),
+	transript varchar(100),
+	wordProcess varchar(100),
+	otherSkillP varchar(100));";
 $tableMoneySkills = "create table moneySkills(
 	applicantID int,
-	payable varchar(3),
-	receivable varchar(3),
-	backups varchar(3),
-	bankR varchar(3),
-	collections varchar(3),
-	deposits varchar(3),
-	financial varchar(3),
-	fullCycleAcc varchar(3),
-	journal varchar(3),
-	taxBusiness varchar(3),
-	taxPersonal varchar(3),
-	entities varchar(3),
-	payrollBenefits varchar(3),
-	trialBalances varchar(3),
-	yearEndFin varchar(3),
-	otherMoneySkill varchar(3));";
+	payable varchar(40),
+	receivable varchar(40),
+	backups varchar(40),
+	bankR varchar(40),
+	collections varchar(40),
+	deposits varchar(40),
+	financial varchar(40),
+	fullCycleAcc varchar(40),
+	journal varchar(40),
+	taxBusiness varchar(40),
+	taxPersonal varchar(40),
+	entities varchar(40),
+	payrollBenefits varchar(40),
+	trialBalances varchar(40),
+	yearEndFin varchar(40),
+	otherMoneySkill varchar(40));";
 $tableOtherSkills = "create table otherSkills(
 	applicantID int,
 	MAssembly varchar(25),
@@ -172,7 +168,11 @@ $tableOtherSkills = "create table otherSkills(
 	HBartending varchar(25),
 	HHost varchar(25),
 	HWaitstaff varchar(25),
-	HCookChef varchar(25));";
+	HCookChef varchar(25),
+	certificates varchar(100),
+	lifting varchar(3),
+	driverLicense varchar(3),
+	driveClass varchar(100));";
 $tableCities = "create table cities(
 	applicantID int,
 	armstrong varchar(3),
@@ -192,13 +192,13 @@ $tableCities = "create table cities(
 	vernon varchar(3),
 	westKelowna varchar(3),
 	winfield varchar(3),
-	otherCity varchar(3));";
+	otherCity varchar(100));";
 $tableAvailability = "create table availability(
 	applicantID int,
-	dayTimes varchar(3),
-	partTimes varchar(3),
-	fullTimes varchar(3),
-	eveNweekends varchar(3),
+	dayTimes varchar(5),
+	partTimes varchar(5),
+	fullTimes varchar(5),
+	eveNweekends varchar(5),
 	monday varchar(50),
 	tuesday varchar(50),
 	wednesday varchar(50),
@@ -206,24 +206,24 @@ $tableAvailability = "create table availability(
 	friday varchar(50),
 	saturday varchar(50),
 	sunday varchar(50),
-	mainTransport varchar(10),
-	notice varchar(50),
-	hourlyRate varchar(10));";	
+	mainTransport varchar(25),
+	notice varchar(100),
+	hourlyRate varchar(25));";	
 $tableApplicantReferences = "create table applicantReferences(
 	applicantID int,
 	nameTitle1 varchar(50),
 	companyName1 varchar(50),
 	referenceEmail1 varchar(50),
-	referencePhone1 varchar(15),
+	referencePhone1 varchar(50),
 	nameTitle2 varchar(50),
 	companyName2 varchar(50),
 	referenceEmail2 varchar(50),
-	referencePhone2 varchar(15),
+	referencePhone2 varchar(50),
 	nameTitle3 varchar(50),
 	companyName3 varchar(50),
 	referenceEmail3 varchar(50),
-	referencePhone3 varchar(15),
-	filePath varchar(50));";
+	referencePhone3 varchar(50),
+	filePath varchar(100));";
 	
 //Table Insertion Data
 $staffInsertion = "insert into staff(firstName, lastName, passwords, username) values (";
@@ -231,9 +231,9 @@ $jobsInsertion = "insert into jobs(applicantID, jobNum, jobName, jobDate, jobTyp
 $personalInsertion = "insert into personal(applicationID, applicantID, firstName, lastName, 
 	street, city, province, postal, homePhone, cellPhone, email, PCMethod, dateForm, findOKStaff) values (";
 $permanentDataInsertion = "insert into permanentData(applicantID, mainExpertise, roleInterest, perfectCandidate, 
-	salaryExpect, mainTransport, filePath) values (";
+	salaryExpect, employment, filePath) values (";
 $citizenOtherInsertion = "insert into citizenOther(applicantID, citizen, legalWork, crimeRecord, yesWhat, permission, 
-	noWhy, pastBonding, eligibleBonding, certificates, lifting, driverLicense, driveClass, workType, employerStatus) values (";
+	noWhy, pastBonding, eligibleBonding, workType, employerStatus) values (";
 $educationInsertion = "insert into education(applicantID, educationLevel, student, studyData, language) values (";
 $expertiseInsertion = "insert into expertise(applicantID, accountingEX, administrative, bookKeeping, business, construction, 
 	customerService, dataEntry, engineering, equipment, foodService, generalLabour, healthSafety, healthCare, hospitality, 
@@ -247,7 +247,7 @@ $moneySkillsInsertion = "insert into moneySkills(applicantID, payable, receivabl
 	otherMoneySkill) values (";
 $otherSkillsInsertion = "insert into otherSkills(applicantID, MAssembly, MConstruction, MLine, MPieceWork, MPrinting, 
 	MShipping, MWarehouse, EAKitting, EAPCBoards, TIQCAutomated, TIQCManual, TIQCFinal, MADiscDrive, MAMachineParts, 
-	HCatering, HBartending, HHost, HWaitstaff, HCookChef) values (";
+	HCatering, HBartending, HHost, HWaitstaff, HCookChef, certificates, lifting, driverLicense, driveClass) values (";
 $citiesInsertion = "insert into cities(applicantID, armstrong, enderby, kamloops, kelowna, 
 	lakeCountry, OKFalls, oliver, osoyoos, oyama, peachland, penticton, salmonArm, sicamous, summerland, vernon, 
 	westKelowna, winfield, otherCity) values (";
@@ -256,7 +256,6 @@ monday, tuesday, wednesday, thursday, friday, saturday, sunday, mainTransport, n
 $applicantReferencesInsertion = "insert into applicantReferences(applicantID, nameTitle1, 
 	companyName1, referenceEmail1, referencePhone1, nameTitle2, companyName2, referenceEmail2, 
 	referencePhone2, nameTitle3, companyName3, referenceEmail3, referencePhone3, filePath) values (";
-
 // Table Selection Data
 $StaffSelection ="select s.firstName, s.lastName, s.passwords, s.username 
 	from staff s;";
@@ -264,18 +263,17 @@ $PermanentSelection = "select distinct p.applicationID, p.applicantID, p.firstNa
 	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, 
 	p.dateForm, p.findOKStaff,
 	pd.mainExpertise, pd.roleInterest, pd.perfectCandidate, pd.salaryExpect, 
-	pd.mainTransport, pd.filePath,
+	pd.employment, pd.filePath,
 	j.jobNum, j.jobName, j.jobDate, j.jobType
 	from personal p, permanentData pd, jobs j
 	where p.applicantID = pd.applicantID
 	and p.applicantID = j.applicantID
 	and j.jobType = 'OP';";
-
 $TemporySelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, 
 	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, p.dateForm, p.findOKStaff,
 	j.jobNum, j.jobName, j.jobDate, j.jobType,
-	co.citizen, co.legalWork, co.crimeRecord, co.yesWhat, co.permission, co.noWhy, co.pastBonding, co.eligibleBonding, 
-	co.certificates, co.lifting, co.driverLicense, co.driveClass, co.workType, co.employerStatus, 
+	co.citizen, co.legalWork, co.crimeRecord, co.yesWhat, co.permission, co.noWhy, co.pastBonding,
+	co.eligibleBonding, co.workType, co.employerStatus, 
 	ed.educationLevel, ed.student, ed.studyData, ed.language,
 	ex.accountingEX, ex.administrative, ex.bookKeeping, ex.business, ex.construction, ex.customerService, ex.dataEntry, 
 	ex.engineering, ex.equipment, ex.foodService, ex.generalLabour, ex.healthSafety, ex.healthCare, ex.hospitality, 
@@ -288,7 +286,7 @@ $TemporySelection = "select distinct p.applicationID, p.applicantID, p.firstName
 	ms.yearEndFin, ms.otherMoneySkill,
 	os.MAssembly, os.MConstruction, os.MLine, os.MPieceWork, os.MPrinting, os.MShipping, os.MWarehouse, os.EAKitting, 
 	os.EAPCBoards, os.TIQCAutomated, os.TIQCManual, os.TIQCFinal, os.MADiscDrive, os.MAMachineParts, os.HCatering, 
-	os.HBartending, os.HHost, os.HWaitstaff, os.HCookChef,
+	os.HBartending, os.HHost, os.HWaitstaff, os.HCookChef, os.certificates, os.lifting, os.driverLicense, os.driveClass,
 	c.armstrong, c.enderby, c.kamloops, c.kelowna, c.lakeCountry, c.OKFalls, c.oliver, c.osoyoos, c.oyama, c.peachland,
 	c.penticton, c.salmonArm, c.sicamous, c.summerland, c.vernon, c.westKelowna, c.winfield, c.otherCity,
 	a.dayTimes, a.partTimes, a.fullTimes, a.eveNweekends, a.monday, a.tuesday, a.wednesday, a.thursday,

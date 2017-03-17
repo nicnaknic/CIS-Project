@@ -42,7 +42,7 @@ function PermanentSelectTest($temp, $query){
 			$row["postal"]."<br>Home: ".$row["homePhone"]." Cell: ".$row["cellPhone"]." Email: ".
 			$row["email"]." Preffered: ".$row["PCMethod"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
 			$row["mainExpertise"].", ".$row["roleInterest"].", ".$row["perfectCandidate"].", ".$row["salaryExpect"].", ".
-			$row["mainTransport"].", File Path: ".$row["filePath"].
+			$row["employment"].", File Path: ".$row["filePath"].
 			"<br>Job# ".$row["jobNum"]." Job: ".$row["jobName"]." Date: ".$row["jobDate"]." Type: ".$row["jobType"]."<br>";
 		}
 	} else {
@@ -61,8 +61,8 @@ function TemporySelectTest($temp, $query){
 			$row["email"]." Preffered: ".$row["PCMethod"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
 			"<br>Job# ".$row["jobNum"]." Job: ".$row["jobName"]." Date: ".$row["jobDate"]." Type: ".$row["jobType"].
 			"<br>Citizen: ".$row["citizen"].", ".$row["legalWork"].", ".$row["crimeRecord"].", ".$row["yesWhat"].", ".$row["permission"].
-			", ".$row["noWhy"].", ".$row["pastBonding"].", ".$row["eligibleBonding"].", ".$row["certificates"].", ".
-			$row["lifting"].", ".$row["driverLicense"].", ".$row["driveClass"]."<br>Work Type: ".$row["workType"]." Work Status: ".$row["employerStatus"].
+			", ".$row["noWhy"].", ".$row["pastBonding"].", ".$row["eligibleBonding"].
+			"<br>Work Type: ".$row["workType"]." Work Status: ".$row["employerStatus"].
 			"<br>Education: ".$row["educationLevel"].", ".$row["student"].", ".$row["studyData"].", ".$row["language"].
 			"<br>Expertise: ".$row["accountingEX"].", ".$row["administrative"].", ".$row["bookKeeping"].", ".$row["business"].", ".
 			$row["construction"].", ".$row["customerService"].", ".$row["dataEntry"].", ".$row["engineering"].", ".$row["equipment"].", ".
@@ -82,7 +82,7 @@ function TemporySelectTest($temp, $query){
 			$row["MPieceWork"].", ".$row["MPrinting"].", ".$row["MShipping"].", ".$row["MWarehouse"].", ".$row["EAKitting"].", ".
 			$row["EAPCBoards"].", ".$row["TIQCAutomated"].", ".$row["TIQCManual"].", ".$row["TIQCFinal"].", ".$row["MADiscDrive"].", ".
 			$row["MAMachineParts"].", ".$row["HCatering"].", ".$row["HBartending"].", ".$row["HHost"].", ".
-			$row["HWaitstaff"].", ".$row["HCookChef"].
+			$row["HWaitstaff"].", ".$row["HCookChef"].", ".$row["certificates"].", ".$row["lifting"].", ".$row["driverLicense"].", ".$row["driveClass"].
 			"<br>Cities: ".$row["armstrong"].", ".$row["enderby"].", ".$row["kamloops"].", ".$row["kelowna"].", ".$row["lakeCountry"].", ".
 			$row["OKFalls"].", ".$row["oliver"].", ".$row["osoyoos"].", ".$row["oyama"].", ".$row["peachland"].", ".$row["penticton"].", ".
 			$row["salmonArm"].", ".$row["sicamous"].", ".$row["summerland"].", ".$row["vernon"].", ".$row["westKelowna"].", ".
@@ -154,10 +154,10 @@ $permanent['mainExpertise'] = 'Programming, Organizing, Sorting, TKD';
 $permanent['roleInterest'] = 'Programming';
 $permanent['perfectCandidate'] = 'Computer Science Diploma';
 $permanent['salaryExpect'] = '13$/hour';
-$permanent['mainTransport'] = 'bike/bus';
+$permanent['employment'] = 'C';
 $permanent['filePath'] = 'dsad/sdsa/sdsd.ccc';
 $permanentData = $permanentDataInsertion.$permanent['apptID'].",'".$permanent['mainExpertise']."','".$permanent['roleInterest']."','".
-$permanent['perfectCandidate']."','".$permanent['salaryExpect']."','".$permanent['mainTransport']."','".$permanent['filePath'].$end;
+$permanent['perfectCandidate']."','".$permanent['salaryExpect']."','".$permanent['employment']."','".$permanent['filePath'].$end;
 tableInsert($mysqli, $permanentData, __LINE__);
 //CitizenOther Table
 $citizenO['apptID'] = 21;
@@ -169,15 +169,10 @@ $citizenO['permission'] = 'YES';
 $citizenO['noWhy'] = 'YES';
 $citizenO['pastBonding'] = 'NO';
 $citizenO['eligibleBonding'] = 'YES';
-$citizenO['certificates'] = 'Food Safe Level 1';
-$citizenO['lifting'] = 'YES';
-$citizenO['driverLicense'] = 'NO';
-$citizenO['driveClass'] = 'None';
 $citizenO['workType'] = 'OT';
 $citizenO['employerStatus'] = 'Student';
 $citizenOtherData = $citizenOtherInsertion.$citizenO['apptID'].",'".$citizenO['citizen']."','".$citizenO['legalWork']."','".$citizenO['crimeRecord']."','".
 $citizenO['yesWhat']."','".$citizenO['permission']."','".$citizenO['noWhy']."','".$citizenO['pastBonding']."','".$citizenO['eligibleBonding']."','".
-$citizenO['certificates']."','".$citizenO['lifting']."','".$citizenO['driverLicense']."','".$citizenO['driveClass']."','".
 $citizenO['workType']."','".$citizenO['employerStatus'].$end;
 tableInsert($mysqli, $citizenOtherData, __LINE__);
 //Education Table
@@ -295,10 +290,15 @@ $skills['HBartending'] = 'NO';
 $skills['HHost'] = 'NO';
 $skills['HWaitstaff'] = 'NO';
 $skills['HCookChef'] = 'NO';
+$skills['certificates'] = 'Food Safe Level 1';
+$skills['lifting'] = 'YES';
+$skills['driverLicense'] = 'NO';
+$skills['driveClass'] = 'None';
 $otherSkillsData = $otherSkillsInsertion.$skills['apptID'].",'".$skills['MAssembly']."','".$skills['MConstruction']."','".$skills['MLine']."','".
 $skills['MPieceWork']."','".$skills['MPrinting']."','".$skills['MShipping']."','".$skills['MWarehouse']."','".$skills['EAKitting']."','".$skills['EAPCBoards']."','".
 $skills['TIQCAutomated']."','".$skills['TIQCManual']."','".$skills['TIQCFinal']."','".$skills['MADiscDrive']."','".$skills['MAMachineParts']."','".
-$skills['HCatering']."','".$skills['HBartending']."','".$skills['HHost']."','".$skills['HWaitstaff']."','".$skills['HCookChef'].$end;
+$skills['HCatering']."','".$skills['HBartending']."','".$skills['HHost']."','".$skills['HWaitstaff']."','".$skills['HCookChef']."','".
+$skills['certificates']."','".$skills['lifting']."','".$skills['driverLicense']."','".$skills['driveClass'].$end;
 tableInsert($mysqli, $otherSkillsData, __LINE__);
 //Cities
 $cities['apptID'] = 0;
