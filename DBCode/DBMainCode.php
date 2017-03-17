@@ -23,7 +23,7 @@ function tableInsert($temp, $query, $lineNumber){
 //Function Staff Selection
 function StaffSelectTest($temp, $query){
 	$tempResult = $temp->query($query);
-	if($tempResult->num_rows > 0) {
+	if((isset($tempResult->num_rows)) && ($tempResult->num_rows > 0)) {
 		while($row = $tempResult->fetch_assoc()){
 			echo "<br>Staff Name: ".$row["firstName"]." ".$row["lastName"].
 			"<br>Password: ".$row["passwords"]." Username: ".$row["username"]."<br>";
@@ -35,9 +35,9 @@ function StaffSelectTest($temp, $query){
 //Function Permanent Selection
 function PermanentSelectTest($temp, $query){
 	$tempResult = $temp->query($query);
-	if((isset($tempResult->num_rows)) &&($tempResult->num_rows > 0)) {
+	if((isset($tempResult->num_rows)) && ($tempResult->num_rows > 0)) {
 		while($row = $tempResult->fetch_assoc()){
-			echo "<br>IDapp: ".$row["applicationID"]."ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"].
+			echo "<br>IDapp: ".$row["applicationID"].", ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"].
 			"<br>Address: ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
 			$row["postal"]."<br>Home: ".$row["homePhone"]." Cell: ".$row["cellPhone"]." Email: ".
 			$row["email"]." Preffered: ".$row["PCMethod"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
@@ -55,7 +55,7 @@ function TemporySelectTest($temp, $query){
 	$tempResult = $temp->query($query);
 	if($tempResult->num_rows > 0) {
 		while($row = $tempResult->fetch_assoc()){
-			echo "<br>IDapp: ".$row["applicationID"]."ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"]."<br>".
+			echo "<br>IDapp: ".$row["applicationID"].", ID: ".$row["applicantID"]." Name: ".$row["firstName"]." ".$row["lastName"]."<br>".
 			" Address: ".$row["street"].", ".$row["city"]." ".$row["province"].", ".
 			$row["postal"]."<br>Home: ".$row["homePhone"]." Cell: ".$row["cellPhone"]." Email: ".
 			$row["email"]." Preffered: ".$row["PCMethod"]." Date: ".$row["dateForm"].", ".$row["findOKStaff"]."<br>".
@@ -126,7 +126,7 @@ $jobs['apptID'] = 21;
 $jobs['job#'] = 2121;
 $jobs['name'] = 'SQL & PHP Code';
 $jobs['date'] = '2017/01/21';
-$jobs['type'] = 'Tempory';
+$jobs['type'] = 'OT';
 $jobsData = $jobsInsertion.$jobs['apptID'].', '.$jobs['job#'].",'".$jobs['name']."','".$jobs['date']."','".$jobs['type'].$end;
 tableInsert($mysqli, $jobsData, __LINE__); 
 //Personal Insert Table
@@ -301,25 +301,25 @@ $skills['HCatering']."','".$skills['HBartending']."','".$skills['HHost']."','".$
 $skills['certificates']."','".$skills['lifting']."','".$skills['driverLicense']."','".$skills['driveClass'].$end;
 tableInsert($mysqli, $otherSkillsData, __LINE__);
 //Cities
-$cities['apptID'] = 0;
+$cities['apptID'] = 21;
 $cities['armstrong'] = 'NO';
-$Cities['enderby'] = 'NO';
-$Cities['kamloops'] = 'NO';
-$Cities['kelowna'] = 'YES';
-$Cities['lakeCountry'] = 'YES';
-$Cities['OKFalls'] = 'NO';
-$Cities['oliver'] = 'NO';
-$Cities['osoyoos'] = 'NO';
-$Cities['oyama'] = 'NO';
-$Cities['peachland'] = 'NO';
-$Cities['penticton'] = 'NO';
-$Cities['salmonArm'] = 'NO';
-$Cities['sicamous'] = 'NO';
-$Cities['summerland'] = 'NO';
-$Cities['vernon'] = 'NO';
-$Cities['westKelowna'] = 'YES';
-$Cities['winfield'] = 'NO';
-$Cities['otherCity'] = 'NO';
+$cities['enderby'] = 'NO';
+$cities['kamloops'] = 'NO';
+$cities['kelowna'] = 'YES';
+$cities['lakeCountry'] = 'YES';
+$cities['OKFalls'] = 'NO';
+$cities['oliver'] = 'NO';
+$cities['osoyoos'] = 'NO';
+$cities['oyama'] = 'NO';
+$cities['peachland'] = 'NO';
+$cities['penticton'] = 'NO';
+$cities['salmonArm'] = 'NO';
+$cities['sicamous'] = 'NO';
+$cities['summerland'] = 'NO';
+$cities['vernon'] = 'NO';
+$cities['westKelowna'] = 'YES';
+$cities['winfield'] = 'NO';
+$cities['otherCity'] = 'NO';
 $citiesData = $citiesInsertion.$cities['apptID'].",'".$cities['armstrong']."','".$cities['enderby']."','".$cities['kamloops']."','".$cities['kelowna']."','".
 $cities['lakeCountry']."','".$cities['OKFalls']."','".$cities['oliver']."','".$cities['osoyoos']."','".$cities['oyama']."','".$cities['peachland']."','".$cities['penticton']."','".
 $cities['salmonArm']."','".$cities['sicamous']."','".$cities['summerland']."','".$cities['vernon']."','".$cities['westKelowna']."','".$cities['winfield']."','".$cities['otherCity'].$end;

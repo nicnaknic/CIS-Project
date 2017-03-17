@@ -257,7 +257,7 @@ $applicantReferencesInsertion = "insert into applicantReferences(applicantID, na
 	companyName1, referenceEmail1, referencePhone1, nameTitle2, companyName2, referenceEmail2, 
 	referencePhone2, nameTitle3, companyName3, referenceEmail3, referencePhone3, filePath) values (";
 // Table Selection Data
-$StaffSelection ="select s.firstName, s.lastName, s.passwords, s.username 
+$StaffSelection ="select s.firstName, s.lastName, s.passwords, distinct s.username 
 	from staff s;";
 $PermanentSelection = "select distinct p.applicationID, p.applicantID, p.firstName, p.lastName, 
 	p.street, p.city, p.province, p.postal, p.homePhone, p.cellPhone, p.email, p.PCMethod, 
