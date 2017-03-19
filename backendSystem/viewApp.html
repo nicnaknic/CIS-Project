@@ -19,6 +19,8 @@
 		.panel-margins{
 			margin-bottom: 40px;
 		}
+        ul{list-style: none;}
+        p{ font-size: 0.9em }
     </style>
 </head>
 <body>
@@ -50,7 +52,7 @@
         </div>
         <div class="panel panel-default panel-margins"><!--BASIC INFORMATION SECTION-->
 			<div class="panel-heading">
-				<strong>Basic Information:</strong>
+				<strong  style="font-size: 18px;">Basic Information:</strong>
 			</div>
 			<div class="panel-body">
 				<div class="row">
@@ -75,12 +77,33 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size: 15px;"><strong>Areas Of Expertise:</strong></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size: 18px;"><strong>Areas Of Expertise:</strong></a>
                     </h4>
                 </div>
-                <div id="collapse1" class="panel-collapse collapse">
+                <div id="collapse1" class="panel-collapse collapse in">
                     <div class="panel-body">
-                        THIS IS THE SAMPLE BODY
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label>What are your areas of expertise?</label>
+                                <p>Accounting/Financing</p><!--Insert Area of expertise values into the <p> tags in this list-->
+                                <p>Data Entry</p>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div><!--End Area of expertise row-->
+                        <div class="row">
+                            <div class="col-sm-7"><!--For this section, only display the Software list if condition if(dbReturnRsult != NULL). wrap this around each <p> tag-->
+                                <label>Which software programs you are experienced and proficient in?</label>
+                                <p><strong>Accounting: </strong>Quickbooks, GnuCash</p>
+                                <p><strong>Design &amp; Drafting: </strong>Quickbooks, GnuCash</p>
+                            </div><!--End col-sm-6 LEFT SIDE-->
+                            <div class="col-sm-5">
+                                <label>Which Accounting skills/functions are you experienced in?</label>
+                                <p>Accounts payable</p>
+                                <p>Accounts Recovery</p>
+                                <p></p>
+                            </div><!--End col-sm-6 RIGHT SIDE-->
+                        </div><!--END Row 2-->
                     </div>
                 </div>
             </div>
@@ -89,7 +112,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="font-size: 15px;"><strong>Education &amp; Employment Status:</strong></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="font-size: 18px;"><strong>Education &amp; Employment Status:</strong></a>
                     </h4>
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
@@ -103,7 +126,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="font-size: 15px;"><strong>Availability &amp; Logistics:</strong></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"  style="font-size: 18px;"><strong>Availability &amp; Logistics:</strong></a>
                     </h4>
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
@@ -117,7 +140,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="font-size: 15px;"><strong>References: </strong></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="font-size: 18px;"><strong>References: </strong></a>
                     </h4>
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
