@@ -17,10 +17,16 @@
             color: #337ab7;
         }
 		.panel-margins{
-			margin-bottom: 40px;
+			margin-bottom: 30px;
 		}
-        ul{list-style: none;}
+        .head-mod{
+            margin-top: 4px;
+        }
+
         p{ font-size: 0.9em }
+        .label-small{
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -80,8 +86,9 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size: 18px;"><strong>Areas Of Expertise:</strong></a>
                     </h4>
                 </div>
-                <div id="collapse1" class="panel-collapse collapse in">
+                <div id="collapse1" class="panel-collapse collapse">
                     <div class="panel-body">
+                        
                         <div class="row">
                             <div class="col-sm-12">
                                 <label>What are your areas of expertise?</label>
@@ -91,6 +98,9 @@
                                 <p></p>
                             </div>
                         </div><!--End Area of expertise row-->
+
+                        <div class="page-header head-mod"></div>
+
                         <div class="row">
                             <div class="col-sm-7"><!--For this section, only display the Software list if condition if(dbReturnRsult != NULL). wrap this around each <p> tag-->
                                 <label>Which software programs you are experienced and proficient in?</label>
@@ -104,6 +114,28 @@
                                 <p></p>
                             </div><!--End col-sm-6 RIGHT SIDE-->
                         </div><!--END Row 2-->
+
+                        <div class="page-header head-mod"></div>
+
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <label>Current Certificates/Tickets Completed:</label>
+                                <p>Some random certs listed here</p>
+                                <label>Do you have a driver's licence?</label>
+                                <p>YES</p>
+                                <p>Class 3 with Air break endoresement</p>
+                                <label>Are you capable of lifting over 50lbs?</label>
+                                <p>YES</p>
+                            </div>
+                            <div class="col-sm-5">
+                                <label>Which Labour/Trade/Hospitality functions are you experienced in?</label>
+                                <p>Catering</p>
+                                <p>Waitress</p>
+                                <p>Bartending</p>
+                                
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -117,7 +149,59 @@
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
                     <div class="panel-body">
-                        THIS IS THE SAMPLE BODY
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>What is your highest level of education you have completed?</label>
+                                <p>Doctoral Degree (PHD)</p>
+                                <label>What Languages are you proficient in?</label>
+                                <p>English speaking, writing and speaking</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Are you a student?</label>
+                                <p>YES</p>
+                                <p>Insert random school name and career goals here</p>
+                            </div>
+                        </div>
+
+                        <div class="page-header head-mod"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>What type of work are you mainly seeking</label>
+                                <p>Permanent work preferred, am only seeking temporary work while i seek a Permanent role</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>What is your current employment status?</label>
+                                <p>Employed Full Time</p>
+                            </div>
+                        </div>
+
+                        <div class="page-header head-mod"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>What is your work status in Canada?</label></br>
+                                <label class="label-small">Are you a Canadian Citizen?</label>
+                                <p>YES</p>
+                                <label class="label-small">Are you legally entitled to work in Canada?</label>
+                                <p>N/A</p>
+                                <label class="label-small">Have you ever been bonded?</label>
+                                <p>YES</p>
+                                <label class="label-small">Are you eligible for bonding?</label>
+                                <p>YES</p>
+
+                            </div>
+                            <div class="col-sm-6">
+                                </br><label class="label-small">Do you have a criminal record for which you have not recieved a pardon?</label>
+                                <p>YES</p>
+                                <p>I stole a bicycle from a small child</p>
+                                <label class="label-small">Would you give Okanagan Staffing Services permission to conduct a Criminal Record, should it be requested by a client?</label>
+                                <p>YES</p>
+                                <p>Explanation of why they cant perform a criminal record check goes here</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -131,7 +215,53 @@
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
                     <div class="panel-body">
-                        THIS IS THE SAMPLE BODY
+                        
+                        <label>What is your current avaliability?</label>
+                        <p>Evenings and Weekends</p>
+                        <label>If your avaliability is more complex, please enter what hours you are avaliable:</label>
+                        <table class="table table-bordered table-sm">
+                            <thead>
+                                <tr>
+                                    <th><small>Monday</small></th>
+                                    <th><small>Tuesday</small></th>
+                                    <th><small>Wednesday</small></th>
+                                    <th><small>Thursday</small></th>
+                                    <th><small>Friday</small></th>
+                                    <th><small>Saturday</small></th>
+                                    <th><small>Sunday</small></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><small>9am-5pm</small></td><!--Concat the "start"/Finish times and store them in these table columns-->
+                                    <td><small>9am-8pm</small></td>
+                                    <td><small>7am-3pm</small></td>
+                                    <td><small>11am-4pm</small></td>
+                                    <td><small></small></td>
+                                    <td><small>4pm-9pm</small></td>
+                                    <td><small></small></td>
+                                </tr>     
+                            </tbody>
+                        </table>
+                        <label>How much notice do you require to be avaliable for job placement?</label>
+                        <p>Two Weeks notice at most</p>
+                        <label for="">What is your main mode of transportation?</label>
+                        <p>CarPool</p>
+
+                        <div class="page-header head-mod"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="">Which Okanagan cities are you able and willing to work in?</label>
+                                <p>Kelowna</p>
+                                <p>West Kelowna</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="">What is the minimum hourly rate you are seeking?</label>
+                                <p>$25/h</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -145,7 +275,25 @@
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
                     <div class="panel-body">
-                        THIS IS THE SAMPLE BODY
+                        <label>If references are not included within your resume, please provide three employment references: </label>
+                        <table class="table table-bordered table-sm">
+                            <thead>
+                                <tr>
+                                    <th><small>Supervisor name &amp; title</small></th>
+                                    <th><small>Company Name</small></th>
+                                    <th><small>Email Address</small></th>
+                                    <th><small>Phone Number</small></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><small>John Doe, Manager</small></td><!--Concat the "start"/Finish times and store them in these table columns-->
+                                    <td><small>Sample Company</small></td>
+                                    <td><small>example@jDoe.ca</small></td>
+                                    <td><small>250-765-1234</small></td>
+                                </tr>     
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -171,8 +319,8 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title"><strong>Are you sure you wish to remove this applicant?</strong></h4>
 				</div>
-				<div class="modal-footer">
-                    <form>
+				<div class="modal-footer" style="margin-bottom: 0px;">
+                    <form style="margin-bottom: 0px;">
                         <input type="hidden" name="delApplicant" value=""><!--Insert the Users ApplicantID in the value field-->
 					    <button type="button" class="btn btn-default">Confirm</button>
                     </form>
