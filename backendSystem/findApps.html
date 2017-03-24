@@ -20,6 +20,9 @@
 		.panel-margins{
 			margin-bottom: 40px;
 		}
+		.head-mod{
+            margin-top: 4px;
+        }
     </style>
 </head>
 <body>
@@ -85,8 +88,8 @@
 		<div class="panel panel-default panel-margins">
 			<div class="panel-heading">
 				<div class="row">
-					<div class="col-sm-6"><strong>Nicholas Henseleit:</strong> Job ID: 402 - Web Developer</div><!--INSERT F/l name, Job ID and Job name-->
-					<div class="col-sm-6"><div class="pull-right">10/3/2017</div></div><!--INSERT date value here-->
+					<div class="col-sm-9"><strong>[#492] Nicholas Henseleit:</strong> Job ID: 402 - Web Developer</div><!--INSERT F/l name, Job ID and Job name-->
+					<div class="col-sm-3"><div class="pull-right">10/3/2017</div></div><!--INSERT date value here-->
 				</div>
 			</div>
 			<div class="panel-body">
@@ -135,10 +138,24 @@
                                 </div>
 								<div class="radio-inline">
 									<input type="radio" name="searchType" value="perm">Permanent
-                                </div>								
+                                </div>
 							</div>
 						</div>
-					</div>
+
+						<div class="page-header head-mod"></div>
+
+						<div class="form-contol">
+							<div class="row">								
+								<div class="col-sm-6">
+									<input type="text" maxlength="10" class="form-control" name="jobID" placeholder="Job Number"></br>
+								</div>
+								<div class="col-sm-6">
+									<input type="text" maxlength="10" class="form-control" name="nameNum" placeholder="Applicant Name or Number">
+								</div>
+							</div>
+						</div><!--END FORM CONTROL 1-->
+
+					</div><!--END MODAL BODY-->
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default">Search</button>
 					</div>
